@@ -1,0 +1,887 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+
+// Check if we're editing an existing post
+const editSlug = Astro.url.searchParams.get('edit');
+let editPost = null;
+
+if (editSlug) {
+  console.log('=== EDITOR DEBUG ===');
+  console.log('Looking for slug:', editSlug);
+  
+  try {
+    const posts = await getCollection("blog");
+    console.log('Total posts found:', posts.length);
+    console.log('Available post slugs:', posts.map(p => `"${p.slug}"`));
+    
+    editPost = posts.find(post => post.slug === editSlug);
+    console.log('Found post:', editPost ? `YES - "${editPost.data.title}"` : 'NO');
+    
+    if (!editPost) {
+      // Try exact match with different approaches
+      const exactMatch = posts.find(post => post.slug.toString() === editSlug.toString());
+      console.log('Exact string match:', exactMatch ? `YES - "${exactMatch.data.title}"` : 'NO');
+      
+      // Try case insensitive
+      const caseInsensitive = posts.find(post => post.slug.toLowerCase() === editSlug.toLowerCase());
+      console.log('Case insensitive match:', caseInsensitive ? `YES - "${caseInsensitive.data.title}"` : 'NO');
+      
+      editPost = exactMatch || caseInsensitive;
+    }
+    
+    console.log('Final editPost:', editPost ? `"${editPost.data.title}"` : 'null');
+  } catch (error) {
+    console.error('ERROR in getCollection("blog"):', error);
+    console.error('Error details:', error.message, error.stack);
+  }
+  
+  console.log('===================');
+}
+---
+
+<PageLayout title="Editor" description="Create and edit blog posts">
+  <head slot="head">
+    <!-- Prism.js for syntax highlighting in preview -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  </head>
+  <TopLayout>
+    <div class="animate">
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+        {editPost ? `Edit: ${editPost.data.title}` : 'Blog Editor'}
+      </h1>
+      <div class="mt-1">
+        {editPost ? 'Edit your blog post' : 'Create and edit your blog posts'}
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <div id="editor-container" class="space-y-6">
+        <!-- Title Section -->
+        <div>
+          <label for="post-title" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Title</label>
+          <input 
+            type="text" 
+            id="post-title" 
+            placeholder="Enter post title"
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        
+        <!-- Metadata Section (collapsible) -->
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+          <button 
+            id="metadata-toggle" 
+            class="w-full px-4 py-3 text-left bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-medium text-black dark:text-white">Post Metadata</span>
+              <svg id="metadata-chevron" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </button>
+          <div id="metadata-content" class="px-4 py-3 space-y-4 hidden">
+            <div>
+              <label for="post-summary" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Summary</label>
+              <textarea 
+                id="post-summary" 
+                rows="2"
+                placeholder="Brief description of the post"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              ></textarea>
+            </div>
+            <div class="relative">
+              <label for="post-tags" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Tags (space-separated)</label>
+              <input 
+                type="text" 
+                id="post-tags" 
+                placeholder="Tutorial Astro JavaScript"
+                autocomplete="off"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+              <!-- Autocomplete dropdown -->
+              <div 
+                id="tags-autocomplete" 
+                class="absolute z-10 w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg max-h-48 overflow-y-auto hidden"
+                style="top: 100%"
+              >
+                <!-- Autocomplete suggestions will be populated here -->
+              </div>
+            </div>
+            <div class="flex items-center">
+              <input 
+                type="checkbox" 
+                id="post-draft" 
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label for="post-draft" class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">Save as draft</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editor Tabs -->
+        <div class="border-b border-gray-200 dark:border-gray-700">
+          <nav class="-mb-px flex space-x-8">
+            <button id="edit-tab" class="editor-tab active py-2 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600 dark:text-blue-400">
+              Edit
+            </button>
+            <button id="preview-tab" class="editor-tab py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300">
+              Preview
+            </button>
+          </nav>
+        </div>
+
+        <!-- Editor Content -->
+        <div id="editor-content" class="space-y-4">
+          <!-- Markdown Editor -->
+          <div>
+            <textarea 
+              id="markdown-editor" 
+              rows="20"
+              placeholder="Write your markdown here... (Drop images directly into this editor)"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Preview Content -->
+        <div id="preview-content" class="hidden">
+          <div class="prose prose-gray dark:prose-invert max-w-none">
+            <div id="preview-html">
+              <p class="text-gray-500 dark:text-gray-400 italic">Preview will appear here...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-4">
+          <button 
+            id="save-post" 
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200"
+          >
+            Save Post
+          </button>
+          <button 
+            id="clear-editor" 
+            class="bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-200 font-medium py-2 px-4 rounded-md transition-colors duration-200"
+          >
+            Clear
+          </button>
+        </div>
+
+        <!-- Status Messages -->
+        <div id="status-message" class="hidden p-4 rounded-md"></div>
+      </div>
+    </div>
+  </BottomLayout>
+</PageLayout>
+
+<script is:inline define:vars={{ editPost, editSlug }}>
+  if (editPost) {
+    window.editPostData = editPost;
+    console.log('Setting editPostData:', editPost);
+  } else if (editSlug) {
+    console.log('No post found for slug:', editSlug);
+    window.failedEditSlug = editSlug;
+  }
+</script>
+
+<script is:inline>
+  // Editor functionality
+  class BlogEditor {
+    constructor() {
+      this.initializeEditor();
+      this.setupEventListeners();
+      this.loadEditData();
+    }
+
+    initializeEditor() {
+      this.metadataToggle = document.getElementById('metadata-toggle');
+      this.metadataContent = document.getElementById('metadata-content');
+      this.metadataChevron = document.getElementById('metadata-chevron');
+      this.editTab = document.getElementById('edit-tab');
+      this.previewTab = document.getElementById('preview-tab');
+      this.editorContent = document.getElementById('editor-content');
+      this.previewContent = document.getElementById('preview-content');
+      this.markdownEditor = document.getElementById('markdown-editor');
+      this.previewHtml = document.getElementById('preview-html');
+      this.saveButton = document.getElementById('save-post');
+      this.clearButton = document.getElementById('clear-editor');
+      this.statusMessage = document.getElementById('status-message');
+      this.tagsInput = document.getElementById('post-tags');
+      this.tagsAutocomplete = document.getElementById('tags-autocomplete');
+      this.availableTags = [];
+    }
+
+    setupEventListeners() {
+      // Metadata toggle
+      this.metadataToggle.addEventListener('click', () => this.toggleMetadata());
+
+      // Tab switching
+      this.editTab.addEventListener('click', () => this.showEditor());
+      this.previewTab.addEventListener('click', () => this.showPreview());
+
+      
+      // Drag and drop for markdown editor
+      this.markdownEditor.addEventListener('dragover', (e) => this.handleMarkdownDragOver(e));
+      this.markdownEditor.addEventListener('drop', (e) => this.handleMarkdownDrop(e));
+      this.markdownEditor.addEventListener('dragenter', (e) => this.handleMarkdownDragEnter(e));
+      this.markdownEditor.addEventListener('dragleave', (e) => this.handleMarkdownDragLeave(e));
+
+      // Actions
+      this.saveButton.addEventListener('click', () => this.savePost());
+      this.clearButton.addEventListener('click', () => this.clearEditor());
+
+      // Auto-update preview
+      this.markdownEditor.addEventListener('input', () => this.updatePreview());
+      
+      // Tags autocomplete
+      console.log('Setting up tags autocomplete event listeners...');
+      this.tagsInput.addEventListener('input', (e) => this.handleTagsInput(e));
+      this.tagsInput.addEventListener('keydown', (e) => this.handleTagsKeydown(e));
+      this.tagsInput.addEventListener('blur', () => this.hideAutocomplete());
+      console.log('Tags event listeners attached');
+      
+      // Load available tags
+      this.loadAvailableTags();
+    }
+
+    async loadEditData() {
+      // Also check URL for edit parameter as backup
+      const urlParams = new URLSearchParams(window.location.search);
+      const editSlug = urlParams.get('edit');
+      
+      if (window.editPostData) {
+        const post = window.editPostData;
+        console.log('Loading edit data:', post); // Debug log
+        this.populateEditor(post);
+      } else if (editSlug) {
+        this.showStatus('Post data not found in window, attempting to fetch...', 'info');
+        console.error('editPostData not found in window, but edit slug is:', editSlug);
+        
+        // Try to fetch the post data as fallback
+        try {
+          await this.fetchPostData(editSlug);
+        } catch (error) {
+          this.showStatus('Failed to load post data: ' + error.message, 'error');
+        }
+      }
+    }
+
+    populateEditor(post) {
+      // Load metadata
+      const titleEl = document.getElementById('post-title');
+      const summaryEl = document.getElementById('post-summary');
+      const tagsEl = document.getElementById('post-tags');
+      const draftEl = document.getElementById('post-draft');
+      
+      if (titleEl) titleEl.value = post.data.title || '';
+      if (summaryEl) summaryEl.value = post.data.summary || '';
+      if (tagsEl) tagsEl.value = post.data.tags ? post.data.tags.join(' ') : '';
+      if (draftEl) draftEl.checked = post.data.draft || false;
+      
+      // Load content (remove frontmatter if present)
+      const content = post.body || '';
+      if (this.markdownEditor) {
+        this.markdownEditor.value = content;
+      }
+      
+      // Update preview
+      this.updatePreview();
+      
+      // Show metadata section by default when editing
+      if (this.metadataContent) {
+        this.metadataContent.classList.remove('hidden');
+      }
+      if (this.metadataChevron) {
+        this.metadataChevron.style.transform = 'rotate(180deg)';
+      }
+      
+      this.showStatus('Loaded post for editing: ' + post.data.title, 'info');
+    }
+
+    async fetchPostData(slug) {
+      try {
+        // Try to fetch the raw markdown file directly
+        const response = await fetch(`/src/content/blog/${slug}.md`);
+        if (response.ok) {
+          const content = await response.text();
+          const postData = this.parseMarkdownContent(content, slug);
+          console.log('Parsed post data:', postData);
+          this.populateEditor(postData);
+          this.showStatus(`Loaded post: ${postData.data.title}`, 'success');
+        } else {
+          throw new Error('Post file not found');
+        }
+      } catch (error) {
+        this.showStatus('Could not load post data. The post may not exist or server-side loading failed.', 'error');
+        throw new Error('Could not fetch post data: ' + error.message);
+      }
+    }
+    
+    parseMarkdownContent(content, slug) {
+      // Parse frontmatter and content
+      const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
+      
+      if (!frontmatterMatch) {
+        throw new Error('Invalid frontmatter format');
+      }
+      
+      const [, frontmatterText, body] = frontmatterMatch;
+      
+      // Simple YAML parsing for frontmatter
+      const data = {};
+      const lines = frontmatterText.split('\n');
+      let currentKey = null;
+      let arrayValues = [];
+      
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+        
+        if (trimmed.startsWith('- ')) {
+          // Array item
+          if (currentKey) {
+            arrayValues.push(trimmed.substring(2));
+          }
+        } else {
+          // Key-value pair
+          if (currentKey && arrayValues.length > 0) {
+            data[currentKey] = arrayValues;
+            arrayValues = [];
+          }
+          
+          const colonIndex = trimmed.indexOf(':');
+          if (colonIndex > -1) {
+            currentKey = trimmed.substring(0, colonIndex).trim();
+            let value = trimmed.substring(colonIndex + 1).trim();
+            
+            // Remove quotes and parse booleans
+            if (value.startsWith('"') && value.endsWith('"')) {
+              value = value.slice(1, -1);
+            }
+            if (value === 'true') value = true;
+            if (value === 'false') value = false;
+            
+            data[currentKey] = value;
+          }
+        }
+      }
+      
+      // Handle final array if exists
+      if (currentKey && arrayValues.length > 0) {
+        data[currentKey] = arrayValues;
+      }
+      
+      return {
+        slug,
+        data,
+        body: body.trim()
+      };
+    }
+
+    toggleMetadata() {
+      const isHidden = this.metadataContent.classList.contains('hidden');
+      if (isHidden) {
+        this.metadataContent.classList.remove('hidden');
+        this.metadataChevron.style.transform = 'rotate(180deg)';
+      } else {
+        this.metadataContent.classList.add('hidden');
+        this.metadataChevron.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    showEditor() {
+      this.editTab.classList.add('active', 'border-blue-500', 'text-blue-600');
+      this.editTab.classList.remove('border-transparent', 'text-gray-500');
+      this.previewTab.classList.remove('active', 'border-blue-500', 'text-blue-600');
+      this.previewTab.classList.add('border-transparent', 'text-gray-500');
+      
+      this.editorContent.classList.remove('hidden');
+      this.previewContent.classList.add('hidden');
+    }
+
+    showPreview() {
+      this.previewTab.classList.add('active', 'border-blue-500', 'text-blue-600');
+      this.previewTab.classList.remove('border-transparent', 'text-gray-500');
+      this.editTab.classList.remove('active', 'border-blue-500', 'text-blue-600');
+      this.editTab.classList.add('border-transparent', 'text-gray-500');
+      
+      this.editorContent.classList.add('hidden');
+      this.previewContent.classList.remove('hidden');
+      this.updatePreview();
+    }
+
+    async updatePreview() {
+      const markdown = this.markdownEditor.value;
+      if (markdown.trim()) {
+        try {
+          // Use Astro's markdown rendering pipeline via API
+          const response = await fetch('/api/render-markdown', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ markdown })
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            if (result.success) {
+              this.previewHtml.innerHTML = result.html;
+              
+              // Highlight code blocks if Prism is available
+              if (window.Prism) {
+                setTimeout(() => {
+                  window.Prism.highlightAll();
+                }, 10);
+              }
+            } else {
+              throw new Error(result.error || 'Failed to render markdown');
+            }
+          } else {
+            throw new Error('Failed to render markdown');
+          }
+        } catch (error) {
+          console.error('Preview rendering error:', error);
+          this.previewHtml.innerHTML = `<p class="text-red-500">Error rendering preview: ${error.message}</p>`;
+        }
+      } else {
+        this.previewHtml.innerHTML = '<p class="text-gray-500 dark:text-gray-400 italic">Preview will appear here...</p>';
+      }
+    }
+
+
+
+    async uploadImage(file) {
+      try {
+        const formData = new FormData();
+        formData.append('image', file);
+        
+        const response = await fetch('/api/upload-image', {
+          method: 'POST',
+          body: formData
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to upload image');
+        }
+        
+        const result = await response.json();
+        if (result.success) {
+          return result.path;
+        } else {
+          throw new Error(result.error || 'Upload failed');
+        }
+      } catch (error) {
+        console.error('Image upload error:', error);
+        throw error;
+      }
+    }
+
+    handleMarkdownDragEnter(event) {
+      event.preventDefault();
+      this.markdownEditor.classList.add('drag-over');
+    }
+
+    handleMarkdownDragLeave(event) {
+      event.preventDefault();
+      // Only remove drag-over if we're actually leaving the textarea
+      if (!this.markdownEditor.contains(event.relatedTarget)) {
+        this.markdownEditor.classList.remove('drag-over');
+        // Clear any pending drag over timeout
+        if (this.dragOverTimeout) {
+          clearTimeout(this.dragOverTimeout);
+          this.dragOverTimeout = null;
+        }
+      }
+    }
+
+    handleMarkdownDragOver(event) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'copy';
+      
+      // Throttle cursor position updates to avoid excessive DOM manipulation
+      if (!this.dragOverTimeout) {
+        this.dragOverTimeout = setTimeout(() => {
+          // Calculate drop position and update cursor to show where image will be inserted
+          const dropPosition = this.getTextareaDropPosition(event);
+          
+          // Set cursor position to show where the image will be inserted
+          this.markdownEditor.focus();
+          this.markdownEditor.setSelectionRange(dropPosition, dropPosition);
+          
+          this.dragOverTimeout = null;
+        }, 50); // Update every 50ms max
+      }
+    }
+
+    async handleMarkdownDrop(event) {
+      event.preventDefault();
+      this.markdownEditor.classList.remove('drag-over');
+      
+      // Clear any pending drag over timeout
+      if (this.dragOverTimeout) {
+        clearTimeout(this.dragOverTimeout);
+        this.dragOverTimeout = null;
+      }
+      
+      const files = event.dataTransfer.files;
+      if (files.length > 0) {
+        // Get drop position for textarea
+        const dropPosition = this.getTextareaDropPosition(event);
+        console.log('Drop position calculated:', dropPosition);
+        
+        // Process files at the drop position
+        await this.processFilesAtPosition(files, dropPosition);
+      }
+    }
+
+    getTextareaDropPosition(event) {
+      const textarea = this.markdownEditor;
+      const rect = textarea.getBoundingClientRect();
+      
+      // Get relative mouse position
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      
+      // Account for scroll position
+      const scrollLeft = textarea.scrollLeft;
+      const scrollTop = textarea.scrollTop;
+      
+      // Get textarea style for calculations
+      const style = window.getComputedStyle(textarea);
+      const paddingLeft = parseInt(style.paddingLeft);
+      const paddingTop = parseInt(style.paddingTop);
+      const lineHeight = parseInt(style.lineHeight) || parseInt(style.fontSize) * 1.2;
+      
+      // Calculate which line was clicked (accounting for padding and scroll)
+      const clickedLine = Math.floor((y + scrollTop - paddingTop) / lineHeight);
+      
+      // Split content into lines
+      const lines = textarea.value.split('\n');
+      
+      // Calculate position up to the clicked line
+      let position = 0;
+      for (let i = 0; i < Math.min(clickedLine, lines.length); i++) {
+        position += lines[i].length + 1; // +1 for newline character
+      }
+      
+      // If we clicked beyond the last line, position at end
+      if (clickedLine >= lines.length) {
+        return textarea.value.length;
+      }
+      
+      // For the clicked line, estimate character position
+      if (lines[clickedLine]) {
+        // Create a temporary element to measure character width
+        const tempElement = document.createElement('span');
+        tempElement.style.font = style.font;
+        tempElement.style.fontFamily = style.fontFamily;
+        tempElement.style.fontSize = style.fontSize;
+        tempElement.style.fontWeight = style.fontWeight;
+        tempElement.style.visibility = 'hidden';
+        tempElement.style.position = 'absolute';
+        tempElement.textContent = 'M'; // Use monospace character for measurement
+        document.body.appendChild(tempElement);
+        
+        const charWidth = tempElement.offsetWidth;
+        document.body.removeChild(tempElement);
+        
+        // Estimate character position within the line
+        const lineClickX = x + scrollLeft - paddingLeft;
+        const charPosition = Math.round(lineClickX / charWidth);
+        
+        // Clamp to line length
+        const actualCharPosition = Math.min(Math.max(0, charPosition), lines[clickedLine].length);
+        position += actualCharPosition;
+      }
+      
+      // Clamp to textarea content length
+      return Math.min(Math.max(0, position), textarea.value.length);
+    }
+
+    async processFilesAtPosition(files, position) {
+      for (let file of files) {
+        if (file.type.startsWith('image/')) {
+          try {
+            const imageUrl = await this.uploadImage(file);
+            const markdownImage = `![${file.name}](${imageUrl})\n\n`;
+            const currentContent = this.markdownEditor.value;
+            const newContent = currentContent.slice(0, position) + markdownImage + currentContent.slice(position);
+            this.markdownEditor.value = newContent;
+            this.markdownEditor.focus();
+            // Set cursor after the inserted image
+            const newCursorPos = position + markdownImage.length;
+            this.markdownEditor.setSelectionRange(newCursorPos, newCursorPos);
+            // Update position for next file
+            position = newCursorPos;
+          } catch (error) {
+            this.showStatus('Error uploading image: ' + error.message, 'error');
+          }
+        }
+      }
+    }
+
+    async savePost() {
+      const title = document.getElementById('post-title').value.trim();
+      const summary = document.getElementById('post-summary').value.trim();
+      const tags = document.getElementById('post-tags').value.trim();
+      const draft = document.getElementById('post-draft').checked;
+      const content = this.markdownEditor.value.trim();
+
+      if (!title || !content) {
+        this.showStatus('Please provide both a title and content for the post.', 'error');
+        return;
+      }
+
+      // Create frontmatter
+      const frontmatter = `---
+title: "${title}"
+summary: "${summary}"
+date: "${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}"
+draft: ${draft}
+tags:
+${tags.split(' ').filter(tag => tag.trim()).map(tag => `- ${tag.trim()}`).join('\n')}
+---
+
+`;
+
+      const fullContent = frontmatter + content;
+
+      try {
+        // In a real implementation, you'd send this to a server endpoint
+        // For now, we'll just show a success message and offer to download
+        this.showStatus('Post ready! In a production environment, this would be saved to the server.', 'success');
+        
+        // Create a downloadable file for demonstration
+        const blob = new Blob([fullContent], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        const filename = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.md';
+        a.href = url;
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(url);
+      } catch (error) {
+        this.showStatus('Error saving post: ' + error.message, 'error');
+      }
+    }
+
+    clearEditor() {
+      if (confirm('Are you sure you want to clear all content? This cannot be undone.')) {
+        document.getElementById('post-title').value = '';
+        document.getElementById('post-summary').value = '';
+        document.getElementById('post-tags').value = '';
+        document.getElementById('post-draft').checked = false;
+        this.markdownEditor.value = '';
+        this.updatePreview();
+        this.showStatus('Editor cleared.', 'info');
+      }
+    }
+
+    async loadAvailableTags() {
+      try {
+        console.log('Loading available tags...');
+        const response = await fetch('/api/get-tags');
+        if (response.ok) {
+          const data = await response.json();
+          this.availableTags = data.tags || [];
+          console.log('Loaded tags:', this.availableTags);
+        }
+      } catch (error) {
+        console.error('Failed to load available tags:', error);
+        this.availableTags = [];
+      }
+    }
+
+    handleTagsInput(event) {
+      const value = event.target.value;
+      const cursorPos = event.target.selectionStart;
+      
+      // Find the current word being typed
+      const beforeCursor = value.substring(0, cursorPos);
+      const afterCursor = value.substring(cursorPos);
+      const words = beforeCursor.split(' ');
+      const currentWord = words[words.length - 1];
+      
+      if (currentWord.length > 0) {
+        this.showAutocomplete(currentWord, words.length - 1);
+      } else {
+        this.hideAutocomplete();
+      }
+    }
+
+    handleTagsKeydown(event) {
+      const autocomplete = this.tagsAutocomplete;
+      const suggestions = autocomplete.querySelectorAll('.suggestion-item');
+      const selected = autocomplete.querySelector('.suggestion-item.selected');
+      
+      if (!autocomplete.classList.contains('hidden') && suggestions.length > 0) {
+        switch (event.key) {
+          case 'ArrowDown':
+            event.preventDefault();
+            if (selected) {
+              selected.classList.remove('selected');
+              const next = selected.nextElementSibling || suggestions[0];
+              next.classList.add('selected');
+            } else {
+              suggestions[0].classList.add('selected');
+            }
+            break;
+            
+          case 'ArrowUp':
+            event.preventDefault();
+            if (selected) {
+              selected.classList.remove('selected');
+              const prev = selected.previousElementSibling || suggestions[suggestions.length - 1];
+              prev.classList.add('selected');
+            } else {
+              suggestions[suggestions.length - 1].classList.add('selected');
+            }
+            break;
+            
+          case 'Enter':
+          case 'Tab':
+            event.preventDefault();
+            if (selected) {
+              this.selectTag(selected.textContent);
+            }
+            break;
+            
+          case 'Escape':
+            this.hideAutocomplete();
+            break;
+        }
+      }
+    }
+
+    showAutocomplete(currentWord, wordIndex) {
+      const matches = this.availableTags.filter(tag => 
+        tag.toLowerCase().startsWith(currentWord.toLowerCase()) &&
+        tag.toLowerCase() !== currentWord.toLowerCase()
+      );
+      
+      if (matches.length === 0) {
+        this.hideAutocomplete();
+        return;
+      }
+      
+      const autocomplete = this.tagsAutocomplete;
+      autocomplete.innerHTML = '';
+      
+      matches.slice(0, 8).forEach((tag, index) => {
+        const item = document.createElement('div');
+        item.className = 'suggestion-item px-3 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 text-sm';
+        item.textContent = tag;
+        
+        item.addEventListener('mousedown', (e) => {
+          e.preventDefault(); // Prevent blur from hiding autocomplete
+          this.selectTag(tag);
+        });
+        
+        autocomplete.appendChild(item);
+      });
+      
+      autocomplete.classList.remove('hidden');
+      this.currentWordIndex = wordIndex;
+    }
+
+    selectTag(tag) {
+      const input = this.tagsInput;
+      const value = input.value;
+      const words = value.split(' ');
+      
+      // Replace the current word with the selected tag
+      words[this.currentWordIndex] = tag;
+      
+      // Join back and add space if not at end
+      const newValue = words.join(' ');
+      input.value = newValue + (newValue.endsWith(' ') ? '' : ' ');
+      
+      // Set cursor position after the inserted tag
+      const cursorPos = words.slice(0, this.currentWordIndex + 1).join(' ').length + 1;
+      input.setSelectionRange(cursorPos, cursorPos);
+      
+      this.hideAutocomplete();
+      input.focus();
+    }
+
+    hideAutocomplete() {
+      setTimeout(() => {
+        this.tagsAutocomplete.classList.add('hidden');
+      }, 150); // Small delay to allow click events
+    }
+
+    showStatus(message, type) {
+      const colors = {
+        success: 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 border-green-200 dark:border-green-800',
+        error: 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border-red-200 dark:border-red-800',
+        info: 'bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 border-blue-200 dark:border-blue-800'
+      };
+
+      this.statusMessage.className = `p-4 rounded-md border ${colors[type]}`;
+      this.statusMessage.textContent = message;
+      this.statusMessage.classList.remove('hidden');
+
+      setTimeout(() => {
+        this.statusMessage.classList.add('hidden');
+      }, 5000);
+    }
+  }
+
+  // Initialize editor when page loads
+  function initEditor() {
+    console.log('Initializing BlogEditor...');
+    console.log('editPostData available:', !!window.editPostData);
+    console.log('failedEditSlug available:', !!window.failedEditSlug);
+    if (window.editPostData) {
+      console.log('editPostData:', window.editPostData);
+    }
+    if (window.failedEditSlug) {
+      console.log('Failed to find post for slug:', window.failedEditSlug);
+    }
+    new BlogEditor();
+  }
+
+  // Initialize editor when page loads
+  document.addEventListener('astro:page-load', initEditor);
+
+  // Also initialize on initial page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEditor);
+  } else {
+    // Wait a bit to ensure the editPostData script has run
+    setTimeout(initEditor, 100);
+  }
+</script>
+
+<style>
+  .editor-tab.active {
+    @apply border-blue-500 text-blue-600 dark:text-blue-400;
+  }
+  
+  .editor-tab:not(.active) {
+    @apply border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300;
+  }
+  
+  .suggestion-item.selected {
+    @apply bg-blue-100 dark:bg-blue-800 text-blue-900 dark:text-blue-100;
+  }
+  
+  #markdown-editor.drag-over {
+    @apply border-blue-400 bg-blue-50 dark:bg-blue-900/20 border-2;
+  }
+</style>

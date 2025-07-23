@@ -5,6 +5,7 @@ export type Page = {
 
 export interface Site extends Page {
   AUTHOR: string
+  EDIT_MODE?: boolean
 }
 
 export type Links = {

@@ -15,7 +15,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    date: z.coerce.date(),
+    date: z.string().transform(str => new Date(str)), // Parse string dates
     tags: z.array(z.string()),
     draft: z.boolean().optional(),
   }),
@@ -26,7 +26,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    date: z.coerce.date(),
+    date: z.string().transform(str => new Date(str)), // Parse string dates
     tags: z.array(z.string()),
     draft: z.boolean().optional(),
     demoUrl: z.string().optional(),

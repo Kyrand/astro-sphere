@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import { cn } from "@lib/utils";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Calculate tag counts
+const tagCounts: Record<string, number> = {};
+posts.forEach(post => {
+  post.data.tags.forEach(tag => {
+    tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+  });
+});
+
+// Get all unique tags and sort by count (descending)
+const sortedTags = Object.entries(tagCounts)
+  .sort(([, a], [, b]) => b - a)
+  .map(([tag]) => tag);
+---
+
+<PageLayout title="Tags" description="All tags used in blog posts">
+  <TopLayout>
+    <div class="animate">
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+        Tags
+      </h1>
+      <div class="mt-1">
+        Browse all tags used in blog posts
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <div class="flex flex-wrap gap-3">
+        {sortedTags.map((tag) => (
+          <a
+            href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+            class={cn(
+              "px-4 py-2 rounded-full text-sm",
+              "bg-black/5 dark:bg-white/10",
+              "hover:bg-black/10 hover:dark:bg-white/15",
+              "transition-colors duration-300 ease-in-out",
+              "flex items-center gap-2"
+            )}
+          >
+            <span>{tag}</span>
+            <span class="text-xs opacity-60">({tagCounts[tag]})</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </BottomLayout>
+</PageLayout>

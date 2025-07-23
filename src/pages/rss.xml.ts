@@ -23,7 +23,7 @@ export async function GET(context: Context) {
       description: item.data.summary,
       pubDate: item.data.date,
       link: item.slug.startsWith("blog")
-        ? `/blog/${item.slug}/`
+        ? `/${item.slug}/`
         : `/projects/${item.slug}/`,
     })),
   })

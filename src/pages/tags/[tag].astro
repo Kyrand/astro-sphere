@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import ArrowCard from "@components/ArrowCard";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  
+  // Get all unique tags
+  const uniqueTags = [...new Set(posts.flatMap(post => post.data.tags))];
+  
+  return uniqueTags.map(tag => {
+    const filteredPosts = posts
+      .filter(post => !post.data.draft && post.data.tags.includes(tag))
+      .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+    
+    return {
+      params: { tag: tag.toLowerCase().replace(/\s+/g, '-') },
+      props: { tag, posts: filteredPosts }
+    };
+  });
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<PageLayout title={`Tag: ${tag}`} description={`All posts tagged with "${tag}"`}>
+  <TopLayout>
+    <div class="animate">
+      <div class="flex items-center gap-2">
+        <a href="/tags" class="text-black/60 dark:text-white/60 hover:text-black hover:dark:text-white transition-colors">
+          Tags
+        </a>
+        <span class="text-black/60 dark:text-white/60">/</span>
+        <span class="text-black dark:text-white">{tag}</span>
+      </div>
+      <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
+        Posts tagged "{tag}"
+      </h1>
+      <div class="mt-1">
+        {posts.length} {posts.length === 1 ? 'post' : 'posts'} found
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <ul class="flex flex-col">
+        {posts.map((post, index) => (
+          <li>
+            <ArrowCard entry={post} />
+            {index < posts.length - 1 && (
+              <div class="border-b border-gray-200 dark:border-gray-700 my-3"></div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </BottomLayout>
+</PageLayout>

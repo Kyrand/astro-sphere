@@ -1,0 +1,146 @@
+
+> astro-sphere@1.0.0 dev
+> astro dev
+
+15:54:29 [types] Generated 1ms
+15:54:29 [vite] Re-optimizing dependencies because lockfile has changed
+15:54:29 [vite] Port 4321 is in use, trying another one...
+15:54:29 [vite] Port 4322 is in use, trying another one...
+15:54:29 [vite] Port 4323 is in use, trying another one...
+15:54:29 [vite] Port 4324 is in use, trying another one...
+
+ astro  v4.16.18 ready in 603 ms
+
+┃ Local    http://localhost:4325/
+┃ Network  use --host to expose
+
+15:54:30 watching for file changes...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+15:56:38 [200] /editor 43ms
+15:56:38 [200] /api/get-tags 40ms
+15:56:41 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+Image upload error: TypeError: _Request.formData: Could not parse content as FormData.
+    at webidl.errors.exception (node:internal/deps/undici/undici:1432:14)
+    at _Request.formData (node:internal/deps/undici/undici:4505:33)
+    at async Module.POST (/home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/upload-image.js:10:22)
+    at async renderEndpoint (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/runtime/server/endpoint.js:34:18)
+    at async lastNext (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/core/render-context.js:139:23)
+15:56:41 [500] POST /api/upload-image 2ms
+15:57:02 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/upload-image.js.tmp.3434824.1753282622237 found. Prefix filename with an underscore (`_`) to ignore.
+15:57:02 [watch] src/pages/api/upload-image.js
+15:57:07 [200] /editor 7ms
+15:57:07 [200] /api/get-tags 20ms
+15:57:10 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+Content-Type: null
+15:57:10 [400] POST /api/upload-image 1ms
+15:57:37 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/upload-image.js.tmp.3434824.1753282657381 found. Prefix filename with an underscore (`_`) to ignore.
+15:57:37 [watch] src/pages/api/upload-image.js
+15:57:43 [200] /editor 6ms
+15:57:43 [200] /api/get-tags 49ms
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryllwqchYOhjtswn1i
+15:57:45 [200] POST /api/upload-image 9ms
+15:58:19 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/upload-image.js.tmp.3434824.1753282699958 found. Prefix filename with an underscore (`_`) to ignore.
+15:58:19 [watch] src/pages/api/upload-image.js
+15:58:58 [200] /editor 6ms
+15:58:58 [200] /api/get-tags 48ms
+15:59:00 [200] POST /api/upload-image 3ms
+16:05:00 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/upload-image.js.tmp.3434824.1753283100904 found. Prefix filename with an underscore (`_`) to ignore.
+16:05:00 [watch] src/pages/api/upload-image.js
+16:05:25 [200] /editor 6ms
+16:05:26 [200] /api/get-tags 20ms
+16:05:28 [200] POST /api/upload-image 3ms
+16:06:46 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283206731 found. Prefix filename with an underscore (`_`) to ignore.
+16:06:46 [watch] src/pages/editor/index.astro
+16:07:07 [200] /editor 4ms
+16:07:08 [200] /api/get-tags 35ms
+16:09:41 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283381048 found. Prefix filename with an underscore (`_`) to ignore.
+16:09:41 [watch] src/pages/editor/index.astro
+16:09:48 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283388924 found. Prefix filename with an underscore (`_`) to ignore.
+16:09:48 [watch] src/pages/editor/index.astro
+16:09:55 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283395062 found. Prefix filename with an underscore (`_`) to ignore.
+16:09:55 [watch] src/pages/editor/index.astro
+16:10:20 [200] /editor 5ms
+16:10:21 [200] /api/get-tags 36ms
+16:10:51 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283451026 found. Prefix filename with an underscore (`_`) to ignore.
+16:10:51 [watch] src/pages/editor/index.astro
+16:11:01 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283461330 found. Prefix filename with an underscore (`_`) to ignore.
+16:11:01 [watch] src/pages/editor/index.astro
+16:11:07 [200] /editor 5ms
+16:11:07 [200] /api/get-tags 14ms
+16:11:34 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283494837 found. Prefix filename with an underscore (`_`) to ignore.
+16:11:34 [watch] src/pages/editor/index.astro
+16:11:50 [200] /editor 4ms
+16:11:50 [200] /api/get-tags 21ms
+16:12:20 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753283540509 found. Prefix filename with an underscore (`_`) to ignore.
+16:12:20 [watch] src/pages/editor/index.astro
+16:18:13 [watch] src/layouts/ArticleTopLayout.astro
+16:18:24 [watch] src/layouts/ArticleTopLayout.astro
+16:18:56 [WARN] [router] A `getStaticPaths()` route pattern was matched, but no matching static path was found for requested path `/blog/astro-sphere-file-structure`.
+
+Possible dynamic routes being matched: src/pages/blog/[...slug].astro.
+16:18:56 [404] /blog/astro-sphere-file-structure 2ms
+16:19:18 [200] /blog 12ms
+16:19:30 [200] /blog/01-astro-sphere-file-structure 207ms
+16:19:33 [200] /editor 4ms
+16:19:33 [200] /api/get-tags 2ms
+16:24:09 [200] /blog/04-astro-sphere-writing-markdown 275ms
+16:24:09 [200] /_image 27ms
+16:24:09 [200] /editor 3ms
+16:24:10 [200] /api/get-tags 2ms
+16:24:10 [404] /spongebob.png 1ms
+16:24:10 [404] /spongebob.png 1ms
+16:24:10 [404] /spongebob.png 1ms
+16:24:13 [404] /spongebob.png 1ms
+16:24:14 [404] /spongebob.png 0ms
+16:24:14 [404] /spongebob.png 1ms
+16:24:57 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753284297577 found. Prefix filename with an underscore (`_`) to ignore.
+16:24:57 [watch] src/pages/editor/index.astro
+16:25:08 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753284308175 found. Prefix filename with an underscore (`_`) to ignore.
+16:25:08 [watch] src/pages/editor/index.astro
+16:25:33 [200] /editor 5ms
+16:25:34 [200] /api/get-tags 30ms
+16:25:34 [404] /spongebob.png 1ms
+16:25:34 [404] /spongebob.png 1ms
+16:25:36 [404] /spongebob.png 1ms
+16:25:37 [404] /spongebob.png 1ms
+16:38:53 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753285133210 found. Prefix filename with an underscore (`_`) to ignore.
+16:38:53 [watch] src/pages/editor/index.astro
+16:39:31 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753285171287 found. Prefix filename with an underscore (`_`) to ignore.
+16:39:31 [watch] src/pages/editor/index.astro
+16:39:40 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753285180232 found. Prefix filename with an underscore (`_`) to ignore.
+16:39:40 [watch] src/pages/editor/index.astro
+16:45:09 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285509803 found. Prefix filename with an underscore (`_`) to ignore.
+16:45:37 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285537313 found. Prefix filename with an underscore (`_`) to ignore.
+16:46:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285567412 found. Prefix filename with an underscore (`_`) to ignore.
+16:46:23 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753285583342 found. Prefix filename with an underscore (`_`) to ignore.
+16:46:23 [watch] src/pages/editor/index.astro
+16:47:12 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753285632359 found. Prefix filename with an underscore (`_`) to ignore.
+16:47:12 [watch] src/pages/editor/index.astro
+16:49:24 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285764189 found. Prefix filename with an underscore (`_`) to ignore.
+16:49:53 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285793829 found. Prefix filename with an underscore (`_`) to ignore.
+16:51:06 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285866354 found. Prefix filename with an underscore (`_`) to ignore.
+16:51:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285875323 found. Prefix filename with an underscore (`_`) to ignore.
+16:51:31 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285891424 found. Prefix filename with an underscore (`_`) to ignore.
+16:51:38 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285898904 found. Prefix filename with an underscore (`_`) to ignore.
+16:52:40 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285960736 found. Prefix filename with an underscore (`_`) to ignore.
+16:53:04 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753285984522 found. Prefix filename with an underscore (`_`) to ignore.
+16:53:21 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753286001356 found. Prefix filename with an underscore (`_`) to ignore.
+16:53:39 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753286019945 found. Prefix filename with an underscore (`_`) to ignore.
+16:59:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286347302 found. Prefix filename with an underscore (`_`) to ignore.
+16:59:07 [watch] src/pages/editor/index.astro
+16:59:13 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286353956 found. Prefix filename with an underscore (`_`) to ignore.
+16:59:13 [watch] src/pages/editor/index.astro
+17:02:30 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286550107 found. Prefix filename with an underscore (`_`) to ignore.
+17:02:30 [watch] src/pages/editor/index.astro
+17:02:46 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286566698 found. Prefix filename with an underscore (`_`) to ignore.
+17:02:46 [watch] src/pages/editor/index.astro
+17:02:57 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286577040 found. Prefix filename with an underscore (`_`) to ignore.
+17:02:57 [watch] src/pages/editor/index.astro
+17:03:03 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286583965 found. Prefix filename with an underscore (`_`) to ignore.
+17:03:03 [watch] src/pages/editor/index.astro
+17:03:12 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753286592464 found. Prefix filename with an underscore (`_`) to ignore.
+17:03:12 [watch] src/pages/editor/index.astro
+17:08:28 [watch] src/components/Footer.astro
+17:08:38 [watch] src/components/Footer.astro

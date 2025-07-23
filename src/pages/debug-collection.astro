@@ -1,0 +1,43 @@
+---
+let errorMessage = '';
+let posts = [];
+
+try {
+  const { getCollection } = await import('astro:content');
+  console.log('getCollection imported successfully');
+  
+  posts = await getCollection("blog");
+  console.log('getCollection("blog") succeeded, found', posts.length, 'posts');
+  
+} catch (error) {
+  errorMessage = error.message;
+  console.error('getCollection failed:', error);
+  console.error('Error stack:', error.stack);
+}
+---
+
+<html>
+<head>
+  <title>Collection Debug</title>
+</head>
+<body>
+  <h1>Collection Debug Page</h1>
+  
+  {errorMessage ? (
+    <div style="color: red;">
+      <h2>Error:</h2>
+      <p>{errorMessage}</p>
+    </div>
+  ) : (
+    <div style="color: green;">
+      <h2>Success!</h2>
+      <p>Found {posts.length} blog posts</p>
+      <ul>
+        {posts.slice(0, 3).map(post => (
+          <li>{post.slug} - {post.data.title}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+</body>
+</html>

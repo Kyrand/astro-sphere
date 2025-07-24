@@ -59,10 +59,10 @@ Relative image in the /public folder
 Relative Image in the same folder as the markdown
 
 ```markdown
-![Test Relative Image](./spongebob.png)
+![Test Relative Image](/blog_assets/images/spongebob.png)
 ```
 
-![Test Relative Image](./spongebob.png)
+![Test Relative Image](/blog_assets/images/spongebob.png)
 
 ## Blockquotes
 

@@ -4,6 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
+- `make dev` to start the dev server
+
+**Important:**
+
+- NEVER start the server in any other way than with `make dev`, NEVER kill or stop it.
+- the server and the client are logging into .log/challmar.log which you can look at with `make tail-log`
+- If you are told about a bug, always consult the log first (`make tail-log`)
+- **After creating or testing new modules/endpoints**: Always run `make tail-log` to check for import errors, missing dependencies, or runtime issues. For example, after creating test scripts like 'test_page_processing.py', check the logs for any errors that may not be immediately visible in the response.
+
+
 **IMPORTANT**
 Use playwright mcp to open the site (localhost:4321) during debugging to make sure that, for example:
 - text appears where it should be pre-filled (e.g. /editor when editing an existing post)

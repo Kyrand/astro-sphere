@@ -1,0 +1,1 @@
+services: pnpm run dev

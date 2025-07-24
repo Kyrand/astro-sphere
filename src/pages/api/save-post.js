@@ -15,7 +15,7 @@ export async function POST({ request }) {
       });
     }
 
-    const { title, summary, tags, date, content, slug, draft = false } = await request.json();
+    const { title, summary, tags, date, content, slug, draft = false, editSlug } = await request.json();
     
     // Validate required fields
     if (!title || !content) {
@@ -27,31 +27,53 @@ export async function POST({ request }) {
       });
     }
 
-    // Generate slug if not provided
-    const postSlug = slug || title
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .trim();
-
-    // Generate filename with incremental number to avoid conflicts
-    let filename = `${postSlug}.md`;
-    let counter = 1;
-    
-    // Check if file exists and increment counter if needed
     const blogDir = './src/content/blog';
     const fs = await import('fs/promises');
     
-    try {
-      while (true) {
-        const testPath = join(blogDir, filename);
-        await fs.access(testPath);
-        // File exists, increment counter
-        filename = `${postSlug}-${counter}.md`;
-        counter++;
+    // If we're editing an existing post, use the editSlug for the filename
+    let filename;
+    let postSlug;
+    
+    if (editSlug) {
+      // We're updating an existing post
+      filename = `${editSlug}.md`;
+      postSlug = editSlug;
+      
+      // Check if the file exists
+      try {
+        await fs.access(join(blogDir, filename));
+      } catch {
+        return new Response(JSON.stringify({ 
+          error: 'Original post not found for editing' 
+        }), {
+          status: 404,
+          headers: { 'Content-Type': 'application/json' }
+        });
       }
-    } catch {
-      // File doesn't exist, we can use this filename
+    } else {
+      // We're creating a new post
+      postSlug = slug || title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .trim();
+      
+      // Generate filename with incremental number to avoid conflicts
+      filename = `${postSlug}.md`;
+      let counter = 1;
+      
+      // Check if file exists and increment counter if needed
+      try {
+        while (true) {
+          const testPath = join(blogDir, filename);
+          await fs.access(testPath);
+          // File exists, increment counter
+          filename = `${postSlug}-${counter}.md`;
+          counter++;
+        }
+      } catch {
+        // File doesn't exist, we can use this filename
+      }
     }
 
     // Format the frontmatter

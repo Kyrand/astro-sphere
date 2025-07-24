@@ -254,6 +254,12 @@ if (editSlug) {
           >
             Clear
           </button>
+          <button
+            id="delete-post"
+            class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 hidden"
+          >
+            Delete Post
+          </button>
         </div>
 
         <!-- Status Messages -->
@@ -268,30 +274,51 @@ if (editSlug) {
   href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
   rel="stylesheet"
 />
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"
-></script>
+<script is:inline>
+  // Load Prism.js dynamically with sequential loading
+  window.loadPrism = function() {
+    if (window.Prism) return Promise.resolve();
+    
+    return new Promise((resolve) => {
+      const scripts = [
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js'
+      ];
+      
+      function loadScript(src) {
+        return new Promise((scriptResolve) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = scriptResolve;
+          script.onerror = () => {
+            console.warn('Failed to load script:', src);
+            scriptResolve(); // Continue even if one script fails
+          };
+          document.head.appendChild(script);
+        });
+      }
+      
+      // Load scripts sequentially, not in parallel
+      async function loadSequentially() {
+        for (const script of scripts) {
+          await loadScript(script);
+        }
+        resolve();
+      }
+      
+      loadSequentially().catch((error) => {
+        console.warn('Failed to load Prism.js:', error);
+        resolve(); // Continue without Prism
+      });
+    });
+  };
+</script>
 
 <script is:inline define:vars={{ editPost, editSlug }}>
   if (editPost) {
@@ -324,6 +351,7 @@ if (editSlug) {
       this.previewHtml = document.getElementById("preview-html");
       this.saveButton = document.getElementById("save-post");
       this.clearButton = document.getElementById("clear-editor");
+      this.deleteButton = document.getElementById("delete-post");
       this.statusMessage = document.getElementById("status-message");
       this.tagsInput = document.getElementById("post-tags");
       this.tagsAutocomplete = document.getElementById("tags-autocomplete");
@@ -359,6 +387,9 @@ if (editSlug) {
       // Actions
       this.saveButton.addEventListener("click", () => this.savePost());
       this.clearButton.addEventListener("click", () => this.clearEditor());
+      if (this.deleteButton) {
+        this.deleteButton.addEventListener("click", () => this.deletePost());
+      }
 
       // Auto-update preview
       this.markdownEditor.addEventListener("input", () => this.updatePreview());
@@ -372,25 +403,27 @@ if (editSlug) {
       this.tagsInput.addEventListener("blur", () => this.hideAutocomplete());
       console.log("Tags event listeners attached");
 
-      // File upload listeners
-      this.fileUploadArea.addEventListener("click", () =>
-        this.markdownFileInput.click()
-      );
-      this.fileUploadArea.addEventListener("dragover", (e) =>
-        this.handleFileUploadDragOver(e)
-      );
-      this.fileUploadArea.addEventListener("drop", (e) =>
-        this.handleFileUploadDrop(e)
-      );
-      this.fileUploadArea.addEventListener("dragenter", (e) =>
-        this.handleFileUploadDragEnter(e)
-      );
-      this.fileUploadArea.addEventListener("dragleave", (e) =>
-        this.handleFileUploadDragLeave(e)
-      );
-      this.markdownFileInput.addEventListener("change", (e) =>
-        this.handleFileUpload(e)
-      );
+      // File upload listeners (only if elements exist)
+      if (this.fileUploadArea && this.markdownFileInput) {
+        this.fileUploadArea.addEventListener("click", () =>
+          this.markdownFileInput.click()
+        );
+        this.fileUploadArea.addEventListener("dragover", (e) =>
+          this.handleFileUploadDragOver(e)
+        );
+        this.fileUploadArea.addEventListener("drop", (e) =>
+          this.handleFileUploadDrop(e)
+        );
+        this.fileUploadArea.addEventListener("dragenter", (e) =>
+          this.handleFileUploadDragEnter(e)
+        );
+        this.fileUploadArea.addEventListener("dragleave", (e) =>
+          this.handleFileUploadDragLeave(e)
+        );
+        this.markdownFileInput.addEventListener("change", (e) =>
+          this.handleFileUpload(e)
+        );
+      }
 
       // Load available tags
       this.loadAvailableTags();
@@ -400,6 +433,14 @@ if (editSlug) {
       // Also check URL for edit parameter as backup
       const urlParams = new URLSearchParams(window.location.search);
       const editSlug = urlParams.get("edit");
+      
+      // Store the edit slug for potential deletion
+      this.currentEditSlug = editSlug;
+      
+      // Show delete button if we're editing
+      if (editSlug && this.deleteButton) {
+        this.deleteButton.classList.remove('hidden');
+      }
 
       if (window.editPostData) {
         const post = window.editPostData;
@@ -606,11 +647,21 @@ if (editSlug) {
             if (result.success) {
               this.previewHtml.innerHTML = result.html;
 
-              // Highlight code blocks if Prism is available
-              if (window.Prism) {
-                setTimeout(() => {
-                  window.Prism.highlightAll();
-                }, 10);
+              // Highlight code blocks with Prism
+              if (typeof window !== 'undefined' && window.loadPrism) {
+                window.loadPrism().then(() => {
+                  if (window.Prism) {
+                    try {
+                      setTimeout(() => {
+                        window.Prism.highlightAll();
+                      }, 10);
+                    } catch (error) {
+                      console.log('Prism highlighting failed:', error);
+                    }
+                  }
+                }).catch(error => {
+                  console.log('Failed to load Prism:', error);
+                });
               }
             } else {
               throw new Error(result.error || "Failed to render markdown");
@@ -919,24 +970,28 @@ if (editSlug) {
             tags: tags.split(" ").filter((tag) => tag.trim()),
             draft,
             content: "\n" + content, // Add newline after frontmatter
+            editSlug: this.currentEditSlug // Pass the edit slug if we're editing
           }),
         });
 
         const result = await response.json();
 
         if (response.ok && result.success) {
+          const action = this.currentEditSlug ? 'updated' : 'saved';
           this.showStatus(
-            `Post saved successfully as: ${result.filename}`,
+            `Post ${action} successfully as: ${result.filename}`,
             "success"
           );
 
-          // Optionally clear the editor after successful save
-          if (
-            confirm(
-              "Post saved! Would you like to clear the editor to create a new post?"
-            )
-          ) {
-            this.clearEditor();
+          // Only offer to clear editor for new posts, not when editing
+          if (!this.currentEditSlug) {
+            if (
+              confirm(
+                "Post saved! Would you like to clear the editor to create a new post?"
+              )
+            ) {
+              this.clearEditor();
+            }
           }
         } else {
           throw new Error(result.error || "Failed to save post");
@@ -1001,6 +1056,47 @@ ${tags
         this.markdownEditor.value = "";
         this.updatePreview();
         this.showStatus("Editor cleared.", "info");
+      }
+    }
+
+    async deletePost() {
+      if (!this.currentEditSlug) {
+        this.showStatus("No post to delete. This only works when editing an existing post.", "error");
+        return;
+      }
+
+      const title = document.getElementById("post-title").value || this.currentEditSlug;
+      
+      if (confirm(`Are you sure you want to delete "${title}"? This cannot be undone.`)) {
+        try {
+          this.showStatus("Deleting post...", "info");
+          
+          const response = await fetch("/api/delete-post", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              slug: this.currentEditSlug
+            })
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.success) {
+            this.showStatus("Post deleted successfully. Redirecting...", "success");
+            
+            // Redirect to homepage after a short delay
+            setTimeout(() => {
+              window.location.href = "/";
+            }, 1500);
+          } else {
+            throw new Error(result.error || "Failed to delete post");
+          }
+        } catch (error) {
+          console.error("Delete error:", error);
+          this.showStatus("Error deleting post: " + error.message, "error");
+        }
       }
     }
 

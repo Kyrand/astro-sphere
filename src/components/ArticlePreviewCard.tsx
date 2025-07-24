@@ -16,21 +16,37 @@ export default function ArticlePreviewCard({ entry, editMode, viewMode = 'normal
   
   createEffect(() => {
     if (viewMode === 'compact') {
-      // For compact mode, show first paragraph
-      const firstParagraph = content.split('\n\n')[0] || ''
-      setDisplayContent(firstParagraph)
-      setWordCount(content.split(/\s+/).filter(word => word.length > 0).length)
+      // For compact mode, extract the first paragraph from HTML
+      const tempDiv = document.createElement('div')
+      tempDiv.innerHTML = content
+      
+      // Find the first paragraph element
+      const firstParagraph = tempDiv.querySelector('p')
+      const firstParagraphContent = firstParagraph ? firstParagraph.outerHTML : ''
+      
+      setDisplayContent(firstParagraphContent)
+      
+      // Get word count from the entire content
+      const textContent = tempDiv.textContent || tempDiv.innerText || ''
+      setWordCount(textContent.split(/\s+/).filter(word => word.length > 0).length)
     } else {
       // For normal mode, show up to textLimit words
-      const words = content.split(/\s+/).filter(word => word.length > 0)
+      const tempDiv = document.createElement('div')
+      tempDiv.innerHTML = content
+      const textContent = tempDiv.textContent || tempDiv.innerText || ''
+      const words = textContent.split(/\s+/).filter(word => word.length > 0)
       setWordCount(words.length)
       
       if (words.length <= textLimit) {
         setDisplayContent(content)
       } else {
-        // Truncate at word boundary
-        const truncated = words.slice(0, textLimit).join(' ')
-        setDisplayContent(truncated)
+        // Simple truncation: get text content, truncate, then try to preserve some HTML
+        const truncatedWords = words.slice(0, textLimit)
+        const truncatedText = truncatedWords.join(' ') + '...'
+        
+        // For now, just use the truncated text wrapped in a paragraph
+        // This is simpler and more reliable than trying to preserve complex HTML structure
+        setDisplayContent(`<p>${truncatedText}</p>`)
       }
     }
   })
@@ -106,17 +122,46 @@ export default function ArticlePreviewCard({ entry, editMode, viewMode = 'normal
           </Show>
         </div>
         
-        {/* Edit Button (for normal mode) */}
-        <Show when={editMode && viewMode === 'normal'}>
-          <a 
-            href={`/editor?edit=${entry.slug}`}
-            class="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800 transition-colors duration-200"
-          >
-            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-            </svg>
-            Edit
-          </a>
+        {/* Edit and Delete Buttons */}
+        <Show when={editMode}>
+          <div class="flex gap-2">
+            <a 
+              href={`/editor?edit=${entry.slug}`}
+              class="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800 transition-colors duration-200"
+            >
+              <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+              </svg>
+              Edit
+            </a>
+            <button
+              onClick={() => {
+                if (confirm(`Are you sure you want to delete "${entry.data.title}"?`)) {
+                  fetch('/api/delete-post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ slug: entry.slug })
+                  })
+                  .then(res => res.json())
+                  .then(result => {
+                    if (result.success) {
+                      alert('Post deleted successfully');
+                      window.location.reload();
+                    } else {
+                      alert('Error deleting post: ' + result.error);
+                    }
+                  })
+                  .catch(err => alert('Error deleting post: ' + err.message));
+                }
+              }}
+              class="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md bg-red-100 text-red-800 hover:bg-red-200 dark:bg-red-900 dark:text-red-200 dark:hover:bg-red-800 transition-colors duration-200"
+            >
+              <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+              Delete
+            </button>
+          </div>
         </Show>
       </div>
     </article>

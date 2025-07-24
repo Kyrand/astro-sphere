@@ -1,341 +1,182 @@
-
-> astro-sphere@1.0.0 dev
-> astro dev
-
-18:46:39 [types] Generated 2ms
-18:46:39 [vite] Port 4321 is in use, trying another one...
-18:46:39 [vite] Port 4322 is in use, trying another one...
-18:46:39 [vite] Port 4323 is in use, trying another one...
-18:46:39 [vite] Port 4324 is in use, trying another one...
-18:46:39 [vite] Port 4325 is in use, trying another one...
-
- astro  v4.16.18 ready in 899 ms
-
-┃ Local    http://localhost:4326/
-┃ Network  use --host to expose
-
-18:46:39 watching for file changes...
-Browserslist: caniuse-lite is outdated. Please run:
-  npx update-browserslist-db@latest
-  Why you should do it regularly: https://github.com/browserslist/update-db#readme
-18:46:50 [200] / 60ms
-18:46:54 [200] / 5ms
-18:46:59 [200] / 5ms
-18:47:04 [watch] page.html
-18:47:04 [200] / 6ms
-18:47:04 [watch] page.html
-18:47:21 [200] / 8ms
-18:49:27 [watch] src/components/HighlightsColumn.astro
-18:49:33 [200] / 9ms
-18:49:39 [200] / 4ms
-18:49:43 [200] / 5ms
-18:49:48 [200] / 6ms
-19:05:04 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753293904374 found. Prefix filename with an underscore (`_`) to ignore.
-19:05:04 [watch] src/pages/api/render-markdown.js
-19:05:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/upload-image.js.tmp.3434824.1753293915455 found. Prefix filename with an underscore (`_`) to ignore.
-19:05:15 [watch] src/pages/api/upload-image.js
-22:09:33 [watch] src/components/Header.astro
-22:09:38 [watch] src/components/Header.astro
-22:09:47 [watch] src/components/Header.astro
-22:10:00 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753305000930 found. Prefix filename with an underscore (`_`) to ignore.
-22:10:00 [watch] src/pages/index.astro
-22:10:05 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753305005923 found. Prefix filename with an underscore (`_`) to ignore.
-22:10:05 [watch] src/pages/index.astro
-22:10:14 [watch] src/components/SearchCollection.tsx
-22:10:20 [watch] src/components/SearchCollection.tsx
-22:10:26 [watch] src/components/SearchCollection.tsx
-22:10:32 [watch] src/components/SearchCollection.tsx
-11:58:48 Configuration file updated. Restarting...
-11:58:49 [types] Generated 3ms
-11:58:49 [vite] Port 4321 is in use, trying another one...
-11:58:49 [vite] Port 4322 is in use, trying another one...
-11:58:49 [vite] Port 4323 is in use, trying another one...
-11:58:49 [vite] Port 4324 is in use, trying another one...
-11:58:49 [vite] Port 4325 is in use, trying another one...
-11:59:05 Configuration file updated. Restarting...
-11:59:05 [types] Generated 2ms
-11:59:05 [vite] Port 4321 is in use, trying another one...
-11:59:05 [vite] Port 4322 is in use, trying another one...
-11:59:05 [vite] Port 4323 is in use, trying another one...
-11:59:05 [vite] Port 4324 is in use, trying another one...
-11:59:05 [vite] Port 4325 is in use, trying another one...
-11:59:11 Configuration file updated. Restarting...
-11:59:11 [types] Generated 2ms
-11:59:11 [vite] Port 4321 is in use, trying another one...
-11:59:11 [vite] Port 4322 is in use, trying another one...
-11:59:11 [vite] Port 4323 is in use, trying another one...
-12:01:52 Configuration file updated. Restarting...
-12:01:52 [types] Generated 2ms
-12:01:52 [vite] Port 4321 is in use, trying another one...
-12:01:52 [vite] Port 4322 is in use, trying another one...
-12:01:52 [vite] Port 4323 is in use, trying another one...
-12:01:52 [vite] Port 4324 is in use, trying another one...
-12:01:52 [vite] Port 4325 is in use, trying another one...
-12:08:48 Configuration file removed. Restarting...
-12:08:49 [types] Generated 1ms
-12:08:49 [vite] Port 4321 is in use, trying another one...
-12:08:49 [vite] Port 4322 is in use, trying another one...
-12:08:49 [vite] Port 4323 is in use, trying another one...
-12:08:49 [vite] Port 4324 is in use, trying another one...
-12:08:49 [vite] Port 4325 is in use, trying another one...
-12:26:58 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753356418977 found. Prefix filename with an underscore (`_`) to ignore.
-12:28:45 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753356525248 found. Prefix filename with an underscore (`_`) to ignore.
-12:28:55 Configuration file updated. Restarting...
-12:28:55 [types] Generated 3ms
-12:28:55 [vite] Port 4321 is in use, trying another one...
-12:28:55 [vite] Port 4322 is in use, trying another one...
-12:28:55 [vite] Port 4323 is in use, trying another one...
-12:29:06 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753356546483 found. Prefix filename with an underscore (`_`) to ignore.
-12:34:26 Configuration file updated. Restarting...
-12:34:26 [types] Generated 1ms
-12:34:26 [vite] Re-optimizing dependencies because lockfile has changed
-12:34:26 [vite] Port 4321 is in use, trying another one...
-12:34:26 [vite] Port 4322 is in use, trying another one...
-12:34:26 [vite] Port 4323 is in use, trying another one...
-12:34:26 [vite] Port 4324 is in use, trying another one...
-12:34:26 [vite] Port 4325 is in use, trying another one...
-13:00:47 Configuration file added. Restarting...
-13:00:47 [types] Generated 4ms
-13:00:47 [vite] Port 4321 is in use, trying another one...
-13:00:47 [vite] Port 4322 is in use, trying another one...
-13:00:47 [vite] Port 4323 is in use, trying another one...
-13:00:47 [vite] Port 4324 is in use, trying another one...
-13:02:56 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358576506 found. Prefix filename with an underscore (`_`) to ignore.
-13:05:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358728154 found. Prefix filename with an underscore (`_`) to ignore.
-13:05:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358733567 found. Prefix filename with an underscore (`_`) to ignore.
-13:23:51 Configuration file updated. Restarting...
-13:23:52 [types] Generated 2ms
-13:23:53 [200] / 90ms
-13:23:53 [404] /.well-known/appspecific/com.chrome.devtools.json 2ms
-13:23:54 [vite] ✨ optimized dependencies changed. reloading
-13:23:55 [200] / 53ms
-13:23:55 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:23:59 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359839857 found. Prefix filename with an underscore (`_`) to ignore.
-13:23:59 [watch] src/pages/index.astro
-13:24:00 [200] / 10ms
-13:24:00 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:24:11 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359851873 found. Prefix filename with an underscore (`_`) to ignore.
-13:24:11 [watch] src/pages/index.astro
-13:24:12 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-  Stack trace:
-    at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/vite@5.4.19/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:52101:15
-    [...] See full stack trace in the browser, or rerun with --verbose.
-13:24:12 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:24:29 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-  Stack trace:
-    at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/vite@5.4.19/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:52101:15
-    [...] See full stack trace in the browser, or rerun with --verbose.
-13:24:29 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:25:02 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-  Stack trace:
-    at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/vite@5.4.19/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:52101:15)
-    [...] See full stack trace in the browser, or rerun with --verbose.
-13:25:02 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:26:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359967689 found. Prefix filename with an underscore (`_`) to ignore.
-13:26:07 [watch] src/pages/index.astro
-13:26:08 [ERROR] getHighlighter is not defined
-  Stack trace:
-    at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro:31:21
-    [...] See full stack trace in the browser, or rerun with --verbose.
-13:26:08 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:26:14 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359974442 found. Prefix filename with an underscore (`_`) to ignore.
-13:26:14 [watch] src/pages/index.astro
-13:26:14 [200] / 164ms
-13:26:14 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:27:15 [watch] src/pages/index.astro
-13:27:16 [200] / 84ms
-13:27:16 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:28:23 [200] / 64ms
-13:28:23 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:30:15 [watch] src/pages/index.astro
-13:30:16 [200] / 68ms
-13:30:16 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:30:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360233058 found. Prefix filename with an underscore (`_`) to ignore.
-13:30:33 [watch] src/pages/index.astro
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-13:30:33 [200] / 96ms
-13:30:33 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:30:50 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360250890 found. Prefix filename with an underscore (`_`) to ignore.
-13:30:50 [watch] src/pages/index.astro
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-Processing code block with language: undefined
-13:30:51 [200] / 74ms
-13:30:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:31:00 Configuration file removed. Restarting...
-13:31:00 [types] Generated 4ms
-13:31:00 [vite] Port 4321 is in use, trying another one...
-13:31:00 [vite] Port 4322 is in use, trying another one...
-13:31:00 [vite] Port 4323 is in use, trying another one...
-13:31:56 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360316430 found. Prefix filename with an underscore (`_`) to ignore.
-13:32:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360348606 found. Prefix filename with an underscore (`_`) to ignore.
-13:33:01 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360381808 found. Prefix filename with an underscore (`_`) to ignore.
-13:34:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360455066 found. Prefix filename with an underscore (`_`) to ignore.
-13:44:32 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753361072131 found. Prefix filename with an underscore (`_`) to ignore.
-13:44:39 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753361079261 found. Prefix filename with an underscore (`_`) to ignore.
-13:46:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753361167445 found. Prefix filename with an underscore (`_`) to ignore.
-13:46:34 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753361194728 found. Prefix filename with an underscore (`_`) to ignore.
-13:50:20 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753361420111 found. Prefix filename with an underscore (`_`) to ignore.
-14:02:08 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/save-post.js.tmp.3434824.1753362128370 found. Prefix filename with an underscore (`_`) to ignore.
-14:05:58 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362358497 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:18 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362378970 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:29 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362389394 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:35 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362395688 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:47 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362407818 found. Prefix filename with an underscore (`_`) to ignore.
-14:07:12 [watch] src/content/blog/test.md
-14:08:32 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/save-post.js.tmp.3434824.1753362512781 found. Prefix filename with an underscore (`_`) to ignore.
-14:08:41 [watch] src/content/blog/test.md
-x filename with an underscore (`_`) to ignore.
-12:34:44 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753356884171 found. Prefix filename with an underscore (`_`) to ignore.
-13:00:07 Configuration file removed. Restarting...
-13:00:07 [types] Generated 1ms
-13:00:09 [200] /tags/astro-sphere 41ms
-13:00:09 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:00:10 [200] /blog/01-astro-sphere-file-structure 696ms
-13:00:12 [200] /blog/01-astro-sphere-file-structure 5ms
-13:00:12 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:00:20 [200] /blog/02-astro-sphere-getting-started 102ms
-13:00:20 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:00:26 [200] / 31ms
-13:00:26 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:00:27 [404] /spongebob.png 1ms
-13:00:27 [404] /spongebob.png 1ms
-13:00:37 [200] / 17ms
-13:00:37 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:00:37 [404] /spongebob.png 1ms
-13:00:37 [404] /spongebob.png 1ms
-13:01:04 [200] / 11ms
-13:01:05 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:01:05 [404] /spongebob.png 1ms
-13:01:05 [404] /spongebob.png 1ms
-13:01:16 [200] /rss.xml 5ms
-13:01:21 [200] /settings 5ms
-13:01:21 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:01:29 [200] / 9ms
-13:01:29 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:01:29 [404] /spongebob.png 1ms
-13:01:29 [404] /spongebob.png 1ms
-13:01:34 [200] / 8ms
-13:01:34 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:01:34 [404] /spongebob.png 1ms
-13:01:35 [404] /spongebob.png 1ms
-13:02:56 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358576506 found. Prefix filename with an underscore (`_`) to ignore.
-13:02:56 [watch] src/pages/index.astro
-13:02:56 [200] / 12ms
-13:02:56 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:03:04 [watch] /src/styles/global.css
-13:03:18 [watch] /src/styles/global.css
-13:03:25 [watch] /src/styles/global.css
-13:03:27 [200] / 9ms
-13:03:27 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:03:39 [200] / 12ms
-13:03:39 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:03:47 [200] / 9ms
-13:03:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:03:53 [200] /blog/01-astro-sphere-file-structure 5ms
-13:03:53 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:05:21 [watch] /src/styles/global.css
-13:05:24 [200] / 8ms
-13:05:24 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:05:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358728154 found. Prefix filename with an underscore (`_`) to ignore.
-13:05:28 [watch] src/pages/index.astro
-13:05:28 [200] / 20ms
-13:05:28 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:05:33 [watch] src/pages/index.astro
-13:05:33 [200] / 7ms
-13:05:33 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:06:03 [200] /editor 5ms
-13:06:04 [200] /api/get-tags 2ms
-13:06:06 [200] / 10ms
-13:06:08 [200] /blog/01-astro-sphere-file-structure 5ms
-13:06:16 [200] /blog/02-astro-sphere-getting-started 8ms
-13:06:23 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:07:08 [200] / 12ms
-13:07:08 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:21:09 [200] /tags 10ms
-13:21:09 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:22:54 [200] / 48ms
-13:22:54 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
-13:23:51 Configuration file updated. Restarting...
-13:23:52 [types] Generated 1ms
-13:23:52 [vite] Port 4321 is in use, trying another one...
-13:23:52 [vite] Port 4322 is in use, trying another one...
-13:23:52 [vite] Port 4323 is in use, trying another one...
-13:23:59 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359839857 found. Prefix filename with an underscore (`_`) to ignore.
-13:24:11 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359851873 found. Prefix filename with an underscore (`_`) to ignore.
-13:26:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359967689 found. Prefix filename with an underscore (`_`) to ignore.
-13:26:14 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359974442 found. Prefix filename with an underscore (`_`) to ignore.
-13:27:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360035817 found. Prefix filename with an underscore (`_`) to ignore.
-13:30:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360215731 found. Prefix filename with an underscore (`_`) to ignore.
-13:30:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360233058 found. Prefix filename with an underscore (`_`) to ignore.
-13:30:50 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360250890 found. Prefix filename with an underscore (`_`) to ignore.
-13:31:00 Configuration file removed. Restarting...
-13:31:00 [types] Generated 1ms
-13:31:00 [vite] Port 4321 is in use, trying another one...
-13:31:00 [vite] Port 4322 is in use, trying another one...
-13:31:00 [vite] Port 4323 is in use, trying another one...
-13:31:00 [vite] Port 4324 is in use, trying another one...
-13:31:56 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360316430 found. Prefix filename with an underscore (`_`) to ignore.
-13:32:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360348606 found. Prefix filename with an underscore (`_`) to ignore.
-13:33:01 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360381808 found. Prefix filename with an underscore (`_`) to ignore.
-13:34:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360455066 found. Prefix filename with an underscore (`_`) to ignore.
-13:44:32 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753361072131 found. Prefix filename with an underscore (`_`) to ignore.
-13:44:39 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753361079261 found. Prefix filename with an underscore (`_`) to ignore.
-13:46:12 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753361172021 found. Prefix filename with an underscore (`_`) to ignore.
-13:46:34 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753361194728 found. Prefix filename with an underscore (`_`) to ignore.
-13:50:20 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753361420111 found. Prefix filename with an underscore (`_`) to ignore.
-14:02:08 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/save-post.js.tmp.3434824.1753362128370 found. Prefix filename with an underscore (`_`) to ignore.
-14:05:58 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362358497 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:18 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362378970 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:29 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362389394 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:35 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362395688 found. Prefix filename with an underscore (`_`) to ignore.
-14:06:47 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753362407818 found. Prefix filename with an underscore (`_`) to ignore.
-14:07:12 [watch] src/content/blog/test.md
-14:08:32 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/save-post.js.tmp.3434824.1753362512781 found. Prefix filename with an underscore (`_`) to ignore.
-14:08:41 [watch] src/content/blog/test.md
+!!! =================================================================
+18:04:30 SHOREMAN STARTED
+!!! =================================================================
+18:04:30 services	| 'pnpm run dev' started with pid 164756
+18:04:30 services	| 
+18:04:30 services	| > astro-sphere@1.0.0 dev /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere
+18:04:30 services	| > astro dev
+18:04:30 services	| 
+18:04:32 services	| 18:04:32 [types] Generated 1ms
+18:04:32 services	| 
+18:04:32 services	|  astro  v4.16.18 ready in 739 ms
+18:04:32 services	| 
+18:04:32 services	| ┃ Local    http://localhost:4321/
+18:04:32 services	| ┃ Network  use --host to expose
+18:04:32 services	| 
+18:04:32 services	| 18:04:32 watching for file changes...
+18:04:48 services	| 18:04:48 [200] /editor 55ms
+18:04:48 services	| 18:04:48 [200] /api/get-tags 52ms
+18:04:51 services	| 18:04:51 [200] / 713ms
+18:05:01 services	| 18:05:01 [200] /tags/astro 11ms
+18:05:05 services	| 18:05:05 [200] /tags/astro-sphere 8ms
+18:05:11 services	| 18:05:10 [200] /settings 7ms
+18:05:19 services	| 18:05:19 [200] /settings 4ms
+18:05:21 services	| 18:05:21 [200] / 327ms
+18:05:32 services	| 18:05:32 [200] /editor 4ms
+18:05:32 services	| 18:05:32 [200] /api/get-tags 2ms
+18:05:51 services	| 18:05:51 [200] / 329ms
+18:05:52 services	| 18:05:52 [200] / 290ms
+18:05:53 services	| 18:05:53 [200] / 283ms
+18:05:53 services	| 18:05:53 [200] / 295ms
+18:05:54 services	| 18:05:54 [200] / 258ms
+18:05:54 services	| 18:05:54 [200] / 260ms
+18:05:54 services	| 18:05:54 [200] / 242ms
+18:05:54 services	| [Shiki] 10 instances have been created. Shiki is supposed to be used as a singleton, consider refactoring your code to cache your highlighter instance; Or call `highlighter.dispose()` to release unused instances.
+18:05:55 services	| 18:05:55 [200] / 280ms
+18:05:55 services	| 18:05:55 [200] / 242ms
+18:05:56 services	| 18:05:56 [200] / 324ms
+18:05:56 services	| 18:05:56 [200] / 283ms
+18:05:56 services	| 18:05:56 [200] / 317ms
+18:05:56 services	| 18:05:56 [200] / 289ms
+18:05:57 services	| 18:05:57 [200] /editor 15ms
+18:05:57 services	| 18:05:57 [200] /api/get-tags 2ms
+18:05:57 services	| 18:05:57 [200] /editor 7ms
+18:05:57 services	| 18:05:57 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:05:57 services	|   Stack trace:
+18:05:57 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:05:57 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:05:57 services	| 18:05:57 [200] /api/get-tags 3ms
+18:05:57 services	| 18:05:57 [200] /editor 16ms
+18:05:58 services	| [Shiki] 20 instances have been created. Shiki is supposed to be used as a singleton, consider refactoring your code to cache your highlighter instance; Or call `highlighter.dispose()` to release unused instances.
+18:05:59 services	| 18:05:59 [200] / 1354ms
+18:05:59 services	| 18:05:59 [200] / 1354ms
+18:05:59 services	| 18:05:59 [200] / 1354ms
+18:05:59 services	| 18:05:59 [200] / 1354ms
+18:05:59 services	| 18:05:59 [200] / 1354ms
+18:05:59 services	| 18:05:59 [200] /settings 5ms
+18:05:59 services	| 18:05:59 [200] /editor 6ms
+18:05:59 services	| 18:05:59 [200] /editor 7ms
+18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:05:59 services	|   Stack trace:
+18:05:59 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:05:59 services	|   Stack trace:
+18:05:59 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:05:59 services	|   Stack trace:
+18:05:59 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:05:59 services	|   Stack trace:
+18:05:59 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:05:59 services	|   Stack trace:
+18:05:59 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [200] /editor 9ms
+18:06:15 services	| 18:06:15 [200] / 377ms
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:06:15 services	|   Stack trace:
+18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:27 services	| 18:09:27 Configuration file updated. Restarting...
+18:09:28 services	| 18:09:28 [200] /editor 11ms
+18:09:28 services	| 18:09:28 [200] /editor 11ms
+18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:09:28 services	|   Stack trace:
+18:09:28 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:09:28 services	|   Stack trace:
+18:09:28 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:09:28 services	|   Stack trace:
+18:09:28 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:09:28 services	|   Stack trace:
+18:09:28 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
+18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
+18:09:28 services	|   Stack trace:
+18:09:28 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
+18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:28 services	| 18:09:28 [200] /api/get-tags 208557ms
+18:09:28 services	| 18:09:28 [200] /api/get-tags 193416ms
+18:09:28 services	| 18:09:28 [watch] playwright-report/index.html
+18:09:28 services	| 18:09:28 [200] /api/get-tags 192763ms
+18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
+18:09:45 services	|   Stack trace:
+18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
+18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
+18:09:45 services	|   Stack trace:
+18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
+18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
+18:09:45 services	|   Stack trace:
+18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
+18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
+18:09:45 services	|   Stack trace:
+18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
+18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+18:09:45 services	| 18:09:45 [types] Generated 1ms
+18:09:45 services	| 18:09:45 [vite] Re-optimizing dependencies because vite config has changed
+18:09:45 services	| 18:09:45 [vite] Port 4321 is in use, trying another one...
+18:10:04 services	| 18:10:04 [watch] playwright-report/index.html
+18:11:55 services	| 18:11:55 [watch] src/content/blog/test-blog-post-playwright.md
+18:11:55 services	| 18:11:55 [watch] src/content/blog/test-blog-post-playwright.md
+18:12:18 services	| 18:12:18 [watch] playwright-report/index.html

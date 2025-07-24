@@ -1,11 +1,13 @@
 export interface SiteSettings {
   viewMode: 'normal' | 'compact';
   frontPageArticleTextLimit: number;
+  showHighlightsColumn: boolean;
 }
 
 export const DEFAULT_SETTINGS: SiteSettings = {
   viewMode: 'normal',
-  frontPageArticleTextLimit: 1000
+  frontPageArticleTextLimit: 1000,
+  showHighlightsColumn: true
 };
 
 /**
@@ -40,7 +42,8 @@ export const settingsScript = `
         const settings = JSON.parse(stored);
         return {
           viewMode: settings.viewMode || 'normal',
-          frontPageArticleTextLimit: settings.frontPageArticleTextLimit || 1000
+          frontPageArticleTextLimit: settings.frontPageArticleTextLimit || 1000,
+          showHighlightsColumn: settings.showHighlightsColumn !== undefined ? settings.showHighlightsColumn : true
         };
       }
     } catch (e) {
@@ -48,7 +51,8 @@ export const settingsScript = `
     }
     return {
       viewMode: 'normal',
-      frontPageArticleTextLimit: 1000
+      frontPageArticleTextLimit: 1000,
+      showHighlightsColumn: true
     };
   }
 `;

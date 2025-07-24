@@ -70,6 +70,29 @@ import Container from "@components/Container.astro";
             </p>
           </div>
         </div>
+
+        <!-- Layout Settings -->
+        <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-6">
+          <h2 class="text-xl font-semibold mb-4">Layout Settings</h2>
+          
+          <!-- Highlights Column Setting -->
+          <div class="mb-6">
+            <label class="flex items-center gap-3">
+              <input 
+                type="checkbox" 
+                id="show-highlights-column" 
+                checked
+                class="w-5 h-5 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-neutral-700 text-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-0"
+              />
+              <div>
+                <span class="text-sm font-medium">Show Highlights Column</span>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Display the highlights column on the right side of the front page (desktop only)
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
         
         <!-- Save Button -->
         <div class="flex justify-end">
@@ -91,6 +114,7 @@ import Container from "@components/Container.astro";
   const textLimitContainer = document.getElementById('text-limit-container');
   const textLimitSlider = document.getElementById('text-limit-slider') as HTMLInputElement;
   const textLimitInput = document.getElementById('text-limit-input') as HTMLInputElement;
+  const showHighlightsColumnCheckbox = document.getElementById('show-highlights-column') as HTMLInputElement;
   const saveButton = document.getElementById('save-settings');
   
   // Load settings from localStorage
@@ -108,6 +132,11 @@ import Container from "@components/Container.astro";
       textLimitInput.value = settings.frontPageArticleTextLimit.toString();
     }
     
+    // Set highlights column visibility
+    if (settings.showHighlightsColumn !== undefined) {
+      showHighlightsColumnCheckbox.checked = settings.showHighlightsColumn;
+    }
+    
     // Show/hide text limit based on view mode
     updateTextLimitVisibility();
   }
@@ -116,7 +145,8 @@ import Container from "@components/Container.astro";
   function saveSettings() {
     const settings = {
       viewMode: viewModeSelect.value,
-      frontPageArticleTextLimit: parseInt(textLimitInput.value)
+      frontPageArticleTextLimit: parseInt(textLimitInput.value),
+      showHighlightsColumn: showHighlightsColumnCheckbox.checked
     };
     
     localStorage.setItem('siteSettings', JSON.stringify(settings));

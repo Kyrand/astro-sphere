@@ -1,55 +1,127 @@
 ---
-import { SITE } from "@consts"
-import { cn } from "@lib/utils"
-import { Icon } from "astro-icon/components"
-const { pathname } = Astro.url
-const subpath = pathname.match(/[^/]+/g)
-import Container from "@components/Container.astro"
+import { SITE } from "@consts";
+import { cn } from "@lib/utils";
+import { Icon } from "astro-icon/components";
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^/]+/g);
+import Container from "@components/Container.astro";
 ---
 
-<header id="header" class="fixed top-0 w-full h-16 z-50 ">
+<header id="header" class="fixed top-0 w-full h-16 z-50">
   <Container size="960">
     <div class="relative h-full w-full">
+      <!-- Logo -->
+      <div class="absolute left-0 top-1/2 -translate-y-1/2">
+        <a
+          href="/"
+          class="text-xl font-bold text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 ease-in-out"
+          style="font-family: 'Roboto', 'Times New Roman', serif;"
+        >
+          Kyran Dale's blog
+        </a>
+      </div>
 
-    <!-- Logo -->
-    <div class="absolute left-0 top-1/2 -translate-y-1/2">
-      <a 
-        href="/" 
-        class="text-lg font-bold text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 ease-in-out"
-        style="font-family: 'Georgia', 'Times New Roman', serif;"
-      >
-        Kyran Dale's blog
-      </a>
+      <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
+        <a
+          href="/search"
+          aria-label={`Search blog posts and projects on ${SITE.TITLE}`}
+          class={cn(
+            "hidden md:flex",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out",
+            pathname === "/search" || "/" + subpath?.[0] === "/search"
+              ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black"
+              : ""
+          )}
+        >
+          <Icon name="lucide:search" class="size-full" />
+        </a>
+
+        <a
+          href="/rss.xml"
+          target="_blank"
+          aria-label={`Rss feed for ${SITE.TITLE}`}
+          class={cn(
+            "hidden md:flex",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out"
+          )}
+        >
+          <Icon name="lucide:rss" class="size-full" />
+        </a>
+
+        <button
+          id="header-edit-button"
+          aria-label={`Toggle edit mode`}
+          class={cn(
+            "hidden md:flex",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out"
+          )}
+        >
+          <Icon name="lucide:pencil" class="size-full" />
+        </button>
+
+        <a
+          href="/settings"
+          aria-label={`Settings`}
+          class={cn(
+            "hidden md:flex",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out",
+            pathname === "/settings"
+              ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black"
+              : ""
+          )}
+        >
+          <Icon name="lucide:settings" class="size-full" />
+        </a>
+
+        <button
+          id="header-theme-button"
+          aria-label={`Toggle light and dark theme`}
+          class={cn(
+            "hidden md:flex",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out"
+          )}
+        >
+          <Icon name="lucide:sun" class="size-full block dark:hidden" />
+          <Icon name="lucide:moon" class="size-full hidden dark:block" />
+        </button>
+
+        <button
+          id="header-drawer-button"
+          aria-label={`Toggle drawer open and closed`}
+          class={cn(
+            "flex md:hidden",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out"
+          )}
+        >
+          <Icon name="lucide:menu" id="drawer-open" class="size-full" />
+          <Icon name="lucide:x" id="drawer-close" class="size-full" />
+        </button>
+      </div>
     </div>
-
-    <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
-      <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
-        <Icon name="lucide:search" class="size-full" />
-      </a>
-
-      <a href="/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <Icon name="lucide:rss" class="size-full" />
-      </a>
-
-      <button id="header-edit-button" aria-label={`Toggle edit mode`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <Icon name="lucide:pencil" class="size-full" />
-      </button>
-
-      <a href="/settings" aria-label={`Settings`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/settings" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
-        <Icon name="lucide:settings" class="size-full" />
-      </a>
-
-      <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <Icon name="lucide:sun" class="size-full block dark:hidden" />
-        <Icon name="lucide:moon" class="size-full hidden dark:block" />
-      </button>
-
-      <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <Icon name="lucide:menu" id="drawer-open" class="size-full" />
-        <Icon name="lucide:x" id="drawer-close" class="size-full" />
-      </button>
-    </div>
-  </div>
   </Container>
 </header>
 
@@ -77,52 +149,54 @@ import Container from "@components/Container.astro"
 
 <script is:inline>
   function toggleDrawer() {
-    const drawer = document.getElementById("drawer")
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawer?.classList.toggle("open")
-    drawerButton?.classList.toggle("open")
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawer?.classList.toggle("open");
+    drawerButton?.classList.toggle("open");
   }
 
   function toggleEditMode() {
-    const currentEditMode = localStorage.getItem("editMode") === "true"
-    const newEditMode = !currentEditMode
-    localStorage.setItem("editMode", newEditMode.toString())
-    
-    const editButton = document.getElementById("header-edit-button")
+    const currentEditMode = localStorage.getItem("editMode") === "true";
+    const newEditMode = !currentEditMode;
+    localStorage.setItem("editMode", newEditMode.toString());
+
+    const editButton = document.getElementById("header-edit-button");
     if (newEditMode) {
-      editButton?.classList.add("active")
+      editButton?.classList.add("active");
     } else {
-      editButton?.classList.remove("active")
+      editButton?.classList.remove("active");
     }
-    
+
     // Trigger a custom event to notify other components
-    window.dispatchEvent(new CustomEvent("editModeChanged", { detail: { editMode: newEditMode } }))
-    
+    window.dispatchEvent(
+      new CustomEvent("editModeChanged", { detail: { editMode: newEditMode } })
+    );
+
     // Reload the page to apply edit mode changes
-    window.location.reload()
+    window.location.reload();
   }
 
   function initializeEditButton() {
-    const editButton = document.getElementById("header-edit-button")
-    const isEditMode = localStorage.getItem("editMode") === "true"
-    
+    const editButton = document.getElementById("header-edit-button");
+    const isEditMode = localStorage.getItem("editMode") === "true";
+
     if (isEditMode) {
-      editButton?.classList.add("active")
+      editButton?.classList.add("active");
     }
-    
-    editButton?.addEventListener("click", toggleEditMode)
+
+    editButton?.addEventListener("click", toggleEditMode);
   }
 
   function initializeDrawerButton() {
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawerButton?.addEventListener("click", toggleDrawer)
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawerButton?.addEventListener("click", toggleDrawer);
   }
 
   function initialize() {
-    initializeDrawerButton()
-    initializeEditButton()
+    initializeDrawerButton();
+    initializeEditButton();
   }
 
-  document.addEventListener("astro:after-swap", initialize)
-  initialize()
+  document.addEventListener("astro:after-swap", initialize);
+  initialize();
 </script>

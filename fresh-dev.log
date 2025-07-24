@@ -144,3 +144,133 @@ Possible dynamic routes being matched: src/pages/blog/[...slug].astro.
 17:03:12 [watch] src/pages/editor/index.astro
 17:08:28 [watch] src/components/Footer.astro
 17:08:38 [watch] src/components/Footer.astro
+17:34:55 [watch] src/layouts/ArticleTopLayout.astro
+17:35:30 [watch] src/layouts/ArticleTopLayout.astro
+17:35:46 [watch] src/layouts/ArticleTopLayout.astro
+17:39:21 [watch] src/layouts/ArticleTopLayout.astro
+17:42:34 [watch] src/pages/editor/index.astro
+17:43:06 [watch] src/pages/editor/index.astro
+17:43:07 [watch] src/pages/editor/index.astro
+17:44:19 [watch] src/pages/editor/index.astro
+17:44:28 [watch] src/pages/editor/index.astro
+17:44:30 [watch] src/pages/editor/index.astro
+17:47:25 [watch] src/pages/editor/index.astro
+18:02:25 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753290145147 found. Prefix filename with an underscore (`_`) to ignore.
+18:02:25 [watch] src/pages/editor/index.astro
+18:03:23 [watch] src/components/Container.astro
+18:03:30 [watch] src/components/Container.astro
+18:03:41 [watch] src/layouts/TopLayout.astro
+18:03:47 [watch] src/layouts/BottomLayout.astro
+18:04:13 [watch] src/layouts/ArticleBottomLayout.astro
+18:04:35 [watch] src/layouts/ArticleBottomLayout.astro
+18:04:55 [watch] src/components/ArrowCard.tsx
+18:05:09 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/tags/index.astro.tmp.3434824.1753290309474 found. Prefix filename with an underscore (`_`) to ignore.
+18:05:09 [watch] src/pages/tags/index.astro
+18:05:26 [watch] src/content/blog/02-astro-sphere-getting-started.md
+18:05:37 [watch] src/content/blog/04-astro-sphere-writing-markdown.md
+18:05:47 [watch] src/content/blog/06-astro-sphere-social-links.md
+18:08:38 [watch] src/components/Footer.astro
+18:09:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753290573687 found. Prefix filename with an underscore (`_`) to ignore.
+18:09:33 [watch] src/pages/editor/index.astro
+18:09:49 [watch] src/components/Header.astro
+18:17:40 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753291060597 found. Prefix filename with an underscore (`_`) to ignore.
+18:17:40 [watch] src/pages/editor/index.astro
+18:18:04 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.3434824.1753291084611 found. Prefix filename with an underscore (`_`) to ignore.
+18:18:04 [watch] src/pages/editor/index.astro
+18:42:18 [watch] src/layouts/ArticleBottomLayout.astro
+18:42:39 [watch] src/layouts/ArticleBottomLayout.astro
+18:42:44 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753292564697 found. Prefix filename with an underscore (`_`) to ignore.
+18:42:44 [watch] src/pages/index.astro
+18:43:01 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753292581703 found. Prefix filename with an underscore (`_`) to ignore.
+18:43:01 [watch] src/pages/index.astro
+18:46:21 [watch] tailwind.config.mjs
+18:46:29 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753292789322 found. Prefix filename with an underscore (`_`) to ignore.
+18:46:29 [watch] src/pages/index.astro
+18:47:04 [watch] page.html
+18:47:04 [watch] page.html
+19:05:04 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js.tmp.3434824.1753293904374 found. Prefix filename with an underscore (`_`) to ignore.
+19:05:15 [watch] src/pages/api/upload-image.js
+19:06:34 [watch] src/content/blog/spongebob.png
+19:08:10 [watch] src/content/blog/spongebob.png
+22:09:33 [watch] src/components/Header.astro
+22:09:38 [watch] src/components/Header.astro
+22:09:47 [watch] src/components/Header.astro
+22:10:00 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753305000930 found. Prefix filename with an underscore (`_`) to ignore.
+22:10:00 [watch] src/pages/index.astro
+22:10:05 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753305005923 found. Prefix filename with an underscore (`_`) to ignore.
+22:10:05 [watch] src/pages/index.astro
+22:10:14 [watch] src/components/SearchCollection.tsx
+22:10:20 [watch] src/components/SearchCollection.tsx
+22:10:26 [watch] src/components/SearchCollection.tsx
+22:10:32 [watch] src/components/SearchCollection.tsx
+11:58:48 Configuration file updated. Restarting...
+11:58:49 [types] Generated 1ms
+11:58:49 [vite] Port 4321 is in use, trying another one...
+11:58:49 [vite] Port 4322 is in use, trying another one...
+11:58:49 [vite] Port 4323 is in use, trying another one...
+11:58:49 [vite] Port 4324 is in use, trying another one...
+11:59:05 Configuration file updated. Restarting...
+11:59:05 [types] Generated 1ms
+11:59:11 Configuration file updated. Restarting...
+11:59:11 [types] Generated 1ms
+11:59:11 [vite] Port 4321 is in use, trying another one...
+11:59:11 [vite] Port 4322 is in use, trying another one...
+11:59:11 [vite] Port 4323 is in use, trying another one...
+11:59:11 [vite] Port 4324 is in use, trying another one...
+11:59:11 [vite] Port 4325 is in use, trying another one...
+12:01:52 Configuration file updated. Restarting...
+12:01:52 [types] Generated 5ms
+12:01:52 [vite] Re-optimizing dependencies because lockfile has changed
+12:01:52 [vite] Port 4321 is in use, trying another one...
+12:01:52 [vite] Port 4322 is in use, trying another one...
+12:01:52 [vite] Port 4323 is in use, trying another one...
+12:08:48 Configuration file removed. Restarting...
+12:08:49 [types] Generated 1ms
+12:08:49 [vite] Port 4321 is in use, trying another one...
+12:08:49 [vite] Port 4322 is in use, trying another one...
+12:08:49 [vite] Port 4323 is in use, trying another one...
+12:08:49 [vite] Port 4324 is in use, trying another one...
+12:26:58 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753356418977 found. Prefix filename with an underscore (`_`) to ignore.
+12:28:55 Configuration file updated. Restarting...
+12:28:55 [types] Generated 2ms
+12:28:55 [vite] Port 4321 is in use, trying another one...
+12:28:55 [vite] Port 4322 is in use, trying another one...
+12:29:06 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753356546483 found. Prefix filename with an underscore (`_`) to ignore.
+12:29:11 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753356551881 found. Prefix filename with an underscore (`_`) to ignore.
+12:29:25 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.3434824.1753356565929 found. Prefix filename with an underscore (`_`) to ignore.
+12:34:26 Configuration file updated. Restarting...
+12:34:26 [types] Generated 1ms
+12:34:26 [vite] Re-optimizing dependencies because lockfile has changed
+12:34:26 [vite] Port 4321 is in use, trying another one...
+13:00:47 Configuration file added. Restarting...
+13:00:47 [types] Generated 4ms
+13:00:47 [vite] Port 4321 is in use, trying another one...
+13:00:47 [vite] Port 4322 is in use, trying another one...
+13:00:47 [vite] Port 4323 is in use, trying another one...
+13:00:47 [vite] Port 4324 is in use, trying another one...
+13:00:47 [vite] Port 4325 is in use, trying another one...
+13:02:56 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358576506 found. Prefix filename with an underscore (`_`) to ignore.
+13:05:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358728154 found. Prefix filename with an underscore (`_`) to ignore.
+13:05:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753358733567 found. Prefix filename with an underscore (`_`) to ignore.
+13:23:51 Configuration file updated. Restarting...
+13:23:52 [types] Generated 3ms
+13:23:52 [vite] Port 4321 is in use, trying another one...
+13:23:52 [vite] Port 4322 is in use, trying another one...
+13:23:52 [vite] Port 4323 is in use, trying another one...
+13:23:52 [vite] Port 4324 is in use, trying another one...
+13:23:59 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359839857 found. Prefix filename with an underscore (`_`) to ignore.
+13:24:11 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359851873 found. Prefix filename with an underscore (`_`) to ignore.
+13:26:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359967689 found. Prefix filename with an underscore (`_`) to ignore.
+13:26:14 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753359974442 found. Prefix filename with an underscore (`_`) to ignore.
+13:27:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360035817 found. Prefix filename with an underscore (`_`) to ignore.
+13:30:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360215731 found. Prefix filename with an underscore (`_`) to ignore.
+13:30:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360233058 found. Prefix filename with an underscore (`_`) to ignore.
+13:30:50 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360250890 found. Prefix filename with an underscore (`_`) to ignore.
+13:31:00 Configuration file removed. Restarting...
+13:31:00 [types] Generated 1ms
+13:31:00 [vite] Port 4321 is in use, trying another one...
+13:31:00 [vite] Port 4322 is in use, trying another one...
+13:31:56 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360316430 found. Prefix filename with an underscore (`_`) to ignore.
+13:32:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360348606 found. Prefix filename with an underscore (`_`) to ignore.
+13:33:01 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360381808 found. Prefix filename with an underscore (`_`) to ignore.
+13:34:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.3434824.1753360455066 found. Prefix filename with an underscore (`_`) to ignore.

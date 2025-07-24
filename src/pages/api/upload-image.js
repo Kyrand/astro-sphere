@@ -21,8 +21,8 @@ export async function POST({ request }) {
     const randomString = Math.random().toString(36).substring(2, 8);
     const uniqueFilename = `${timestamp}-${randomString}.${fileExtension}`;
     
-    // Define the path within the public/blog_assets folder for static serving
-    const assetsDir = './public/blog_assets';
+    // Define the path within the public/blog_assets/images folder for static serving
+    const assetsDir = './public/blog_assets/images';
     const filePath = join(assetsDir, uniqueFilename);
     
     // Convert file to buffer and save
@@ -31,7 +31,7 @@ export async function POST({ request }) {
     await writeFile(filePath, buffer);
     
     // Return the relative path for markdown (served from public/)
-    const relativePath = `/blog_assets/${uniqueFilename}`;
+    const relativePath = `/blog_assets/images/${uniqueFilename}`;
     
     return new Response(JSON.stringify({ 
       success: true, 

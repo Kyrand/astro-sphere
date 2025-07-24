@@ -1,13 +1,14 @@
 ---
 import { SITE } from "@consts"
 import { cn } from "@lib/utils"
+import { Icon } from "astro-icon/components"
 const { pathname } = Astro.url
 const subpath = pathname.match(/[^/]+/g)
 import Container from "@components/Container.astro"
 ---
 
 <header id="header" class="fixed top-0 w-full h-16 z-50 ">
-  <Container size="md">
+  <Container size="960">
     <div class="relative h-full w-full">
 
     <!-- Logo -->
@@ -22,34 +23,30 @@ import Container from "@components/Container.astro"
     </div>
 
     <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
-      <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
-        <svg class="size-full">
-          <use href="/ui.svg#search"></use>
-        </svg>
+      <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
+        <Icon name="lucide:search" class="size-full" />
       </a>
 
-      <a href="/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg class="size-full">
-          <use href="/ui.svg#rss"></use>
-        </svg>
+      <a href="/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+        <Icon name="lucide:rss" class="size-full" />
       </a>
 
-      <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg class="size-full block dark:hidden">
-          <use href="/ui.svg#sun"></use>
-        </svg>
-        <svg class="size-full hidden dark:block">
-          <use href="/ui.svg#moon"></use>
-        </svg>
+      <button id="header-edit-button" aria-label={`Toggle edit mode`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+        <Icon name="lucide:pencil" class="size-full" />
       </button>
 
-      <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg id="drawer-open" class="size-full">
-          <use href="/ui.svg#menu"></use>
-        </svg>
-        <svg id="drawer-close" class="size-full">
-          <use href="/ui.svg#x"></use>
-        </svg>
+      <a href="/settings" aria-label={`Settings`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/settings" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
+        <Icon name="lucide:settings" class="size-full" />
+      </a>
+
+      <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+        <Icon name="lucide:sun" class="size-full block dark:hidden" />
+        <Icon name="lucide:moon" class="size-full hidden dark:block" />
+      </button>
+
+      <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "text-current hover:text-black hover:dark:text-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+        <Icon name="lucide:menu" id="drawer-open" class="size-full" />
+        <Icon name="lucide:x" id="drawer-close" class="size-full" />
       </button>
     </div>
   </div>
@@ -57,20 +54,24 @@ import Container from "@components/Container.astro"
 </header>
 
 <style>
-  #header-drawer-button > #drawer-open {
+  #drawer-open {
     @apply block;
   }
 
-  #header-drawer-button > #drawer-close {
+  #drawer-close {
     @apply hidden;
   }
 
-  #header-drawer-button.open > #drawer-open {
+  #header-drawer-button.open #drawer-open {
     @apply hidden;
   }
 
-  #header-drawer-button.open > #drawer-close {
+  #header-drawer-button.open #drawer-close {
     @apply block;
+  }
+
+  #header-edit-button.active {
+    @apply bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300;
   }
 </style>
 
@@ -82,11 +83,46 @@ import Container from "@components/Container.astro"
     drawerButton?.classList.toggle("open")
   }
 
+  function toggleEditMode() {
+    const currentEditMode = localStorage.getItem("editMode") === "true"
+    const newEditMode = !currentEditMode
+    localStorage.setItem("editMode", newEditMode.toString())
+    
+    const editButton = document.getElementById("header-edit-button")
+    if (newEditMode) {
+      editButton?.classList.add("active")
+    } else {
+      editButton?.classList.remove("active")
+    }
+    
+    // Trigger a custom event to notify other components
+    window.dispatchEvent(new CustomEvent("editModeChanged", { detail: { editMode: newEditMode } }))
+    
+    // Reload the page to apply edit mode changes
+    window.location.reload()
+  }
+
+  function initializeEditButton() {
+    const editButton = document.getElementById("header-edit-button")
+    const isEditMode = localStorage.getItem("editMode") === "true"
+    
+    if (isEditMode) {
+      editButton?.classList.add("active")
+    }
+    
+    editButton?.addEventListener("click", toggleEditMode)
+  }
+
   function initializeDrawerButton() {
     const drawerButton = document.getElementById("header-drawer-button")
     drawerButton?.addEventListener("click", toggleDrawer)
   }
 
-  document.addEventListener("astro:after-swap", initializeDrawerButton)
-  initializeDrawerButton()
+  function initialize() {
+    initializeDrawerButton()
+    initializeEditButton()
+  }
+
+  document.addEventListener("astro:after-swap", initialize)
+  initialize()
 </script>

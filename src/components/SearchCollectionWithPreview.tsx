@@ -2,6 +2,7 @@ import type { CollectionEntry } from "astro:content"
 import { createEffect, createSignal, For, onMount } from "solid-js"
 import Fuse from "fuse.js"
 import ArrowCard from "@components/ArrowCard"
+import ArticlePreviewCard from "@components/ArticlePreviewCard"
 import { cn } from "@lib/utils"
 import SearchBar from "@components/SearchBar"
 
@@ -12,15 +13,18 @@ type Props = {
   tagCounts?: Record<string, number>
   editMode?: boolean
   clientEditMode?: boolean
+  contents?: Record<string, string> // Mapping of slug to content
 }
 
-export default function SearchCollection({ entry_name, data, tags, tagCounts, editMode, clientEditMode }: Props) {
+export default function SearchCollectionWithPreview({ entry_name, data, tags, tagCounts, editMode, clientEditMode, contents = {} }: Props) {
   const coerced = data.map((entry) => entry as CollectionEntry<'blog'>);
 
   const [query, setQuery] = createSignal("");
   const [collection, setCollection] = createSignal<CollectionEntry<'blog'>[]>([])
   const [descending, setDescending] = createSignal(false);
   const [dynamicEditMode, setDynamicEditMode] = createSignal(editMode || false);
+  const [viewMode, setViewMode] = createSignal<'normal' | 'compact'>('normal');
+  const [textLimit, setTextLimit] = createSignal(1000);
 
   // Sort tags by count (most used first)
   const sortedTags = tagCounts 
@@ -56,6 +60,16 @@ export default function SearchCollection({ entry_name, data, tags, tagCounts, ed
       wrapper.style.minHeight = "unset";
     }
 
+    // Initialize settings from localStorage
+    if (typeof window !== "undefined") {
+      const getSiteSettings = (window as any).getSiteSettings;
+      if (getSiteSettings) {
+        const settings = getSiteSettings();
+        setViewMode(settings.viewMode || 'normal');
+        setTextLimit(settings.frontPageArticleTextLimit || 1000);
+      }
+    }
+
     // Initialize edit mode from localStorage if clientEditMode is enabled
     if (clientEditMode && typeof window !== "undefined") {
       const getEditMode = (window as any).getEditMode;
@@ -68,14 +82,25 @@ export default function SearchCollection({ entry_name, data, tags, tagCounts, ed
         setDynamicEditMode(event.detail.editMode);
       };
       
-      window.addEventListener('editModeChanged', handleEditModeChange as EventListener);
+      // Listen for settings changes
+      const handleSettingsChange = (event: CustomEvent) => {
+        const settings = event.detail;
+        setViewMode(settings.viewMode || 'normal');
+        setTextLimit(settings.frontPageArticleTextLimit || 1000);
+      };
       
-      // Cleanup listener
+      window.addEventListener('editModeChanged', handleEditModeChange as EventListener);
+      window.addEventListener('settingsChanged', handleSettingsChange as EventListener);
+      
+      // Cleanup listeners
       return () => {
         window.removeEventListener('editModeChanged', handleEditModeChange as EventListener);
+        window.removeEventListener('settingsChanged', handleSettingsChange as EventListener);
       };
     }
   })
+
+  const currentEditMode = () => clientEditMode ? dynamicEditMode() : editMode;
 
   return (
     <div class="flex flex-col gap-6">
@@ -145,16 +170,34 @@ export default function SearchCollection({ entry_name, data, tags, tagCounts, ed
       </div>
 
       {/* Posts */}
-      <ul class="flex flex-col">
-        {collection().map((entry, index) => (
-          <li>
-            <ArrowCard entry={entry} editMode={clientEditMode ? dynamicEditMode() : editMode} />
-            {index < collection().length - 1 && (
-              <div class="border-b border-gray-200 dark:border-gray-700 my-3"></div>
+      <div>
+        {viewMode() === 'normal' || viewMode() === 'compact' ? (
+          // Article Preview Mode
+          <For each={collection()}>
+            {(entry) => (
+              <ArticlePreviewCard 
+                entry={entry} 
+                editMode={currentEditMode()} 
+                viewMode={viewMode()}
+                textLimit={textLimit()}
+                content={contents[entry.slug] || ''}
+              />
             )}
-          </li>
-        ))}
-      </ul>
+          </For>
+        ) : (
+          // List Mode (fallback)
+          <ul class="flex flex-col">
+            {collection().map((entry, index) => (
+              <li>
+                <ArrowCard entry={entry} editMode={currentEditMode()} />
+                {index < collection().length - 1 && (
+                  <div class="border-b border-gray-200 dark:border-gray-700 my-3"></div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   )
 }

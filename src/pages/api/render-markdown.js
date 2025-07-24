@@ -15,9 +15,9 @@ function fixRelativeImages() {
     visit(tree, 'element', (node) => {
       if (node.tagName === 'img' && node.properties && node.properties.src) {
         const src = node.properties.src;
-        // Convert relative paths to public directory paths (accessible by browser)
+        // Convert relative paths to blog_assets/images directory
         if (src.startsWith('./')) {
-          node.properties.src = `/${src.slice(2)}`;
+          node.properties.src = `/blog_assets/images/${src.slice(2)}`;
         }
       }
     });

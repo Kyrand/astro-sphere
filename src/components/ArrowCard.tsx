@@ -30,7 +30,7 @@ export default function ArrowCard({ entry, pill, editMode }: Props) {
             {entry.data.summary}
           </div>
           <ul class="flex flex-wrap mt-2 gap-1">
-            {entry.data.tags.map((tag: string) => ( // this line has an error; Parameter 'tag' implicitly has an 'any' type.ts(7006)
+            {entry.data.tags.filter((tag: string) => tag !== '_highlight').map((tag: string) => (
               <li class="text-xs uppercase py-0.5 px-2 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75">
                 {truncateText(tag, 20)}
               </li>

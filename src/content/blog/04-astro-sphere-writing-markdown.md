@@ -8,6 +8,7 @@ tags:
 - Astro
 - Astro Sphere
 - Markdown
+- _highlight
 ---
 
 ### Headings

@@ -3,8 +3,13 @@ import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
-import SearchCollection from "@components/SearchCollection";
+import SearchCollectionWithPreview from "@components/SearchCollectionWithPreview";
+import HighlightsColumn from "@components/HighlightsColumn.astro";
 import { BLOG, SITE } from "@consts";
+import { editModeScript } from "@lib/editMode";
+import { settingsScript } from "@lib/settings";
+import { marked } from "marked";
+import { createHighlighter } from "shiki";
 
 const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -22,6 +27,51 @@ posts.forEach(post => {
   });
 });
 
+// Initialize Shiki highlighter
+const highlighter = await createHighlighter({
+  themes: ['github-dark', 'github-light'],
+  langs: ['javascript', 'typescript', 'html', 'css', 'json', 'yaml', 'markdown', 'bash', 'shell', 'jsx', 'tsx', 'astro', 'python', 'go', 'rust', 'java', 'php', 'sql']
+});
+
+// Configure marked with Shiki syntax highlighting
+marked.use({
+  renderer: {
+    code: function(token) {
+      const code = token.text || token.code || String(token);
+      const lang = token.lang || token.language;
+      
+      if (!lang) {
+        return `<pre><code>${code}</code></pre>`;
+      }
+      
+      try {
+        const highlighted = highlighter.codeToHtml(code, {
+          lang: lang,
+          theme: 'github-dark'
+        });
+        
+        return highlighted;
+      } catch (e) {
+        console.error(`Shiki highlighting error for language "${lang}":`, e);
+        return `<pre><code class="language-${lang}">${code}</code></pre>`;
+      }
+    }
+  }
+});
+
+// Process markdown content for posts
+const postContents: Record<string, string> = {};
+for (const post of posts) {
+  try {
+    // Convert markdown to HTML for preview with syntax highlighting
+    const htmlContent = marked(post.body);
+    postContents[post.slug] = htmlContent;
+  } catch (e) {
+    console.error(`Error processing content for ${post.slug}:`, e);
+    postContents[post.slug] = post.data.summary || '';
+  }
+}
+
 const estimated_initial_size =
   28 + posts.length * 158 + (posts.length - 1) * 12;
 ---
@@ -31,19 +81,35 @@ const estimated_initial_size =
     <!-- Title and description removed for compact layout -->
   </TopLayout>
   <BottomLayout>
-    <div
-      id="search-collection-wrapper"
-      class="animate"
-      style={{ minHeight: `${estimated_initial_size}px` }}
-    >
-      <SearchCollection
-        client:load
-        entry_name={"posts"}
-        tags={tags}
-        data={posts}
-        tagCounts={tagCounts}
-        editMode={SITE.EDIT_MODE}
-      />
+    <div class="grid grid-cols-1 w960:grid-cols-3 gap-8">
+      <!-- Main content (2/3 width) -->
+      <div class="w960:col-span-2">
+        <div
+          id="search-collection-wrapper"
+          class="animate"
+          style={{ minHeight: `${estimated_initial_size}px` }}
+        >
+          <script is:inline set:html={editModeScript}></script>
+          <script is:inline set:html={settingsScript}></script>
+          <SearchCollectionWithPreview
+            client:load
+            entry_name={"posts"}
+            tags={tags}
+            data={posts}
+            tagCounts={tagCounts}
+            editMode={SITE.EDIT_MODE}
+            clientEditMode={true}
+            contents={postContents}
+          />
+        </div>
+      </div>
+
+      <!-- Highlights column (1/3 width) - only visible at 960px+ -->
+      <div class="hidden w960:block w960:col-span-1">
+        <div class="w960:sticky w960:top-20">
+          <HighlightsColumn />
+        </div>
+      </div>
     </div>
   </BottomLayout>
 </PageLayout>

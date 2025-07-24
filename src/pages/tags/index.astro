@@ -9,10 +9,10 @@ const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-// Calculate tag counts
+// Calculate tag counts (excluding '_highlight' tag)
 const tagCounts: Record<string, number> = {};
 posts.forEach(post => {
-  post.data.tags.forEach(tag => {
+  post.data.tags.filter(tag => tag !== '_highlight').forEach(tag => {
     tagCounts[tag] = (tagCounts[tag] || 0) + 1;
   });
 });

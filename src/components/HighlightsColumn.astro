@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+
+// Get all blog posts with the '_highlight' tag
+const highlightedPosts = (await getCollection("blog"))
+  .filter(post => !post.data.draft && post.data.tags?.includes('_highlight'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<div class="space-y-4">
+  <h2 class="text-xl font-semibold text-black dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
+    Highlights
+  </h2>
+  
+  {highlightedPosts.length > 0 ? (
+    <div class="space-y-2">
+      {highlightedPosts.map((post) => (
+        <article class="py-2 hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors rounded">
+          <a href={`/blog/${post.slug}`} class="block">
+            <h3 class="font-medium text-black dark:text-white mb-1 text-sm leading-tight">
+              {post.data.title}
+            </h3>
+            <div class="flex flex-wrap gap-1">
+              {post.data.tags?.filter(tag => tag !== '_highlight').map((tag) => (
+                <span class="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  ) : (
+    <p class="text-gray-500 dark:text-gray-400 text-sm italic">
+      No highlighted posts yet.
+    </p>
+  )}
+</div>

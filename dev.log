@@ -1,182 +1,2703 @@
 !!! =================================================================
-18:04:30 SHOREMAN STARTED
+00:10:48 SHOREMAN STARTED
 !!! =================================================================
-18:04:30 services	| 'pnpm run dev' started with pid 164756
-18:04:30 services	| 
-18:04:30 services	| > astro-sphere@1.0.0 dev /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere
-18:04:30 services	| > astro dev
-18:04:30 services	| 
-18:04:32 services	| 18:04:32 [types] Generated 1ms
-18:04:32 services	| 
-18:04:32 services	|  astro  v4.16.18 ready in 739 ms
-18:04:32 services	| 
-18:04:32 services	| ┃ Local    http://localhost:4321/
-18:04:32 services	| ┃ Network  use --host to expose
-18:04:32 services	| 
-18:04:32 services	| 18:04:32 watching for file changes...
-18:04:48 services	| 18:04:48 [200] /editor 55ms
-18:04:48 services	| 18:04:48 [200] /api/get-tags 52ms
-18:04:51 services	| 18:04:51 [200] / 713ms
-18:05:01 services	| 18:05:01 [200] /tags/astro 11ms
-18:05:05 services	| 18:05:05 [200] /tags/astro-sphere 8ms
-18:05:11 services	| 18:05:10 [200] /settings 7ms
-18:05:19 services	| 18:05:19 [200] /settings 4ms
-18:05:21 services	| 18:05:21 [200] / 327ms
-18:05:32 services	| 18:05:32 [200] /editor 4ms
-18:05:32 services	| 18:05:32 [200] /api/get-tags 2ms
-18:05:51 services	| 18:05:51 [200] / 329ms
-18:05:52 services	| 18:05:52 [200] / 290ms
-18:05:53 services	| 18:05:53 [200] / 283ms
-18:05:53 services	| 18:05:53 [200] / 295ms
-18:05:54 services	| 18:05:54 [200] / 258ms
-18:05:54 services	| 18:05:54 [200] / 260ms
-18:05:54 services	| 18:05:54 [200] / 242ms
-18:05:54 services	| [Shiki] 10 instances have been created. Shiki is supposed to be used as a singleton, consider refactoring your code to cache your highlighter instance; Or call `highlighter.dispose()` to release unused instances.
-18:05:55 services	| 18:05:55 [200] / 280ms
-18:05:55 services	| 18:05:55 [200] / 242ms
-18:05:56 services	| 18:05:56 [200] / 324ms
-18:05:56 services	| 18:05:56 [200] / 283ms
-18:05:56 services	| 18:05:56 [200] / 317ms
-18:05:56 services	| 18:05:56 [200] / 289ms
-18:05:57 services	| 18:05:57 [200] /editor 15ms
-18:05:57 services	| 18:05:57 [200] /api/get-tags 2ms
-18:05:57 services	| 18:05:57 [200] /editor 7ms
-18:05:57 services	| 18:05:57 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:05:57 services	|   Stack trace:
-18:05:57 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:05:57 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:05:57 services	| 18:05:57 [200] /api/get-tags 3ms
-18:05:57 services	| 18:05:57 [200] /editor 16ms
-18:05:58 services	| [Shiki] 20 instances have been created. Shiki is supposed to be used as a singleton, consider refactoring your code to cache your highlighter instance; Or call `highlighter.dispose()` to release unused instances.
-18:05:59 services	| 18:05:59 [200] / 1354ms
-18:05:59 services	| 18:05:59 [200] / 1354ms
-18:05:59 services	| 18:05:59 [200] / 1354ms
-18:05:59 services	| 18:05:59 [200] / 1354ms
-18:05:59 services	| 18:05:59 [200] / 1354ms
-18:05:59 services	| 18:05:59 [200] /settings 5ms
-18:05:59 services	| 18:05:59 [200] /editor 6ms
-18:05:59 services	| 18:05:59 [200] /editor 7ms
-18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:05:59 services	|   Stack trace:
-18:05:59 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:05:59 services	|   Stack trace:
-18:05:59 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:05:59 services	|   Stack trace:
-18:05:59 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:05:59 services	|   Stack trace:
-18:05:59 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:05:59 services	| 18:05:59 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:05:59 services	|   Stack trace:
-18:05:59 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:05:59 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [200] /editor 9ms
-18:06:15 services	| 18:06:15 [200] / 377ms
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:06:15 services	| 18:06:15 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:06:15 services	|   Stack trace:
-18:06:15 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:06:15 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:27 services	| 18:09:27 Configuration file updated. Restarting...
-18:09:28 services	| 18:09:28 [200] /editor 11ms
-18:09:28 services	| 18:09:28 [200] /editor 11ms
-18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:09:28 services	|   Stack trace:
-18:09:28 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:09:28 services	|   Stack trace:
-18:09:28 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:09:28 services	|   Stack trace:
-18:09:28 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:09:28 services	|   Stack trace:
-18:09:28 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15
-18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:28 services	| 18:09:28 [ERROR] [vite] The requested module 'shiki' does not provide an export named 'getHighlighter'
-18:09:28 services	|   Stack trace:
-18:09:28 services	|     at analyzeImportedModDifference (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:52062:15)
-18:09:28 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:28 services	| 18:09:28 [200] /api/get-tags 208557ms
-18:09:28 services	| 18:09:28 [200] /api/get-tags 193416ms
-18:09:28 services	| 18:09:28 [watch] playwright-report/index.html
-18:09:28 services	| 18:09:28 [200] /api/get-tags 192763ms
-18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
-18:09:45 services	|   Stack trace:
-18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
-18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
-18:09:45 services	|   Stack trace:
-18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
-18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
-18:09:45 services	|   Stack trace:
-18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
-18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:45 services	| 18:09:45 [ERROR] The server is being restarted or closed. Request is outdated
-18:09:45 services	|   Stack trace:
-18:09:45 services	|     at throwClosedServerError (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/vite/dist/node/chunks/dep-DbT5NFX0.js:48857:15)
-18:09:45 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
-18:09:45 services	| 18:09:45 [types] Generated 1ms
-18:09:45 services	| 18:09:45 [vite] Re-optimizing dependencies because vite config has changed
-18:09:45 services	| 18:09:45 [vite] Port 4321 is in use, trying another one...
-18:10:04 services	| 18:10:04 [watch] playwright-report/index.html
-18:11:55 services	| 18:11:55 [watch] src/content/blog/test-blog-post-playwright.md
-18:11:55 services	| 18:11:55 [watch] src/content/blog/test-blog-post-playwright.md
-18:12:18 services	| 18:12:18 [watch] playwright-report/index.html
+00:10:48 services	| 'pnpm run dev' started with pid 281369
+00:10:49 services	| 
+00:10:49 services	| > astro-sphere@1.0.0 dev /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere
+00:10:49 services	| > astro dev
+00:10:49 services	| 
+00:10:50 services	| 24:10:50 [types] Generated 9ms
+00:10:50 services	| 
+00:10:50 services	|  astro  v4.16.18 ready in 918 ms
+00:10:50 services	| 
+00:10:50 services	| ┃ Local    http://localhost:4321/
+00:10:50 services	| ┃ Network  use --host to expose
+00:10:50 services	| 
+00:10:51 services	| 24:10:51 watching for file changes...
+00:11:02 services	| Browserslist: caniuse-lite is outdated. Please run:
+00:11:02 services	|   npx update-browserslist-db@latest
+00:11:02 services	|   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+00:11:03 services	| 24:11:03 [200] / 359ms
+00:11:03 services	| 24:11:03 [200] / 36ms
+00:11:04 services	| 24:11:04 [200] / 34ms
+00:11:04 services	| 24:11:04 [200] / 30ms
+00:11:05 services	| 24:11:05 [200] / 34ms
+00:11:06 services	| 24:11:06 [200] / 26ms
+00:11:06 services	| 24:11:06 [200] /editor 5ms
+00:11:06 services	| 24:11:06 [200] /api/get-tags 2ms
+00:11:07 services	| 24:11:07 [200] / 24ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 396ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 397ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 397ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 397ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 397ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 397ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 8ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 6ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 6ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 7ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 5ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 3ms
+00:11:08 services	| 24:11:08 [200] POST /api/render-markdown 4ms
+00:11:08 services	| 24:11:08 [200] POST /api/save-post 3ms
+00:11:08 services	| 24:11:08 [watch] src/content/blog/test-blog-post-playwright.md
+00:11:08 services	| 24:11:08 [200] /editor 19ms
+00:11:08 services	| 24:11:08 [200] / 96ms
+00:11:09 services	| 24:11:09 [200] /api/get-tags 2ms
+00:11:10 services	| 24:11:10 [200] / 27ms
+00:11:12 services	| 24:11:12 [200] /editor 3ms
+00:11:12 services	| 24:11:12 [200] /api/get-tags 2ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 4ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 3ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 2ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 2ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 1ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 2ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 2ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 1ms
+00:11:12 services	| 24:11:12 [watch] src/content/blog/test-blog-post-playwright.md
+00:11:12 services	| 24:11:12 [200] POST /api/save-post 2ms
+00:11:12 services	| 24:11:12 [200] /editor 44ms
+00:11:12 services	| 24:11:12 [200] /api/get-tags 2ms
+00:11:12 services	| 24:11:12 [200] POST /api/render-markdown 1ms
+00:11:18 services	| 24:11:18 [watch] src/content/blog/test-blog-post-playwright.md
+00:11:18 services	| 24:11:18 [200] / 48ms
+00:11:19 services	| 24:11:19 [200] / 42ms
+00:11:20 services	| 24:11:20 [200] /editor 4ms
+00:11:20 services	| 24:11:20 [200] /api/get-tags 1ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 6ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 5ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 6ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 6ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 8ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 7ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 6ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 7ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 7ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 7ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 7ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 6ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 5ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 7ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 5ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 4ms
+00:11:22 services	| 24:11:22 [200] POST /api/render-markdown 3ms
+00:11:22 services	| 24:11:22 [watch] src/content/blog/test-blog-post-playwright.md
+00:11:22 services	| 24:11:22 [200] POST /api/save-post 5ms
+00:11:22 services	| 24:11:22 [200] /editor 28ms
+00:11:22 services	| 24:11:22 [200] /api/get-tags 1ms
+00:11:37 services	| 24:11:37 [watch] src/content/blog/test-blog-post-playwright.md
+00:11:38 services	| 24:11:38 [200] / 49ms
+00:11:39 services	| 24:11:39 [200] / 27ms
+00:11:40 services	| 24:11:40 [200] /editor 4ms
+00:11:40 services	| 24:11:40 [200] /api/get-tags 1ms
+00:11:40 services	| 24:11:40 [200] POST /api/render-markdown 1ms
+00:11:41 services	| 24:11:41 [200] POST /api/save-post 2ms
+00:11:41 services	| 24:11:41 [watch] src/content/blog/post-to-delete-from-homepage.md
+00:11:41 services	| 24:11:41 [200] / 56ms
+00:11:41 services	| 24:11:41 [200] /editor 4ms
+00:11:41 services	| 24:11:41 [200] /api/get-tags 1ms
+00:11:43 services	| 24:11:43 [200] / 37ms
+00:11:44 services	| 24:11:44 [200] POST /api/delete-post 1ms
+00:11:44 services	| 24:11:44 [200] / 26ms
+00:11:44 services	| 24:11:44 [watch] src/content/blog/post-to-delete-from-homepage.md
+00:11:44 services	| 24:11:44 [200] / 47ms
+00:11:46 services	| 24:11:46 [200] / 26ms
+00:11:47 services	| 24:11:47 [200] / 29ms
+00:11:48 services	| 24:11:48 [200] /editor 6ms
+00:11:48 services	| 24:11:48 [200] /api/get-tags 1ms
+00:11:48 services	| 24:11:48 [200] POST /api/render-markdown 3ms
+00:11:48 services	| 24:11:48 [200] POST /api/render-markdown 2ms
+00:11:48 services	| 24:11:48 [200] POST /api/render-markdown 1ms
+00:11:48 services	| 24:11:48 [200] POST /api/render-markdown 1ms
+00:11:48 services	| 24:11:48 [200] POST /api/render-markdown 1ms
+00:11:48 services	| 24:11:48 [200] / 25ms
+00:11:48 services	| 24:11:48 [200] / 26ms
+00:11:49 services	| 24:11:49 [200] /settings 4ms
+00:11:52 services	| 24:11:52 [200] / 23ms
+00:11:52 services	| 24:11:52 [watch] playwright-report/index.html
+00:11:52 services	| 24:11:52 [watch] playwright-report/trace/index.html
+00:11:52 services	| 24:11:52 [watch] playwright-report/trace/snapshot.html
+00:11:52 services	| 24:11:52 [watch] playwright-report/trace/uiMode.html
+00:12:10 services	| 24:12:10 [200] / 67ms
+00:12:10 services	| 24:12:10 [200] / 31ms
+00:12:11 services	| 24:12:11 [200] / 31ms
+00:12:11 services	| 24:12:11 [200] / 32ms
+00:12:11 services	| 24:12:11 [200] / 34ms
+00:12:12 services	| 24:12:12 [200] / 30ms
+00:12:12 services	| 24:12:12 [200] /editor 4ms
+00:12:12 services	| 24:12:12 [200] /api/get-tags 1ms
+00:12:13 services	| 24:12:13 [200] / 26ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 8ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 5ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 5ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 5ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 5ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 5ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 6ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 6ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 4ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/render-markdown 3ms
+00:12:14 services	| 24:12:14 [200] POST /api/save-post 2ms
+00:12:14 services	| 24:12:14 [watch] src/content/blog/test-blog-post-playwright.md
+00:12:14 services	| 24:12:14 [200] /editor 17ms
+00:12:14 services	| 24:12:14 [200] / 86ms
+00:12:14 services	| 24:12:14 [200] /api/get-tags 1ms
+00:12:16 services	| 24:12:16 [200] / 24ms
+00:12:18 services	| 24:12:18 [200] /editor 3ms
+00:12:18 services	| 24:12:18 [200] /api/get-tags 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 5ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 1ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:18 services	| 24:12:18 [watch] src/content/blog/test-blog-post-playwright.md
+00:12:18 services	| 24:12:18 [200] POST /api/save-post 3ms
+00:12:18 services	| 24:12:18 [200] /editor 23ms
+00:12:18 services	| 24:12:18 [200] /api/get-tags 2ms
+00:12:18 services	| 24:12:18 [200] POST /api/render-markdown 2ms
+00:12:23 services	| 24:12:23 [watch] src/content/blog/test-blog-post-playwright.md
+00:12:24 services	| 24:12:24 [200] / 48ms
+00:12:24 services	| 24:12:24 [200] / 28ms
+00:12:25 services	| 24:12:25 [200] /editor 4ms
+00:12:26 services	| 24:12:26 [200] /api/get-tags 1ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 5ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 5ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 5ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 5ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 3ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 3ms
+00:12:27 services	| 24:12:27 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:27 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 5ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 6ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 5ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 5ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 3ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/render-markdown 4ms
+00:12:28 services	| 24:12:28 [200] POST /api/save-post 2ms
+00:12:28 services	| 24:12:28 [watch] src/content/blog/test-blog-post-playwright.md
+00:12:28 services	| 24:12:28 [200] /editor 27ms
+00:12:28 services	| 24:12:28 [200] / 72ms
+00:12:30 services	| 24:12:30 [200] /editor 3ms
+00:12:30 services	| 24:12:30 [200] /api/get-tags 2ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 4ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 2ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 2ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 1ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 1ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 2ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 2ms
+00:12:30 services	| 24:12:30 [200] POST /api/render-markdown 2ms
+00:12:31 services	| 24:12:31 [watch] src/content/blog/test-blog-post-playwright.md
+00:12:31 services	| 24:12:31 [200] POST /api/save-post 3ms
+00:12:31 services	| 24:12:31 [200] /editor 24ms
+00:12:31 services	| 24:12:31 [200] /api/get-tags 2ms
+00:12:31 services	| 24:12:31 [200] POST /api/render-markdown 2ms
+00:12:32 services	| 24:12:32 [watch] src/content/blog/test-blog-post-playwright.md
+00:12:33 services	| 24:12:33 [200] / 58ms
+00:12:33 services	| 24:12:33 [200] / 26ms
+00:12:34 services	| 24:12:34 [200] /editor 3ms
+00:12:34 services	| 24:12:34 [200] /api/get-tags 1ms
+00:12:34 services	| 24:12:34 [200] POST /api/render-markdown 2ms
+00:12:35 services	| 24:12:35 [200] POST /api/save-post 2ms
+00:12:35 services	| 24:12:35 [watch] src/content/blog/post-to-delete-from-homepage.md
+00:12:36 services	| 24:12:36 [200] /editor 6ms
+00:12:36 services	| 24:12:36 [200] / 73ms
+00:12:36 services	| 24:12:36 [200] /api/get-tags 1ms
+00:12:38 services	| 24:12:38 [200] / 38ms
+00:12:39 services	| 24:12:39 [200] POST /api/delete-post 1ms
+00:12:39 services	| 24:12:39 [200] / 23ms
+00:12:39 services	| 24:12:39 [watch] src/content/blog/post-to-delete-from-homepage.md
+00:12:39 services	| 24:12:39 [200] / 44ms
+00:12:41 services	| 24:12:41 [200] / 23ms
+00:12:41 services	| 24:12:41 [200] / 30ms
+00:12:42 services	| 24:12:42 [200] /editor 4ms
+00:12:42 services	| 24:12:42 [200] /api/get-tags 1ms
+00:12:42 services	| 24:12:42 [200] POST /api/render-markdown 2ms
+00:12:42 services	| 24:12:42 [200] POST /api/render-markdown 2ms
+00:12:42 services	| 24:12:42 [200] POST /api/render-markdown 2ms
+00:12:42 services	| 24:12:42 [200] POST /api/render-markdown 1ms
+00:12:42 services	| 24:12:42 [200] POST /api/render-markdown 2ms
+00:12:42 services	| 24:12:42 [200] / 25ms
+00:12:43 services	| 24:12:43 [200] / 24ms
+00:12:44 services	| 24:12:44 [200] /settings 3ms
+00:12:47 services	| 24:12:47 [200] / 23ms
+00:14:27 services	| 24:14:27 [200] / 47ms
+00:14:32 services	| 24:14:32 [200] /editor 5ms
+00:14:32 services	| 24:14:32 [200] /api/get-tags 3ms
+00:14:32 services	| 24:14:32 [200] POST /api/render-markdown 28ms
+00:15:05 services	| 24:15:05 [200] / 39ms
+00:15:05 services	| 24:15:05 [200] / 32ms
+00:15:06 services	| 24:15:06 [200] / 28ms
+00:15:06 services	| 24:15:06 [200] / 34ms
+00:15:07 services	| 24:15:07 [200] /editor 4ms
+00:15:07 services	| 24:15:07 [200] /api/get-tags 1ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 8ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 8ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 8ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 8ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 6ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 4ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 5ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 3ms
+00:15:09 services	| 24:15:09 [200] POST /api/save-post 6ms
+00:15:09 services	| 24:15:09 [watch] src/content/blog/test-blog-post-playwright.md
+00:15:09 services	| 24:15:09 [200] /editor 21ms
+00:15:09 services	| 24:15:09 [200] /editor 21ms
+00:15:09 services	| 24:15:09 [200] / 103ms
+00:15:09 services	| 24:15:09 [200] /api/get-tags 2ms
+00:15:09 services	| 24:15:09 [200] /api/get-tags 2ms
+00:15:09 services	| 24:15:09 [200] POST /api/render-markdown 15ms
+00:15:11 services	| 24:15:11 [200] / 31ms
+00:15:13 services	| 24:15:13 [200] /editor 3ms
+00:15:13 services	| 24:15:13 [200] /api/get-tags 2ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 4ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 2ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 1ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 1ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 2ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 1ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 1ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 2ms
+00:15:13 services	| 24:15:13 [watch] src/content/blog/test-blog-post-playwright.md
+00:15:13 services	| 24:15:13 [200] POST /api/save-post 3ms
+00:15:13 services	| 24:15:13 [200] /editor 8ms
+00:15:13 services	| 24:15:13 [200] /editor 5ms
+00:15:13 services	| 24:15:13 [200] / 83ms
+00:15:13 services	| 24:15:13 [200] /api/get-tags 3ms
+00:15:13 services	| 24:15:13 [200] /api/get-tags 2ms
+00:15:13 services	| 24:15:13 [200] POST /api/render-markdown 15ms
+00:15:13 services	| 24:15:13 [watch] src/content/blog/test-blog-post-playwright.md
+00:15:13 services	| 24:15:13 [200] /editor 37ms
+00:15:14 services	| 24:15:14 [200] /api/get-tags 3ms
+00:15:14 services	| 24:15:14 [200] POST /api/render-markdown 18ms
+00:15:14 services	| 24:15:14 [200] / 32ms
+00:15:14 services	| 24:15:14 [200] / 45ms
+00:15:16 services	| 24:15:16 [200] /editor 4ms
+00:15:16 services	| 24:15:16 [200] /api/get-tags 1ms
+00:15:17 services	| 24:15:17 [200] POST /api/render-markdown 4ms
+00:15:17 services	| 24:15:17 [200] POST /api/render-markdown 3ms
+00:15:17 services	| 24:15:17 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 6ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 5ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 5ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 2ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 5ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 4ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/save-post 2ms
+00:15:18 services	| 24:15:18 [watch] src/content/blog/test-blog-post-playwright.md
+00:15:18 services	| 24:15:18 [200] /editor 37ms
+00:15:18 services	| 24:15:18 [200] /editor 37ms
+00:15:18 services	| 24:15:18 [200] /api/get-tags 3ms
+00:15:18 services	| 24:15:18 [200] /api/get-tags 3ms
+00:15:18 services	| 24:15:18 [200] POST /api/render-markdown 15ms
+00:15:18 services	| 24:15:18 [watch] src/content/blog/test-blog-post-playwright.md
+00:15:18 services	| 24:15:18 [200] /editor 27ms
+00:15:19 services	| 24:15:19 [200] /api/get-tags 19ms
+00:15:19 services	| 24:15:19 [200] POST /api/render-markdown 19ms
+00:15:24 services	| 24:15:24 [200] POST /api/render-markdown 11ms
+00:15:49 services	| 24:15:49 [200] /editor 4ms
+00:15:49 services	| 24:15:49 [200] /api/get-tags 4ms
+00:15:49 services	| 24:15:49 [200] POST /api/render-markdown 17ms
+10:24:39 services	| 10:24:39 [200] /editor 7ms
+10:24:39 services	| 10:24:39 [200] /api/get-tags 2ms
+10:24:39 services	| 10:24:39 [200] POST /api/render-markdown 19ms
+10:24:41 services	| 10:24:41 [200] / 40ms
+10:43:59 services	| 10:43:59 [200] / 44ms
+14:46:41 services	| 14:46:41 [200] / 36ms
+14:46:41 services	| 14:46:41 [200] / 32ms
+14:46:42 services	| 14:46:42 [200] / 26ms
+14:46:42 services	| 14:46:42 [200] / 45ms
+14:46:43 services	| 14:46:43 [200] / 67ms
+14:46:43 services	| 14:46:43 [200] / 26ms
+14:46:44 services	| 14:46:44 [200] /editor 3ms
+14:46:44 services	| 14:46:44 [200] /api/get-tags 2ms
+14:46:44 services	| 14:46:44 [200] / 26ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 5ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 5ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 5ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 5ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 5ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 2ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 2ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 4ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 5ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:45 services	| 14:46:45 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 6ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 4ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 4ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 5ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 5ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 4ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 6ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 4ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/render-markdown 3ms
+14:46:46 services	| 14:46:46 [200] POST /api/save-post 6ms
+14:46:46 services	| 14:46:46 [watch] src/content/blog/test-blog-post-playwright.md
+14:46:46 services	| 14:46:46 [200] /editor 14ms
+14:46:46 services	| 14:46:46 [200] / 80ms
+14:46:46 services	| 14:46:46 [200] /api/get-tags 1ms
+14:46:47 services	| 14:46:47 [200] / 29ms
+14:46:48 services	| 14:46:48 [200] / 25ms
+14:46:49 services	| 14:46:49 [200] /editor 3ms
+14:46:49 services	| 14:46:49 [200] /api/get-tags 2ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 4ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 1ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 2ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 1ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 2ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 2ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 3ms
+14:46:49 services	| 14:46:49 [200] POST /api/render-markdown 1ms
+14:46:49 services	| 14:46:49 [watch] src/content/blog/test-blog-post-playwright.md
+14:46:49 services	| 14:46:49 [200] POST /api/save-post 2ms
+14:46:50 services	| 14:46:50 [200] / 49ms
+14:46:50 services	| 14:46:50 [200] /editor 4ms
+14:46:50 services	| 14:46:50 [200] /api/get-tags 2ms
+14:46:50 services	| 14:46:50 [200] POST /api/render-markdown 2ms
+14:46:50 services	| 14:46:50 [200] / 32ms
+14:46:50 services	| 14:46:50 [watch] src/content/blog/test-blog-post-playwright.md
+14:46:51 services	| 14:46:51 [200] / 62ms
+14:46:51 services	| 14:46:51 [200] / 31ms
+14:46:51 services	| 14:46:51 [200] / 31ms
+14:46:52 services	| 14:46:52 [200] /editor 4ms
+14:46:52 services	| 14:46:52 [200] /api/get-tags 1ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 2ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 8ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 6ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 6ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 8ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 6ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 5ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 7ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 4ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/render-markdown 3ms
+14:46:54 services	| 14:46:54 [200] POST /api/save-post 3ms
+14:46:54 services	| 14:46:54 [watch] src/content/blog/test-blog-post-playwright.md
+14:46:55 services	| 14:46:55 [200] /editor 27ms
+14:46:55 services	| 14:46:55 [200] /api/get-tags 2ms
+14:46:55 services	| 14:46:55 [200] / 30ms
+14:46:55 services	| 14:46:55 [watch] src/content/blog/test-blog-post-playwright.md
+14:46:56 services	| 14:46:56 [200] / 62ms
+14:46:56 services	| 14:46:56 [200] / 27ms
+14:46:56 services	| 14:46:56 [200] / 25ms
+14:46:57 services	| 14:46:57 [200] /editor 4ms
+14:46:57 services	| 14:46:57 [200] /api/get-tags 1ms
+14:46:57 services	| 14:46:57 [200] POST /api/render-markdown 1ms
+14:46:59 services	| 14:46:59 [200] POST /api/save-post 2ms
+14:46:59 services	| 14:46:59 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:46:59 services	| 14:46:59 [200] / 47ms
+14:46:59 services	| 14:46:59 [200] /editor 4ms
+14:46:59 services	| 14:46:59 [200] /api/get-tags 10ms
+14:47:00 services	| 14:47:00 [200] / 28ms
+14:47:01 services	| 14:47:01 [200] / 24ms
+14:47:03 services	| 14:47:03 [200] POST /api/delete-post 1ms
+14:47:03 services	| 14:47:03 [200] / 28ms
+14:47:03 services	| 14:47:03 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:47:03 services	| 14:47:03 [200] / 68ms
+14:47:03 services	| 14:47:03 [200] / 68ms
+14:47:05 services	| 14:47:05 [200] / 28ms
+14:47:05 services	| 14:47:05 [200] / 26ms
+14:47:06 services	| 14:47:06 [200] /editor 4ms
+14:47:06 services	| 14:47:06 [200] /api/get-tags 1ms
+14:47:06 services	| 14:47:06 [200] POST /api/render-markdown 2ms
+14:47:06 services	| 14:47:06 [200] POST /api/render-markdown 1ms
+14:47:06 services	| 14:47:06 [200] POST /api/render-markdown 2ms
+14:47:06 services	| 14:47:06 [200] POST /api/render-markdown 2ms
+14:47:06 services	| 14:47:06 [200] POST /api/render-markdown 2ms
+14:47:06 services	| 14:47:06 [200] / 24ms
+14:47:07 services	| 14:47:07 [200] / 24ms
+14:47:08 services	| 14:47:08 [200] /settings 3ms
+14:47:11 services	| 14:47:11 [200] / 23ms
+14:47:11 services	| 14:47:11 [watch] playwright-report/index.html
+14:47:11 services	| 14:47:11 [watch] playwright-report/index.html
+14:47:11 services	| 14:47:11 [watch] playwright-report/trace/index.html
+14:47:11 services	| 14:47:11 [watch] playwright-report/trace/snapshot.html
+14:47:11 services	| 14:47:11 [watch] playwright-report/trace/uiMode.html
+14:48:23 services	| 14:48:23 [200] /editor 39ms
+14:48:23 services	| 14:48:23 [200] /api/get-tags 1ms
+14:48:28 services	| 14:48:28 [200] POST /api/render-markdown 2ms
+14:48:28 services	| 14:48:28 [200] POST /api/render-markdown 1ms
+14:48:28 services	| 14:48:28 [200] POST /api/render-markdown 1ms
+14:48:28 services	| 14:48:28 [200] POST /api/render-markdown 2ms
+14:48:29 services	| 14:48:29 [200] POST /api/render-markdown 1ms
+14:48:29 services	| 14:48:29 [200] POST /api/render-markdown 2ms
+14:48:29 services	| 14:48:29 [200] POST /api/render-markdown 2ms
+14:48:31 services	| 14:48:31 [200] POST /api/save-post 1ms
+14:48:31 services	| 14:48:31 [watch] src/content/blog/test.md
+14:48:34 services	| 14:48:34 [200] /editor 31ms
+14:48:35 services	| 14:48:35 [200] /api/get-tags 1ms
+14:48:38 services	| 14:48:38 [200] / 39ms
+14:48:41 services	| 14:48:41 [200] /editor 5ms
+14:48:41 services	| 14:48:41 [200] /api/get-tags 3ms
+14:48:41 services	| 14:48:41 [200] POST /api/render-markdown 2ms
+14:48:49 services	| 14:48:49 [200] POST /api/delete-post 2ms
+14:48:49 services	| 14:48:49 [watch] src/content/blog/test.md
+14:48:49 services	| 14:48:49 [200] /editor 28ms
+14:48:49 services	| 14:48:49 [404] /src/content/blog/test.md 1ms
+14:48:49 services	| 14:48:49 [200] /api/get-tags 3ms
+14:49:14 services	| 14:49:14 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:49:15 services	| 14:49:15 [200] / 43ms
+14:49:15 services	| 14:49:15 [200] / 35ms
+14:49:17 services	| 14:49:17 [200] / 35ms
+14:49:17 services	| 14:49:17 [200] / 43ms
+14:49:18 services	| 14:49:18 [200] /editor 4ms
+14:49:18 services	| 14:49:18 [200] /api/get-tags 3ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 8ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 6ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 3ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 6ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 3ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 4ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 5ms
+14:49:20 services	| 14:49:20 [200] POST /api/render-markdown 3ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 5ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 5ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 3ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 3ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 5ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 3ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 5ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 5ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 5ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 3ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:21 services	| 14:49:21 [200] POST /api/render-markdown 4ms
+14:49:22 services	| 14:49:22 [200] POST /api/save-post 2ms
+14:49:22 services	| 14:49:22 [watch] src/content/blog/test-blog-post-playwright.md
+14:49:22 services	| 14:49:22 [200] /editor 90ms
+14:49:22 services	| 14:49:22 [200] /editor 87ms
+14:49:23 services	| 14:49:23 [200] / 182ms
+14:49:23 services	| 14:49:23 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:49:23 services	| 14:49:23 [404] /src/content/blog/test.md 1ms
+14:49:23 services	| 14:49:23 [200] /api/get-tags 25ms
+14:49:24 services	| 14:49:24 [200] /editor 4ms
+14:49:24 services	| 14:49:24 [200] /api/get-tags 5ms
+14:49:24 services	| 14:49:24 [200] POST /api/render-markdown 10ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 2ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 2ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 3ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 3ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 3ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 3ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 4ms
+14:49:25 services	| 14:49:25 [watch] src/content/blog/test-blog-post-playwright.md
+14:49:25 services	| 14:49:25 [200] POST /api/save-post 4ms
+14:49:25 services	| 14:49:25 [200] /editor 37ms
+14:49:25 services	| 14:49:25 [200] /editor 22ms
+14:49:25 services	| 14:49:25 [200] / 100ms
+14:49:25 services	| 14:49:25 [200] /api/get-tags 8ms
+14:49:25 services	| 14:49:25 [404] /.well-known/appspecific/com.chrome.devtools.json 2ms
+14:49:25 services	| 14:49:25 [200] POST /api/render-markdown 3ms
+14:49:25 services	| 14:49:25 [404] /src/content/blog/test.md 1ms
+14:49:25 services	| 14:49:25 [200] /api/get-tags 19ms
+14:49:27 services	| 14:49:27 [200] / 24ms
+14:49:28 services	| 14:49:28 [200] POST /api/delete-post 1ms
+14:49:28 services	| 14:49:28 [200] / 26ms
+14:49:28 services	| 14:49:28 [watch] src/content/blog/test-blog-post-playwright.md
+14:49:28 services	| 14:49:28 [200] /editor 27ms
+14:49:28 services	| 14:49:28 [200] / 66ms
+14:49:29 services	| 14:49:29 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:49:29 services	| 14:49:29 [404] /src/content/blog/test.md 1ms
+14:49:29 services	| 14:49:29 [200] /api/get-tags 21ms
+14:49:29 services	| 14:49:29 [200] / 24ms
+14:49:32 services	| 14:49:32 [watch] playwright-report/index.html
+14:49:32 services	| 14:49:32 [watch] playwright-report/trace/index.html
+14:49:32 services	| 14:49:32 [watch] playwright-report/trace/snapshot.html
+14:49:32 services	| 14:49:32 [watch] playwright-report/trace/uiMode.html
+14:49:45 services	| 14:49:45 [200] / 51ms
+14:49:45 services	| 14:49:45 [200] / 27ms
+14:49:46 services	| 14:49:46 [200] / 30ms
+14:49:46 services	| 14:49:46 [200] / 27ms
+14:49:48 services	| 14:49:48 [200] /editor 4ms
+14:49:48 services	| 14:49:48 [200] /api/get-tags 1ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 6ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 6ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 7ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 6ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 6ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 5ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 4ms
+14:49:49 services	| 14:49:49 [200] POST /api/render-markdown 3ms
+14:49:50 services	| 14:49:50 [200] POST /api/render-markdown 4ms
+14:49:50 services	| 14:49:50 [200] POST /api/render-markdown 4ms
+14:49:50 services	| 14:49:50 [200] POST /api/render-markdown 3ms
+14:49:50 services	| 14:49:50 [200] POST /api/save-post 2ms
+14:49:50 services	| 14:49:50 [watch] src/content/blog/test-blog-post-playwright.md
+14:49:50 services	| 14:49:50 [200] /editor 7ms
+14:49:50 services	| 14:49:50 [200] /editor 7ms
+14:49:50 services	| 14:49:50 [200] / 95ms
+14:49:50 services	| 14:49:50 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:49:50 services	| 14:49:50 [200] /api/get-tags 6ms
+14:49:50 services	| 14:49:50 [404] /src/content/blog/test.md 1ms
+14:49:50 services	| 14:49:50 [200] /api/get-tags 15ms
+14:49:52 services	| 14:49:52 [200] / 24ms
+14:49:53 services	| 14:49:53 [200] /editor 3ms
+14:49:53 services	| 14:49:53 [200] /api/get-tags 2ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 3ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 2ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 2ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 2ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 2ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 1ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 1ms
+14:49:53 services	| 14:49:53 [200] POST /api/render-markdown 1ms
+14:49:53 services	| 14:49:53 [watch] src/content/blog/test-blog-post-playwright.md
+14:49:53 services	| 14:49:53 [200] POST /api/save-post 2ms
+14:49:53 services	| 14:49:53 [200] / 50ms
+14:49:53 services	| 14:49:53 [200] /editor 4ms
+14:49:53 services	| 14:49:53 [200] /editor 5ms
+14:49:53 services	| 14:49:53 [200] /api/get-tags 2ms
+14:49:54 services	| 14:49:54 [200] POST /api/render-markdown 2ms
+14:49:54 services	| 14:49:54 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:49:54 services	| 14:49:54 [404] /src/content/blog/test.md 1ms
+14:49:54 services	| 14:49:54 [200] /api/get-tags 17ms
+14:49:55 services	| 14:49:55 [200] / 22ms
+14:49:57 services	| 14:49:57 [200] POST /api/delete-post 1ms
+14:49:57 services	| 14:49:57 [200] / 24ms
+14:49:57 services	| 14:49:57 [watch] src/content/blog/test-blog-post-playwright.md
+14:49:57 services	| 14:49:57 [200] /editor 52ms
+14:49:57 services	| 14:49:57 [200] / 97ms
+14:49:57 services	| 14:49:57 [404] /src/content/blog/test.md 1ms
+14:49:57 services	| 14:49:57 [200] /api/get-tags 3ms
+14:49:57 services	| 14:49:57 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:49:58 services	| 14:49:58 [200] / 45ms
+14:50:00 services	| 14:50:00 [200] / 24ms
+14:50:01 services	| 14:50:01 [200] / 29ms
+14:50:02 services	| 14:50:02 [200] /editor 4ms
+14:50:02 services	| 14:50:02 [200] /api/get-tags 1ms
+14:50:02 services	| 14:50:02 [200] POST /api/render-markdown 1ms
+14:50:03 services	| 14:50:03 [200] POST /api/save-post 2ms
+14:50:03 services	| 14:50:03 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:50:03 services	| 14:50:03 [200] /editor 10ms
+14:50:03 services	| 14:50:03 [200] /editor 11ms
+14:50:04 services	| 14:50:04 [200] / 733ms
+14:50:04 services	| 14:50:04 [200] /api/get-tags 12ms
+14:50:04 services	| 14:50:04 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:50:04 services	| 14:50:04 [404] /src/content/blog/test.md 1ms
+14:50:04 services	| 14:50:04 [200] /api/get-tags 9ms
+14:50:05 services	| 14:50:05 [200] / 28ms
+14:50:07 services	| 14:50:07 [200] POST /api/delete-post 1ms
+14:50:07 services	| 14:50:07 [200] / 24ms
+14:50:07 services	| 14:50:07 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:50:07 services	| 14:50:07 [200] /editor 50ms
+14:50:07 services	| 14:50:07 [200] / 101ms
+14:50:07 services	| 14:50:07 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:50:07 services	| 14:50:07 [404] /src/content/blog/test.md 1ms
+14:50:07 services	| 14:50:07 [200] /api/get-tags 16ms
+14:50:09 services	| 14:50:09 [200] / 25ms
+14:50:09 services	| 14:50:09 [200] / 31ms
+14:50:10 services	| 14:50:10 [200] /editor 4ms
+14:50:10 services	| 14:50:10 [200] /api/get-tags 1ms
+14:50:10 services	| 14:50:10 [200] POST /api/render-markdown 2ms
+14:50:10 services	| 14:50:10 [200] POST /api/render-markdown 2ms
+14:50:10 services	| 14:50:10 [200] POST /api/render-markdown 2ms
+14:50:10 services	| 14:50:10 [200] POST /api/render-markdown 2ms
+14:50:10 services	| 14:50:10 [200] POST /api/render-markdown 2ms
+14:50:10 services	| 14:50:10 [200] / 24ms
+14:50:10 services	| 14:50:10 [200] / 25ms
+14:50:12 services	| 14:50:12 [200] /settings 3ms
+14:50:15 services	| 14:50:15 [200] / 24ms
+14:50:15 services	| 14:50:15 [watch] playwright-report/index.html
+14:50:43 services	| 14:50:43 [200] / 24ms
+14:50:43 services	| 14:50:43 [200] / 33ms
+14:50:44 services	| 14:50:44 [200] / 30ms
+14:50:44 services	| 14:50:44 [200] / 29ms
+14:50:44 services	| 14:50:44 [200] / 27ms
+14:50:45 services	| 14:50:45 [200] / 24ms
+14:50:45 services	| 14:50:45 [200] /editor 4ms
+14:50:45 services	| 14:50:45 [200] /api/get-tags 1ms
+14:50:46 services	| 14:50:46 [200] / 24ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 10ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 6ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 11ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 6ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 8ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 6ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 7ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 6ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 6ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 5ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 4ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/render-markdown 3ms
+14:50:47 services	| 14:50:47 [200] POST /api/save-post 2ms
+14:50:47 services	| 14:50:47 [watch] src/content/blog/test-blog-post-playwright.md
+14:50:47 services	| 14:50:47 [200] /editor 58ms
+14:50:47 services	| 14:50:47 [200] /editor 28ms
+14:50:47 services	| 14:50:47 [200] / 106ms
+14:50:48 services	| 14:50:48 [200] /api/get-tags 4ms
+14:50:48 services	| 14:50:48 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:50:48 services	| 14:50:48 [200] /api/get-tags 2ms
+14:50:48 services	| 14:50:48 [404] /src/content/blog/test.md 1ms
+14:50:49 services	| 14:50:49 [200] / 26ms
+14:50:51 services	| 14:50:51 [200] /editor 4ms
+14:50:51 services	| 14:50:51 [200] /api/get-tags 2ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 3ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 4ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [watch] src/content/blog/test-blog-post-playwright.md
+14:50:51 services	| 14:50:51 [200] POST /api/save-post 3ms
+14:50:51 services	| 14:50:51 [200] / 55ms
+14:50:51 services	| 14:50:51 [200] /editor 4ms
+14:50:51 services	| 14:50:51 [200] /editor 5ms
+14:50:51 services	| 14:50:51 [200] /api/get-tags 3ms
+14:50:51 services	| 14:50:51 [200] POST /api/render-markdown 2ms
+14:50:51 services	| 14:50:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:50:51 services	| 14:50:51 [404] /src/content/blog/test.md 0ms
+14:50:51 services	| 14:50:51 [200] /api/get-tags 8ms
+14:50:53 services	| 14:50:53 [200] / 24ms
+14:50:54 services	| 14:50:54 [200] POST /api/delete-post 1ms
+14:50:54 services	| 14:50:54 [200] / 26ms
+14:50:54 services	| 14:50:54 [watch] src/content/blog/test-blog-post-playwright.md
+14:50:55 services	| 14:50:55 [200] /editor 55ms
+14:50:55 services	| 14:50:55 [200] / 94ms
+14:50:55 services	| 14:50:55 [404] /src/content/blog/test.md 1ms
+14:50:55 services	| 14:50:55 [200] /api/get-tags 4ms
+14:50:55 services	| 14:50:55 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:50:55 services	| 14:50:55 [200] / 39ms
+14:50:58 services	| 14:50:58 [200] / 26ms
+14:50:58 services	| 14:50:58 [200] / 25ms
+14:50:59 services	| 14:50:59 [200] /editor 3ms
+14:50:59 services	| 14:50:59 [200] /api/get-tags 2ms
+14:51:00 services	| 14:51:00 [200] POST /api/render-markdown 2ms
+14:51:01 services	| 14:51:01 [200] POST /api/save-post 2ms
+14:51:01 services	| 14:51:01 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:51:01 services	| 14:51:01 [200] /editor 51ms
+14:51:01 services	| 14:51:01 [200] /editor 21ms
+14:51:01 services	| 14:51:01 [200] / 94ms
+14:51:01 services	| 14:51:01 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:01 services	| 14:51:01 [200] /api/get-tags 10ms
+14:51:01 services	| 14:51:01 [404] /src/content/blog/test.md 1ms
+14:51:01 services	| 14:51:01 [200] /api/get-tags 9ms
+14:51:03 services	| 14:51:03 [200] / 31ms
+14:51:04 services	| 14:51:04 [200] POST /api/delete-post 1ms
+14:51:04 services	| 14:51:04 [200] / 23ms
+14:51:04 services	| 14:51:04 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:51:04 services	| 14:51:04 [200] /editor 23ms
+14:51:04 services	| 14:51:04 [200] / 52ms
+14:51:04 services	| 14:51:04 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:04 services	| 14:51:04 [404] /src/content/blog/test.md 1ms
+14:51:04 services	| 14:51:04 [200] /api/get-tags 10ms
+14:51:06 services	| 14:51:06 [200] / 22ms
+14:51:06 services	| 14:51:06 [200] / 23ms
+14:51:07 services	| 14:51:07 [200] /editor 3ms
+14:51:07 services	| 14:51:07 [200] /api/get-tags 1ms
+14:51:07 services	| 14:51:07 [200] POST /api/render-markdown 2ms
+14:51:07 services	| 14:51:07 [200] POST /api/render-markdown 2ms
+14:51:07 services	| 14:51:07 [200] POST /api/render-markdown 2ms
+14:51:07 services	| 14:51:07 [200] POST /api/render-markdown 2ms
+14:51:07 services	| 14:51:07 [200] POST /api/render-markdown 1ms
+14:51:07 services	| 14:51:07 [200] / 23ms
+14:51:08 services	| 14:51:08 [200] / 26ms
+14:51:09 services	| 14:51:09 [200] /settings 5ms
+14:51:12 services	| 14:51:12 [200] / 24ms
+14:51:12 services	| 14:51:12 [watch] playwright-report/index.html
+14:51:19 services	| 14:51:19 [200] / 23ms
+14:51:19 services	| 14:51:19 [200] / 23ms
+14:51:20 services	| 14:51:20 [200] / 30ms
+14:51:20 services	| 14:51:20 [200] / 34ms
+14:51:20 services	| 14:51:20 [200] / 28ms
+14:51:21 services	| 14:51:21 [200] / 22ms
+14:51:21 services	| 14:51:21 [200] /editor 3ms
+14:51:22 services	| 14:51:22 [200] /api/get-tags 1ms
+14:51:22 services	| 14:51:22 [200] / 23ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 5ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 5ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 5ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 4ms
+14:51:23 services	| 14:51:23 [200] POST /api/render-markdown 3ms
+14:51:23 services	| 14:51:23 [200] POST /api/save-post 2ms
+14:51:23 services	| 14:51:23 [watch] src/content/blog/test-blog-post-playwright.md
+14:51:24 services	| 14:51:24 [200] /editor 27ms
+14:51:24 services	| 14:51:24 [200] /editor 25ms
+14:51:24 services	| 14:51:24 [200] / 123ms
+14:51:24 services	| 14:51:24 [200] /api/get-tags 2ms
+14:51:24 services	| 14:51:24 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:24 services	| 14:51:24 [404] /src/content/blog/test.md 1ms
+14:51:24 services	| 14:51:24 [200] /api/get-tags 9ms
+14:51:26 services	| 14:51:26 [200] / 23ms
+14:51:27 services	| 14:51:27 [200] /editor 3ms
+14:51:27 services	| 14:51:27 [200] /api/get-tags 2ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 5ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 1ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 1ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 1ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 2ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 1ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 1ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 1ms
+14:51:27 services	| 14:51:27 [watch] src/content/blog/test-blog-post-playwright.md
+14:51:27 services	| 14:51:27 [200] POST /api/save-post 2ms
+14:51:27 services	| 14:51:27 [200] / 45ms
+14:51:27 services	| 14:51:27 [200] /editor 5ms
+14:51:27 services	| 14:51:27 [200] /editor 3ms
+14:51:27 services	| 14:51:27 [200] /api/get-tags 12ms
+14:51:27 services	| 14:51:27 [200] POST /api/render-markdown 3ms
+14:51:27 services	| 14:51:27 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:27 services	| 14:51:27 [404] /src/content/blog/test.md 0ms
+14:51:28 services	| 14:51:27 [200] /api/get-tags 10ms
+14:51:29 services	| 14:51:29 [200] / 23ms
+14:51:31 services	| 14:51:31 [200] POST /api/delete-post 1ms
+14:51:31 services	| 14:51:31 [200] / 26ms
+14:51:31 services	| 14:51:31 [watch] src/content/blog/test-blog-post-playwright.md
+14:51:31 services	| 14:51:31 [200] /editor 21ms
+14:51:31 services	| 14:51:31 [200] / 59ms
+14:51:31 services	| 14:51:31 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:31 services	| 14:51:31 [404] /src/content/blog/test.md 0ms
+14:51:31 services	| 14:51:31 [200] /api/get-tags 13ms
+14:51:32 services	| 14:51:32 [200] / 36ms
+14:51:35 services	| 14:51:35 [200] / 35ms
+14:51:35 services	| 14:51:35 [200] / 25ms
+14:51:36 services	| 14:51:36 [200] /editor 3ms
+14:51:36 services	| 14:51:36 [200] /api/get-tags 1ms
+14:51:36 services	| 14:51:36 [200] POST /api/render-markdown 1ms
+14:51:38 services	| 14:51:38 [200] POST /api/save-post 2ms
+14:51:38 services	| 14:51:38 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:51:38 services	| 14:51:38 [200] / 44ms
+14:51:38 services	| 14:51:38 [200] /editor 4ms
+14:51:38 services	| 14:51:38 [200] /editor 4ms
+14:51:38 services	| 14:51:38 [200] /api/get-tags 1ms
+14:51:38 services	| 14:51:38 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:38 services	| 14:51:38 [404] /src/content/blog/test.md 1ms
+14:51:38 services	| 14:51:38 [200] /api/get-tags 15ms
+14:51:40 services	| 14:51:40 [200] / 25ms
+14:51:41 services	| 14:51:41 [200] POST /api/delete-post 1ms
+14:51:41 services	| 14:51:41 [200] / 28ms
+14:51:41 services	| 14:51:41 [watch] src/content/blog/post-to-delete-from-homepage.md
+14:51:41 services	| 14:51:41 [200] /editor 26ms
+14:51:41 services	| 14:51:41 [200] / 68ms
+14:51:41 services	| 14:51:41 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:51:41 services	| 14:51:41 [200] /api/get-tags 2ms
+14:51:41 services	| 14:51:41 [404] /src/content/blog/test.md 0ms
+14:51:43 services	| 14:51:43 [200] / 27ms
+14:51:43 services	| 14:51:43 [200] / 23ms
+14:51:44 services	| 14:51:44 [200] /editor 3ms
+14:51:44 services	| 14:51:44 [200] /api/get-tags 1ms
+14:51:44 services	| 14:51:44 [200] POST /api/render-markdown 2ms
+14:51:44 services	| 14:51:44 [200] POST /api/render-markdown 2ms
+14:51:44 services	| 14:51:44 [200] POST /api/render-markdown 2ms
+14:51:44 services	| 14:51:44 [200] POST /api/render-markdown 1ms
+14:51:44 services	| 14:51:44 [200] POST /api/render-markdown 2ms
+14:51:45 services	| 14:51:45 [200] / 23ms
+14:51:45 services	| 14:51:45 [200] / 26ms
+14:51:46 services	| 14:51:46 [200] /settings 3ms
+14:51:49 services	| 14:51:49 [200] / 29ms
+14:51:49 services	| 14:51:49 [watch] playwright-report/index.html
+15:04:32 services	| 15:04:32 [404] POST /api/delete-post 1ms
+15:06:14 services	| 15:06:14 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.313173.1753452374525 found. Prefix filename with an underscore (`_`) to ignore.
+15:06:14 services	| 15:06:14 [watch] src/pages/editor/index.astro
+15:06:15 services	| 15:06:15 [200] /editor 5ms
+15:06:15 services	| 15:06:15 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:06:15 services	| 15:06:15 [404] /src/content/blog/test.md 1ms
+15:06:15 services	| 15:06:15 [200] /api/get-tags 16ms
+15:06:28 services	| 15:06:28 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.313173.1753452388289 found. Prefix filename with an underscore (`_`) to ignore.
+15:06:28 services	| 15:06:28 [watch] src/pages/editor/index.astro
+15:06:28 services	| 15:06:28 [200] /editor 9ms
+15:06:28 services	| 15:06:28 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:06:28 services	| 15:06:28 [200] /api/get-tags 4ms
+15:06:30 services	| 15:06:30 [200] /editor 3ms
+15:06:30 services	| 15:06:30 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+15:06:30 services	| 15:06:30 [200] /api/get-tags 6ms
+15:06:43 services	| 15:06:43 [200] / 32ms
+15:06:43 services	| 15:06:43 [200] / 27ms
+15:06:44 services	| 15:06:44 [200] / 29ms
+15:06:44 services	| 15:06:44 [200] / 27ms
+15:06:45 services	| 15:06:45 [200] /editor 3ms
+15:06:45 services	| 15:06:45 [200] /api/get-tags 1ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 6ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 5ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 5ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 5ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 5ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 4ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/render-markdown 3ms
+15:06:47 services	| 15:06:47 [200] POST /api/save-post 2ms
+15:06:47 services	| 15:06:47 [watch] src/content/blog/test-blog-post-playwright.md
+15:06:47 services	| 15:06:47 [200] /editor 13ms
+15:06:47 services	| 15:06:47 [200] /editor 13ms
+15:06:47 services	| 15:06:47 [200] / 95ms
+15:06:48 services	| 15:06:48 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:06:48 services	| 15:06:48 [200] /api/get-tags 2ms
+15:06:48 services	| 15:06:48 [200] /api/get-tags 9ms
+15:06:49 services	| 15:06:49 [200] / 23ms
+15:06:51 services	| 15:06:51 [200] /editor 3ms
+15:06:51 services	| 15:06:51 [200] /api/get-tags 1ms
+15:06:51 services	| 15:06:51 [watch] src/content/blog/test-blog-post-playwright.md
+15:06:51 services	| 15:06:51 [200] /editor 26ms
+15:06:51 services	| 15:06:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:06:51 services	| 15:06:51 [200] /api/get-tags 5ms
+15:06:52 services	| 15:06:52 [200] / 36ms
+15:06:52 services	| 15:06:52 [200] / 30ms
+15:06:53 services	| 15:06:53 [200] /editor 3ms
+15:06:54 services	| 15:06:54 [200] /api/get-tags 6ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 7ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 5ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 4ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 5ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 5ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 4ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 5ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 5ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 4ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 3ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 4ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 4ms
+15:06:55 services	| 15:06:55 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 6ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 6ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 6ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 5ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 3ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 6ms
+15:06:56 services	| 15:06:56 [200] POST /api/render-markdown 4ms
+15:06:56 services	| 15:06:56 [200] POST /api/save-post 2ms
+15:06:56 services	| 15:06:56 [watch] src/content/blog/test-blog-post-playwright.md
+15:06:56 services	| 15:06:56 [200] /editor 38ms
+15:06:56 services	| 15:06:56 [200] /editor 38ms
+15:06:56 services	| 15:06:56 [200] /api/get-tags 2ms
+15:06:56 services	| 15:06:56 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:06:56 services	| 15:06:56 [200] /api/get-tags 2ms
+15:06:56 services	| 15:06:56 [watch] src/content/blog/test-blog-post-playwright.md
+15:06:57 services	| 15:06:57 [200] /editor 36ms
+15:06:57 services	| 15:06:57 [200] /api/get-tags 15ms
+15:06:57 services	| 15:06:57 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+15:06:57 services	| 15:06:57 [200] / 29ms
+15:06:58 services	| 15:06:58 [200] / 27ms
+15:06:59 services	| 15:06:59 [200] /editor 3ms
+15:06:59 services	| 15:06:59 [200] /api/get-tags 1ms
+15:06:59 services	| 15:06:59 [200] POST /api/render-markdown 1ms
+15:07:00 services	| 15:07:00 [200] POST /api/save-post 2ms
+15:07:00 services	| 15:07:00 [watch] src/content/blog/post-to-delete-from-homepage.md
+15:07:00 services	| 15:07:00 [200] / 44ms
+15:07:00 services	| 15:07:00 [200] /editor 6ms
+15:07:00 services	| 15:07:00 [200] /editor 6ms
+15:07:00 services	| 15:07:00 [200] /api/get-tags 3ms
+15:07:00 services	| 15:07:00 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:07:00 services	| 15:07:00 [200] /api/get-tags 11ms
+15:07:02 services	| 15:07:02 [200] / 22ms
+15:07:04 services	| 15:07:04 [200] POST /api/delete-post 1ms
+15:07:04 services	| 15:07:04 [200] / 23ms
+15:07:04 services	| 15:07:04 [watch] src/content/blog/post-to-delete-from-homepage.md
+15:07:04 services	| 15:07:04 [200] /editor 27ms
+15:07:04 services	| 15:07:04 [200] / 63ms
+15:07:04 services	| 15:07:04 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:07:04 services	| 15:07:04 [200] /api/get-tags 6ms
+15:07:06 services	| 15:07:06 [200] / 24ms
+15:07:06 services	| 15:07:06 [200] / 24ms
+15:07:07 services	| 15:07:07 [200] /editor 3ms
+15:07:07 services	| 15:07:07 [200] /api/get-tags 1ms
+15:07:07 services	| 15:07:07 [200] POST /api/render-markdown 2ms
+15:07:07 services	| 15:07:07 [200] POST /api/render-markdown 2ms
+15:07:07 services	| 15:07:07 [200] POST /api/render-markdown 2ms
+15:07:07 services	| 15:07:07 [200] POST /api/render-markdown 1ms
+15:07:07 services	| 15:07:07 [200] POST /api/render-markdown 2ms
+15:07:07 services	| 15:07:07 [200] / 28ms
+15:07:08 services	| 15:07:08 [200] / 35ms
+15:07:09 services	| 15:07:09 [200] /settings 3ms
+15:07:12 services	| 15:07:12 [200] / 23ms
+15:07:39 services	| 15:07:39 [200] / 23ms
+15:07:39 services	| 15:07:39 [200] / 29ms
+15:07:40 services	| 15:07:40 [200] / 29ms
+15:07:41 services	| 15:07:41 [200] / 25ms
+15:07:42 services	| 15:07:42 [200] /editor 3ms
+15:07:42 services	| 15:07:42 [200] /api/get-tags 1ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 5ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 6ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 5ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 5ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 2ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 5ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 4ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:43 services	| 15:07:43 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 3ms
+15:07:44 services	| 15:07:44 [200] POST /api/render-markdown 4ms
+15:07:44 services	| 15:07:44 [200] POST /api/save-post 2ms
+15:07:44 services	| 15:07:44 [watch] src/content/blog/test-blog-post-playwright.md
+15:07:44 services	| 15:07:44 [200] /editor 41ms
+15:07:44 services	| 15:07:44 [200] /editor 41ms
+15:07:44 services	| 15:07:44 [200] / 136ms
+15:07:44 services	| 15:07:44 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:07:44 services	| 15:07:44 [200] /api/get-tags 6ms
+15:07:44 services	| 15:07:44 [200] /api/get-tags 11ms
+15:07:46 services	| 15:07:46 [200] / 25ms
+15:07:48 services	| 15:07:48 [200] /editor 4ms
+15:07:48 services	| 15:07:48 [200] /api/get-tags 2ms
+15:07:48 services	| 15:07:48 [watch] src/content/blog/test-blog-post-playwright.md
+15:07:48 services	| 15:07:48 [200] /editor 20ms
+15:07:48 services	| 15:07:48 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:07:48 services	| 15:07:48 [200] /api/get-tags 7ms
+15:07:49 services	| 15:07:49 [200] / 33ms
+15:07:49 services	| 15:07:49 [200] / 31ms
+15:07:50 services	| 15:07:50 [200] /editor 4ms
+15:07:50 services	| 15:07:50 [200] /api/get-tags 1ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 6ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 5ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 7ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 5ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 5ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 5ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 3ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 4ms
+15:07:52 services	| 15:07:52 [200] POST /api/render-markdown 2ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 5ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 5ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 6ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 5ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 8ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 5ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 3ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 5ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 3ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 3ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 5ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 3ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/render-markdown 4ms
+15:07:53 services	| 15:07:53 [200] POST /api/save-post 2ms
+15:07:53 services	| 15:07:53 [watch] src/content/blog/test-blog-post-playwright.md
+15:07:53 services	| 15:07:53 [200] /editor 30ms
+15:07:53 services	| 15:07:53 [200] /editor 30ms
+15:07:53 services	| 15:07:53 [200] /api/get-tags 3ms
+15:07:53 services	| 15:07:53 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:07:53 services	| 15:07:53 [200] /api/get-tags 9ms
+15:07:53 services	| 15:07:53 [watch] src/content/blog/test-blog-post-playwright.md
+15:07:53 services	| 15:07:53 [200] /editor 29ms
+15:07:53 services	| 15:07:53 [200] /api/get-tags 10ms
+15:07:54 services	| 15:07:54 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+15:08:25 services	| 15:08:25 [200] / 35ms
+15:08:26 services	| 15:08:26 [200] / 28ms
+15:08:27 services	| 15:08:27 [200] / 28ms
+15:08:27 services	| 15:08:27 [200] / 26ms
+15:08:28 services	| 15:08:28 [200] /editor 6ms
+15:08:28 services	| 15:08:28 [200] /api/get-tags 1ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 2ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 5ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 2ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 2ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 2ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 2ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 4ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 5ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:30 services	| 15:08:30 [200] POST /api/render-markdown 3ms
+15:08:32 services	| 15:08:32 [200] POST /api/save-post 1ms
+15:08:32 services	| 15:08:32 [watch] src/content/blog/test-blog-post-playwright.md
+15:08:32 services	| 15:08:32 [200] /editor 42ms
+15:08:32 services	| 15:08:32 [200] /editor 18ms
+15:08:32 services	| 15:08:32 [200] / 55ms
+15:08:32 services	| 15:08:32 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:08:32 services	| 15:08:32 [200] /api/get-tags 3ms
+15:08:35 services	| 15:08:35 [200] / 27ms
+15:08:40 services	| 15:08:40 [200] /editor 5ms
+15:08:40 services	| 15:08:40 [200] /api/get-tags 1ms
+15:08:40 services	| 15:08:40 [watch] src/content/blog/test-blog-post-playwright.md
+15:08:40 services	| 15:08:40 [200] /editor 30ms
+15:08:40 services	| 15:08:40 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:08:41 services	| 15:08:41 [200] /api/get-tags 7ms
+15:08:42 services	| 15:08:42 [200] / 66ms
+15:08:42 services	| 15:08:42 [200] / 26ms
+15:08:43 services	| 15:08:43 [200] /editor 4ms
+15:08:43 services	| 15:08:43 [200] /api/get-tags 1ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 6ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 6ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 5ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 5ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 4ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:45 services	| 15:08:45 [200] POST /api/render-markdown 3ms
+15:08:46 services	| 15:08:46 [200] POST /api/save-post 2ms
+15:08:46 services	| 15:08:46 [watch] src/content/blog/test-blog-post-playwright.md
+15:08:46 services	| 15:08:46 [200] /editor 29ms
+15:08:46 services	| 15:08:46 [200] /editor 29ms
+15:08:46 services	| 15:08:46 [200] /api/get-tags 2ms
+15:08:46 services	| 15:08:46 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:08:46 services	| 15:08:46 [200] /api/get-tags 8ms
+15:08:46 services	| 15:08:46 [watch] src/content/blog/test-blog-post-playwright.md
+15:08:46 services	| 15:08:46 [200] /editor 55ms
+15:08:46 services	| 15:08:46 [200] /api/get-tags 8ms
+15:08:47 services	| 15:08:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:17 services	| 15:11:17 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.313173.1753452677018 found. Prefix filename with an underscore (`_`) to ignore.
+15:11:17 services	| 15:11:17 [watch] src/pages/editor/index.astro
+15:11:17 services	| 15:11:17 [200] /editor 6ms
+15:11:17 services	| 15:11:17 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:17 services	| 15:11:17 [200] /api/get-tags 13ms
+15:11:24 services	| 15:11:24 [200] / 36ms
+15:11:25 services	| 15:11:25 [200] / 29ms
+15:11:25 services	| 15:11:25 [200] / 29ms
+15:11:26 services	| 15:11:26 [200] / 40ms
+15:11:27 services	| 15:11:27 [200] /editor 4ms
+15:11:27 services	| 15:11:27 [200] /api/get-tags 1ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 6ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 6ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 5ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 5ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 5ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 5ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 4ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 6ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 5ms
+15:11:28 services	| 15:11:28 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 10ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 11ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 6ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 8ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 7ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 5ms
+15:11:29 services	| 15:11:29 [200] POST /api/render-markdown 4ms
+15:11:29 services	| 15:11:29 [200] POST /api/save-post 9ms
+15:11:29 services	| 15:11:29 [watch] src/content/blog/test-blog-post-playwright.md
+15:11:29 services	| 15:11:29 [200] /editor 19ms
+15:11:29 services	| 15:11:29 [200] /editor 19ms
+15:11:29 services	| 15:11:29 [200] / 130ms
+15:11:29 services	| 15:11:29 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:29 services	| 15:11:29 [200] /api/get-tags 4ms
+15:11:29 services	| 15:11:29 [200] /api/get-tags 4ms
+15:11:31 services	| 15:11:31 [200] / 27ms
+15:11:34 services	| 15:11:34 [200] / 25ms
+15:11:35 services	| 15:11:35 [200] /editor 3ms
+15:11:35 services	| 15:11:35 [200] /api/get-tags 1ms
+15:11:36 services	| 15:11:36 [watch] src/content/blog/test-blog-post-playwright.md
+15:11:36 services	| 15:11:36 [200] /editor 25ms
+15:11:36 services	| 15:11:36 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:36 services	| 15:11:36 [200] /api/get-tags 7ms
+15:11:37 services	| 15:11:37 [200] / 32ms
+15:11:37 services	| 15:11:37 [200] / 33ms
+15:11:38 services	| 15:11:38 [200] /editor 3ms
+15:11:38 services	| 15:11:38 [200] /api/get-tags 1ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 7ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 3ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 6ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 8ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 3ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 3ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 3ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 5ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 5ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 5ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 5ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 5ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 5ms
+15:11:40 services	| 15:11:40 [200] POST /api/render-markdown 3ms
+15:11:41 services	| 15:11:40 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 5ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 3ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 5ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 3ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 3ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 5ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 3ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 3ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/render-markdown 4ms
+15:11:41 services	| 15:11:41 [200] POST /api/save-post 1ms
+15:11:41 services	| 15:11:41 [watch] src/content/blog/test-blog-post-playwright.md
+15:11:41 services	| 15:11:41 [200] /editor 30ms
+15:11:41 services	| 15:11:41 [200] /editor 30ms
+15:11:41 services	| 15:11:41 [200] /api/get-tags 2ms
+15:11:41 services	| 15:11:41 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:41 services	| 15:11:41 [200] /api/get-tags 2ms
+15:11:41 services	| 15:11:41 [watch] src/content/blog/test-blog-post-playwright.md
+15:11:41 services	| 15:11:41 [200] /editor 29ms
+15:11:42 services	| 15:11:42 [200] /api/get-tags 14ms
+15:11:42 services	| 15:11:42 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:42 services	| 15:11:42 [200] / 59ms
+15:11:43 services	| 15:11:43 [200] / 33ms
+15:11:44 services	| 15:11:44 [200] /editor 5ms
+15:11:44 services	| 15:11:44 [200] /api/get-tags 1ms
+15:11:44 services	| 15:11:44 [200] POST /api/render-markdown 1ms
+15:11:45 services	| 15:11:45 [200] POST /api/save-post 2ms
+15:11:45 services	| 15:11:45 [watch] src/content/blog/post-to-delete-from-homepage.md
+15:11:45 services	| 15:11:45 [200] /editor 10ms
+15:11:45 services	| 15:11:45 [200] /editor 10ms
+15:11:45 services	| 15:11:45 [200] / 101ms
+15:11:45 services	| 15:11:45 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:45 services	| 15:11:45 [200] /api/get-tags 3ms
+15:11:45 services	| 15:11:45 [200] /api/get-tags 11ms
+15:11:47 services	| 15:11:47 [200] / 26ms
+15:11:49 services	| 15:11:49 [200] POST /api/delete-post 1ms
+15:11:49 services	| 15:11:49 [200] / 28ms
+15:11:49 services	| 15:11:49 [watch] src/content/blog/post-to-delete-from-homepage.md
+15:11:49 services	| 15:11:49 [200] /editor 30ms
+15:11:49 services	| 15:11:49 [200] / 68ms
+15:11:49 services	| 15:11:49 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:11:49 services	| 15:11:49 [200] /api/get-tags 7ms
+15:11:51 services	| 15:11:51 [200] / 25ms
+15:11:51 services	| 15:11:51 [200] / 30ms
+15:11:52 services	| 15:11:52 [200] /editor 3ms
+15:11:52 services	| 15:11:52 [200] /api/get-tags 1ms
+15:11:52 services	| 15:11:52 [200] POST /api/render-markdown 2ms
+15:11:52 services	| 15:11:52 [200] POST /api/render-markdown 2ms
+15:11:52 services	| 15:11:52 [200] POST /api/render-markdown 2ms
+15:11:52 services	| 15:11:52 [200] POST /api/render-markdown 2ms
+15:11:52 services	| 15:11:52 [200] POST /api/render-markdown 2ms
+15:11:52 services	| 15:11:52 [200] / 24ms
+15:11:53 services	| 15:11:53 [200] / 32ms
+15:11:54 services	| 15:11:54 [200] /settings 3ms
+15:11:57 services	| 15:11:57 [200] / 23ms
+15:12:09 services	| 15:12:09 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.313173.1753452729384 found. Prefix filename with an underscore (`_`) to ignore.
+15:12:09 services	| 15:12:09 [watch] src/pages/editor/index.astro
+15:12:09 services	| 15:12:09 [200] /editor 5ms
+15:12:09 services	| 15:12:09 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:12:10 services	| 15:12:10 [200] /api/get-tags 29ms
+15:12:26 services	| 15:12:26 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.313173.1753452746921 found. Prefix filename with an underscore (`_`) to ignore.
+15:12:26 services	| 15:12:26 [watch] src/pages/editor/index.astro
+15:12:27 services	| 15:12:27 [200] /editor 5ms
+15:12:27 services	| 15:12:27 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:12:27 services	| 15:12:27 [200] /api/get-tags 9ms
+15:12:34 services	| 15:12:34 [200] / 34ms
+15:12:34 services	| 15:12:34 [200] / 34ms
+15:12:35 services	| 15:12:35 [200] / 31ms
+15:12:35 services	| 15:12:35 [200] / 34ms
+15:12:36 services	| 15:12:36 [200] /editor 4ms
+15:12:37 services	| 15:12:37 [200] /api/get-tags 1ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 6ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 5ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 5ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 5ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 5ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 5ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 4ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/render-markdown 3ms
+15:12:38 services	| 15:12:38 [200] POST /api/save-post 2ms
+15:12:38 services	| 15:12:38 [watch] src/content/blog/test-blog-post-playwright.md
+15:12:39 services	| 15:12:39 [200] /editor 19ms
+15:12:39 services	| 15:12:39 [200] /editor 19ms
+15:12:39 services	| 15:12:39 [200] / 87ms
+15:12:39 services	| 15:12:39 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:12:39 services	| 15:12:39 [200] /api/get-tags 2ms
+15:12:39 services	| 15:12:39 [200] /api/get-tags 11ms
+15:12:41 services	| 15:12:41 [200] / 22ms
+15:12:44 services	| 15:12:44 [200] / 22ms
+15:12:46 services	| 15:12:46 [200] /editor 7ms
+15:12:46 services	| 15:12:46 [200] /api/get-tags 3ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 3ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 2ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 1ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 1ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 2ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 1ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 2ms
+15:12:46 services	| 15:12:46 [200] POST /api/render-markdown 2ms
+15:12:47 services	| 15:12:47 [watch] src/content/blog/test-blog-post-playwright.md
+15:12:47 services	| 15:12:47 [200] POST /api/save-post 4ms
+15:12:47 services	| 15:12:47 [200] / 53ms
+15:12:47 services	| 15:12:47 [200] /editor 4ms
+15:12:48 services	| 15:12:48 [200] /editor 5ms
+15:12:48 services	| 15:12:48 [200] /api/get-tags 5ms
+15:12:48 services	| 15:12:48 [200] POST /api/render-markdown 2ms
+15:12:48 services	| 15:12:48 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:12:48 services	| 15:12:48 [200] /api/get-tags 6ms
+15:12:49 services	| 15:12:49 [200] / 26ms
+15:12:51 services	| 15:12:51 [200] POST /api/delete-post 1ms
+15:12:51 services	| 15:12:51 [200] / 24ms
+15:12:51 services	| 15:12:51 [watch] src/content/blog/test-blog-post-playwright.md
+15:12:51 services	| 15:12:51 [200] /editor 31ms
+15:12:51 services	| 15:12:51 [200] / 70ms
+15:12:51 services	| 15:12:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:12:51 services	| 15:12:51 [200] /api/get-tags 6ms
+15:12:52 services	| 15:12:52 [200] / 24ms
+15:13:01 services	| 15:13:01 [200] / 30ms
+15:13:01 services	| 15:13:01 [200] / 29ms
+15:13:02 services	| 15:13:02 [200] / 25ms
+15:13:02 services	| 15:13:02 [200] / 26ms
+15:13:03 services	| 15:13:03 [200] /editor 3ms
+15:13:03 services	| 15:13:03 [200] /api/get-tags 1ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 2ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 2ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 2ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 2ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 4ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/render-markdown 3ms
+15:13:05 services	| 15:13:05 [200] POST /api/save-post 2ms
+15:13:05 services	| 15:13:05 [watch] src/content/blog/test-blog-post-playwright.md
+15:13:05 services	| 15:13:05 [200] /editor 23ms
+15:13:05 services	| 15:13:05 [200] /editor 24ms
+15:13:05 services	| 15:13:05 [200] / 129ms
+15:13:05 services	| 15:13:05 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:13:05 services	| 15:13:05 [200] /api/get-tags 20ms
+15:13:05 services	| 15:13:05 [200] /api/get-tags 10ms
+15:13:07 services	| 15:13:07 [200] / 24ms
+15:13:10 services	| 15:13:10 [200] / 26ms
+15:13:12 services	| 15:13:12 [200] /editor 3ms
+15:13:12 services	| 15:13:12 [200] /api/get-tags 2ms
+15:13:12 services	| 15:13:12 [200] POST /api/render-markdown 4ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 1ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 2ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 2ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 2ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 2ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 2ms
+15:13:13 services	| 15:13:13 [200] POST /api/render-markdown 2ms
+15:13:14 services	| 15:13:14 [watch] src/content/blog/test-blog-post-playwright.md
+15:13:14 services	| 15:13:14 [200] POST /api/save-post 3ms
+15:13:14 services	| 15:13:14 [200] /editor 4ms
+15:13:14 services	| 15:13:14 [200] /editor 3ms
+15:13:14 services	| 15:13:14 [200] / 70ms
+15:13:14 services	| 15:13:14 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:13:14 services	| 15:13:14 [200] /api/get-tags 4ms
+15:13:14 services	| 15:13:14 [200] POST /api/render-markdown 2ms
+15:13:14 services	| 15:13:14 [200] /api/get-tags 9ms
+15:13:16 services	| 15:13:16 [200] / 26ms
+15:13:18 services	| 15:13:18 [200] POST /api/delete-post 1ms
+15:13:18 services	| 15:13:18 [200] / 23ms
+15:13:18 services	| 15:13:18 [watch] src/content/blog/test-blog-post-playwright.md
+15:13:18 services	| 15:13:18 [200] /editor 24ms
+15:13:18 services	| 15:13:18 [200] / 60ms
+15:13:18 services	| 15:13:18 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:13:18 services	| 15:13:18 [200] /api/get-tags 7ms
+15:13:19 services	| 15:13:19 [200] / 26ms
+15:13:21 services	| 15:13:21 [200] / 24ms
+15:13:22 services	| 15:13:22 [200] / 23ms
+15:13:23 services	| 15:13:23 [200] /editor 5ms
+15:13:23 services	| 15:13:23 [200] /api/get-tags 1ms
+15:13:23 services	| 15:13:23 [200] POST /api/render-markdown 1ms
+15:13:24 services	| 15:13:24 [200] POST /api/save-post 1ms
+15:13:24 services	| 15:13:24 [watch] src/content/blog/post-to-delete-from-homepage.md
+15:13:24 services	| 15:13:24 [200] / 46ms
+15:13:24 services	| 15:13:24 [200] /editor 4ms
+15:13:24 services	| 15:13:24 [200] /editor 3ms
+15:13:24 services	| 15:13:24 [200] /api/get-tags 1ms
+15:13:24 services	| 15:13:24 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:13:24 services	| 15:13:24 [200] /api/get-tags 13ms
+15:13:26 services	| 15:13:26 [200] / 21ms
+15:13:27 services	| 15:13:27 [200] POST /api/delete-post 1ms
+15:13:27 services	| 15:13:27 [200] / 22ms
+15:13:27 services	| 15:13:27 [watch] src/content/blog/post-to-delete-from-homepage.md
+15:13:27 services	| 15:13:27 [200] /editor 21ms
+15:13:27 services	| 15:13:27 [200] / 48ms
+15:13:27 services	| 15:13:27 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:13:27 services	| 15:13:27 [200] /api/get-tags 7ms
+15:13:29 services	| 15:13:29 [200] / 23ms
+15:13:29 services	| 15:13:29 [200] / 25ms
+15:13:30 services	| 15:13:30 [200] /editor 3ms
+15:13:30 services	| 15:13:30 [200] /api/get-tags 1ms
+15:13:31 services	| 15:13:31 [200] POST /api/render-markdown 1ms
+15:13:31 services	| 15:13:31 [200] POST /api/render-markdown 1ms
+15:13:31 services	| 15:13:31 [200] POST /api/render-markdown 2ms
+15:13:31 services	| 15:13:31 [200] POST /api/render-markdown 1ms
+15:13:31 services	| 15:13:31 [200] POST /api/render-markdown 2ms
+15:13:31 services	| 15:13:31 [200] / 24ms
+15:13:31 services	| 15:13:31 [200] / 30ms
+15:13:32 services	| 15:13:32 [200] /settings 3ms
+15:13:35 services	| 15:13:35 [200] / 23ms
+15:13:43 services	| 15:13:43 [200] HEAD /editor 4ms
+15:43:35 services	| 15:43:35 [200] /editor 8ms
+15:43:35 services	| 15:43:35 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:43:35 services	| 15:43:35 [200] /api/get-tags 6ms
+15:58:33 services	| 15:58:33 [200] POST /api/render-markdown 3ms
+15:58:33 services	| 15:58:33 [200] POST /api/render-markdown 1ms
+15:58:33 services	| 15:58:33 [200] POST /api/render-markdown 2ms
+15:58:34 services	| 15:58:34 [200] POST /api/render-markdown 1ms
+15:58:34 services	| 15:58:34 [200] POST /api/render-markdown 2ms
+15:58:34 services	| 15:58:34 [200] POST /api/render-markdown 1ms
+15:58:34 services	| 15:58:34 [200] POST /api/render-markdown 1ms
+15:58:34 services	| 15:58:34 [200] POST /api/render-markdown 1ms
+15:58:34 services	| 15:58:34 [200] POST /api/render-markdown 1ms
+15:58:35 services	| 15:58:35 [200] POST /api/render-markdown 2ms
+15:58:35 services	| 15:58:35 [200] POST /api/render-markdown 1ms
+15:58:35 services	| 15:58:35 [200] POST /api/render-markdown 1ms
+15:58:36 services	| 15:58:36 [200] POST /api/save-post 2ms
+15:58:36 services	| 15:58:36 [watch] src/content/blog/test-this.md
+15:58:44 services	| 15:58:44 [200] /editor 30ms
+15:58:44 services	| 15:58:44 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:58:44 services	| 15:58:44 [200] /api/get-tags 2ms
+15:58:47 services	| 15:58:47 [200] / 37ms
+15:58:47 services	| 15:58:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:58:51 services	| 15:58:51 [200] /editor 9ms
+15:58:51 services	| 15:58:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:58:51 services	| 15:58:51 [200] /api/get-tags 2ms
+15:58:51 services	| 15:58:51 [200] POST /api/render-markdown 4ms
+15:58:58 services	| 15:58:58 [200] POST /api/delete-post 1ms
+15:58:58 services	| 15:58:58 [watch] src/content/blog/test-this.md
+15:58:58 services	| 15:58:58 [200] /editor 29ms
+15:58:58 services	| 15:58:58 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:58:58 services	| 15:58:58 [404] /src/content/blog/test-this.md 1ms
+15:58:58 services	| 15:58:58 [200] /api/get-tags 10ms
+15:59:01 services	| 15:59:01 [404] /src/content/blog/test-this.md 1ms
+15:59:03 services	| 15:59:03 [404] /src/content/blog/test-this.md 1ms
+15:59:04 services	| 15:59:04 [200] /editor 4ms
+15:59:04 services	| 15:59:04 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+15:59:04 services	| 15:59:04 [200] /api/get-tags 10ms
+15:59:16 services	| 15:59:16 [200] POST /api/render-markdown 1ms
+15:59:16 services	| 15:59:16 [200] POST /api/render-markdown 2ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 1ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 2ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 1ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 1ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 1ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 1ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 1ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 2ms
+15:59:17 services	| 15:59:17 [200] POST /api/render-markdown 2ms
+15:59:18 services	| 15:59:18 [200] POST /api/render-markdown 1ms
+15:59:22 services	| 15:59:22 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:23 services	| 15:59:23 [200] POST /api/render-markdown 1ms
+15:59:26 services	| 15:59:26 [200] / 30ms
+15:59:26 services	| 15:59:26 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:00:08 services	| 16:00:08 [200] /blog/01-astro-sphere-file-structure 114ms
+16:00:08 services	| 16:00:08 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:00:14 services	| 16:00:14 [200] / 29ms
+16:00:14 services	| 16:00:14 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:00:24 services	| 16:00:24 [200] /blog/04-astro-sphere-writing-markdown 150ms
+16:00:24 services	| 16:00:24 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:03:25 services	| 16:03:25 [watch] src/layouts/ArticleBottomLayout.astro
+16:03:25 services	| 16:03:25 [200] /blog/04-astro-sphere-writing-markdown 6ms
+16:03:25 services	| 16:03:25 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:03:33 services	| 16:03:33 [watch] src/layouts/ArticleBottomLayout.astro
+16:03:33 services	| 16:03:33 [200] /blog/04-astro-sphere-writing-markdown 5ms
+16:03:33 services	| 16:03:33 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:03:43 services	| 16:03:43 [watch] src/layouts/ArticleBottomLayout.astro
+16:03:43 services	| 16:03:43 [200] /blog/04-astro-sphere-writing-markdown 4ms
+16:03:43 services	| 16:03:43 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:03:53 services	| 16:03:53 [watch] src/layouts/ArticleBottomLayout.astro
+16:03:53 services	| 16:03:53 [200] /blog/04-astro-sphere-writing-markdown 6ms
+16:03:53 services	| 16:03:53 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:04:02 services	| 16:04:02 [watch] src/layouts/ArticleBottomLayout.astro
+16:04:02 services	| 16:04:02 [200] /blog/04-astro-sphere-writing-markdown 4ms
+16:04:02 services	| 16:04:02 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:04:13 services	| 16:04:13 [watch] /src/components/TableOfContents.tsx, /src/styles/global.css
+16:04:18 services	| 16:04:18 [watch] /src/components/TableOfContents.tsx, /src/styles/global.css
+16:04:52 services	| 16:04:52 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.313173.1753455892074 found. Prefix filename with an underscore (`_`) to ignore.
+16:04:52 services	| 16:04:52 [watch] src/pages/settings.astro
+16:04:52 services	| 16:04:52 [200] /blog/04-astro-sphere-writing-markdown 19ms
+16:04:52 services	| 16:04:52 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:04:59 services	| 16:04:59 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.313173.1753455899971 found. Prefix filename with an underscore (`_`) to ignore.
+16:04:59 services	| 16:04:59 [watch] src/pages/settings.astro
+16:05:00 services	| 16:05:00 [200] /blog/04-astro-sphere-writing-markdown 5ms
+16:05:00 services	| 16:05:00 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:05:07 services	| 16:05:07 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.313173.1753455907705 found. Prefix filename with an underscore (`_`) to ignore.
+16:05:07 services	| 16:05:07 [watch] src/pages/settings.astro
+16:05:07 services	| 16:05:07 [200] /blog/04-astro-sphere-writing-markdown 5ms
+16:05:08 services	| 16:05:08 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:05:15 services	| 16:05:15 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/settings.astro.tmp.313173.1753455915573 found. Prefix filename with an underscore (`_`) to ignore.
+16:05:15 services	| 16:05:15 [watch] src/pages/settings.astro
+16:05:15 services	| 16:05:15 [200] /blog/04-astro-sphere-writing-markdown 5ms
+16:05:15 services	| 16:05:15 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:05:30 services	| 16:05:30 [watch] src/layouts/ArticleBottomLayout.astro
+16:05:31 services	| 16:05:31 [200] /blog/04-astro-sphere-writing-markdown 14ms
+16:05:31 services	| 16:05:31 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:06:17 services	| 16:06:17 [watch] /src/components/TableOfContents.tsx, /src/styles/global.css
+16:06:25 services	| 16:06:25 [200] /blog/04-astro-sphere-writing-markdown 7ms
+16:06:31 services	| 16:06:31 [200] /blog/04-astro-sphere-writing-markdown 5ms
+16:06:47 services	| 16:06:47 [watch] src/content/blog/test-toc.md
+16:06:47 services	| 16:06:47 [200] /blog/04-astro-sphere-writing-markdown 23ms
+16:06:47 services	| 16:06:47 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:06:56 services	| 16:06:56 [200] /blog/test-toc 41ms
+16:07:02 services	| 16:07:02 [200] /blog/test-toc 8ms
+16:09:55 services	| 16:09:55 [watch] /src/components/TableOfContents.tsx, /src/styles/global.css
+16:10:46 services	| 16:10:46 [watch] /src/components/TableOfContents.tsx, /src/styles/global.css
+16:12:09 services	| 16:12:09 [watch] src/layouts/ArticleBottomLayout.astro
+16:12:10 services	| 16:12:10 [200] /blog/04-astro-sphere-writing-markdown 16ms
+16:12:10 services	| 16:12:10 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:13:07 services	| 16:13:07 [watch] /src/components/TableOfContents.tsx, /src/styles/global.css
+16:13:49 services	| 16:13:49 [watch] src/content/blog/test-toc.md
+16:13:50 services	| 16:13:50 [200] /blog/04-astro-sphere-writing-markdown 28ms
+16:13:50 services	| 16:13:50 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:16:11 services	| 16:16:11 [ERROR] Failed to load url ./MyComponent.astro (resolved id: ./MyComponent.astro) in /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx.mdx. Does the file exist?
+16:16:11 services	|   Stack trace:
+16:16:11 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx.mdx?astroPropagatedAssets
+16:16:11 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+16:16:11 services	| 16:16:11 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:16:22 services	| 16:16:22 [200] /blog/04-astro-sphere-writing-markdown 6ms
+16:16:22 services	| 16:16:22 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:16:25 services	| 16:16:25 [200] /blog/03-astro-sphere-add-new-post-or-projects 49ms
+16:16:25 services	| 16:16:25 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:16:33 services	| 16:16:33 [200] /blog/04-astro-sphere-writing-markdown 6ms
+16:16:33 services	| 16:16:33 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:16:44 services	| 16:16:44 [ERROR] Failed to load url ./MyComponent.astro (resolved id: ./MyComponent.astro) in /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx.mdx. Does the file exist?
+16:16:44 services	|   Stack trace:
+16:16:44 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx.mdx?astroPropagatedAssets
+16:16:44 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+16:16:44 services	| 16:16:44 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:19:05 services	| 16:19:05 [200] /blog/05-astro-sphere-writing-mdx 82ms
+16:19:05 services	| 16:19:05 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:20:01 services	| 16:20:01 [200] /settings 6ms
+16:20:01 services	| 16:20:01 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:20:10 services	| 16:20:10 [200] /settings 3ms
+16:20:10 services	| 16:20:10 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:20:12 services	| 16:20:12 [200] / 40ms
+16:20:12 services	| 16:20:12 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:20:35 services	| 16:20:35 [200] /blog/test-toc 25ms
+16:20:35 services	| 16:20:35 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:20:43 services	| 16:20:43 [200] /blog/01-astro-sphere-file-structure 5ms
+16:20:43 services	| 16:20:43 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:20:47 services	| 16:20:47 [200] /blog/test-toc 8ms
+16:20:47 services	| 16:20:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:21:00 services	| 16:21:00 [200] / 43ms
+16:21:00 services	| 16:21:00 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:22:06 services	| 16:22:06 [watch] src/layouts/PageLayout.astro
+16:22:07 services	| 16:22:07 [200] / 50ms
+16:22:07 services	| 16:22:07 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:22:12 services	| 16:22:12 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/index.astro.tmp.378362.1753456932509 found. Prefix filename with an underscore (`_`) to ignore.
+16:22:12 services	| 16:22:12 [watch] src/pages/index.astro
+16:22:13 services	| 16:22:13 [200] / 29ms
+16:22:13 services	| 16:22:13 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:22:30 services	| 16:22:30 [200] / 72ms
+16:24:51 services	| 16:24:51 [200] / 40ms
+16:24:51 services	| 16:24:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:24:54 services	| 16:24:54 [200] /blog/02-astro-sphere-getting-started 161ms
+16:24:54 services	| 16:24:54 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:34 services	| 16:48:34 [200] /blog/02-astro-sphere-getting-started 10ms
+16:48:34 services	| 16:48:34 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:38 services	| 16:48:38 [200] /blog/02-astro-sphere-getting-started 7ms
+16:48:38 services	| 16:48:38 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:48:40 services	| 16:48:40 [200] /blog/02-astro-sphere-getting-started 5ms
+16:48:40 services	| 16:48:40 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:42 services	| 16:48:42 [200] / 26ms
+16:48:42 services	| 16:48:42 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:45 services	| 16:48:45 [200] / 25ms
+16:48:45 services	| 16:48:45 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:47 services	| 16:48:47 [200] / 29ms
+16:48:47 services	| 16:48:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:50 services	| 16:48:50 [200] / 25ms
+16:48:50 services	| 16:48:50 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:48:57 services	| 16:48:57 [200] / 24ms
+16:48:57 services	| 16:48:57 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:49:06 services	| 16:49:06 [200] /blog/test-toc 4ms
+16:49:06 services	| 16:49:06 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:49:14 services	| 16:49:14 [200] /blog/test-toc 5ms
+16:49:14 services	| 16:49:14 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:49:15 services	| 16:49:15 [200] /blog/test-toc 6ms
+16:49:15 services	| 16:49:15 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:50:42 services	| 16:50:42 [watch] src/layouts/ArticleTopLayout.astro
+16:50:42 services	| 16:50:42 [200] /blog/test-toc 17ms
+16:50:42 services	| 16:50:42 [ERROR] showEditButton is not defined
+16:50:42 services	|   Stack trace:
+16:50:42 services	|     at /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/layouts/ArticleTopLayout.astro:67:6
+16:50:42 services	|     [...] See full stack trace in the browser, or rerun with --verbose.
+16:50:42 services	| 16:50:42 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:50:42 services	| [Shiki] 10 instances have been created. Shiki is supposed to be used as a singleton, consider refactoring your code to cache your highlighter instance; Or call `highlighter.dispose()` to release unused instances.
+16:50:54 services	| 16:50:54 [watch] src/layouts/ArticleTopLayout.astro
+16:50:54 services	| 16:50:54 [200] /blog/test-toc 5ms
+16:50:54 services	| 16:50:54 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:51:00 services	| 16:51:00 [watch] src/layouts/ArticleTopLayout.astro
+16:51:01 services	| 16:51:01 [200] /blog/test-toc 7ms
+16:51:01 services	| 16:51:01 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:52:39 services	| 16:52:39 [200] /blog/test-toc 10ms
+16:52:39 services	| 16:52:39 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:52:41 services	| 16:52:41 [200] /blog/test-toc 5ms
+16:52:41 services	| 16:52:41 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:53:40 services	| 16:53:40 [200] / 37ms
+16:53:40 services	| 16:53:40 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:53:46 services	| 16:53:46 [200] /editor 4ms
+16:53:46 services	| 16:53:46 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:53:46 services	| 16:53:46 [200] /api/get-tags 12ms
+16:53:55 services	| 16:53:55 [200] / 35ms
+16:53:55 services	| 16:53:55 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:54:02 services	| 16:54:02 [200] /tags 6ms
+16:54:02 services	| 16:54:02 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:54:56 services	| 16:54:56 [watch] src/components/Header.astro
+16:54:56 services	| 16:54:56 [200] /tags 15ms
+16:54:56 services	| 16:54:56 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:56:03 services	| 16:56:03 [200] /tags/astro 7ms
+16:56:04 services	| 16:56:04 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:56:11 services	| 16:56:11 [200] /tags 7ms
+16:56:11 services	| 16:56:11 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:56:13 services	| 16:56:13 [200] / 30ms
+16:56:13 services	| 16:56:13 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:56:35 services	| 16:56:35 [200] /editor 5ms
+16:56:35 services	| 16:56:35 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+16:56:35 services	| 16:56:35 [200] /api/get-tags 2ms
+16:59:50 services	| 16:59:50 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459190369 found. Prefix filename with an underscore (`_`) to ignore.
+16:59:50 services	| 16:59:50 [watch] src/pages/editor/index.astro
+16:59:51 services	| 16:59:51 [200] /editor 5ms
+16:59:51 services	| 16:59:51 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+16:59:51 services	| 16:59:51 [200] /api/get-tags 5ms
+17:00:01 services	| 17:00:01 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459201233 found. Prefix filename with an underscore (`_`) to ignore.
+17:00:01 services	| 17:00:01 [watch] src/pages/editor/index.astro
+17:00:02 services	| 17:00:02 [200] /editor 5ms
+17:00:02 services	| 17:00:02 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:00:02 services	| 17:00:02 [200] /api/get-tags 6ms
+17:00:40 services	| 17:00:40 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459240423 found. Prefix filename with an underscore (`_`) to ignore.
+17:00:40 services	| 17:00:40 [watch] src/pages/editor/index.astro
+17:00:41 services	| 17:00:41 [200] /editor 7ms
+17:00:41 services	| 17:00:41 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:00:41 services	| 17:00:41 [200] /api/get-tags 7ms
+17:02:49 services	| 17:02:49 [200] POST /api/render-markdown 2ms
+17:02:52 services	| 17:02:52 [200] POST /api/render-markdown 1ms
+17:02:55 services	| 17:02:55 [200] POST /api/render-markdown 1ms
+17:02:55 services	| 17:02:55 [200] POST /api/render-markdown 1ms
+17:02:57 services	| 17:02:57 [200] POST /api/render-markdown 1ms
+17:02:59 services	| 17:02:59 [200] POST /api/render-markdown 2ms
+17:03:04 services	| 17:03:04 [200] POST /api/render-markdown 1ms
+17:03:11 services	| 17:03:11 [200] POST /api/render-markdown 2ms
+17:03:13 services	| 17:03:13 [200] POST /api/render-markdown 2ms
+17:03:14 services	| 17:03:14 [200] POST /api/render-markdown 2ms
+17:03:15 services	| 17:03:15 [200] POST /api/render-markdown 2ms
+17:03:16 services	| 17:03:16 [200] POST /api/render-markdown 1ms
+17:03:40 services	| 17:03:40 [200] POST /api/render-markdown 1ms
+17:03:41 services	| 17:03:41 [200] POST /api/render-markdown 1ms
+17:03:43 services	| 17:03:43 [200] POST /api/render-markdown 2ms
+17:03:45 services	| 17:03:45 [200] POST /api/render-markdown 3ms
+17:03:47 services	| 17:03:47 [200] POST /api/render-markdown 3ms
+17:03:51 services	| 17:03:51 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459431394 found. Prefix filename with an underscore (`_`) to ignore.
+17:03:51 services	| 17:03:51 [watch] src/pages/editor/index.astro
+17:03:51 services	| 17:03:51 [200] POST /api/render-markdown 2ms
+17:03:51 services	| 17:03:51 [200] POST /api/render-markdown 4ms
+17:03:51 services	| 17:03:51 [200] /editor 7ms
+17:03:51 services	| 17:03:51 [200] POST /api/render-markdown 2ms
+17:03:51 services	| 17:03:51 [200] POST /api/render-markdown 2ms
+17:03:52 services	| 17:03:52 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:03:52 services	| 17:03:52 [200] /api/get-tags 4ms
+17:04:00 services	| 17:04:00 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459440560 found. Prefix filename with an underscore (`_`) to ignore.
+17:04:00 services	| 17:04:00 [watch] src/pages/editor/index.astro
+17:04:00 services	| 17:04:00 [200] /editor 7ms
+17:04:01 services	| 17:04:01 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:04:01 services	| 17:04:01 [200] /api/get-tags 27ms
+17:04:19 services	| 17:04:19 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459459762 found. Prefix filename with an underscore (`_`) to ignore.
+17:04:19 services	| 17:04:19 [watch] src/pages/editor/index.astro
+17:04:20 services	| 17:04:20 [200] /editor 7ms
+17:04:20 services	| 17:04:20 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:04:20 services	| 17:04:20 [200] /api/get-tags 6ms
+17:04:25 services	| 17:04:25 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459465084 found. Prefix filename with an underscore (`_`) to ignore.
+17:04:25 services	| 17:04:25 [watch] src/pages/editor/index.astro
+17:04:25 services	| 17:04:25 [200] /editor 6ms
+17:04:25 services	| 17:04:25 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:04:25 services	| 17:04:25 [200] /api/get-tags 28ms
+17:04:31 services	| 17:04:31 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459471137 found. Prefix filename with an underscore (`_`) to ignore.
+17:04:31 services	| 17:04:31 [watch] src/pages/editor/index.astro
+17:04:31 services	| 17:04:31 [200] /editor 6ms
+17:04:31 services	| 17:04:31 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:04:31 services	| 17:04:31 [200] /api/get-tags 1ms
+17:04:36 services	| 17:04:36 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753459476755 found. Prefix filename with an underscore (`_`) to ignore.
+17:04:36 services	| 17:04:36 [watch] src/pages/editor/index.astro
+17:04:37 services	| 17:04:37 [200] /editor 10ms
+17:04:37 services	| 17:04:37 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:04:37 services	| 17:04:37 [200] /api/get-tags 2ms
+17:04:55 services	| 17:04:55 [200] POST /api/render-markdown 3ms
+17:05:13 services	| 17:05:13 [200] POST /api/render-markdown 1ms
+17:05:18 services	| 17:05:18 [200] POST /api/render-markdown 1ms
+17:05:18 services	| 17:05:18 [200] POST /api/render-markdown 2ms
+17:05:18 services	| 17:05:18 [200] POST /api/render-markdown 2ms
+17:05:18 services	| 17:05:18 [200] POST /api/render-markdown 2ms
+17:05:20 services	| 17:05:20 [200] POST /api/render-markdown 1ms
+17:05:20 services	| 17:05:20 [200] POST /api/render-markdown 1ms
+17:05:20 services	| 17:05:20 [200] POST /api/render-markdown 1ms
+17:05:20 services	| 17:05:20 [200] POST /api/render-markdown 1ms
+17:05:24 services	| 17:05:24 [200] POST /api/render-markdown 1ms
+17:05:25 services	| 17:05:25 [200] POST /api/render-markdown 1ms
+17:05:27 services	| 17:05:27 [200] POST /api/render-markdown 1ms
+17:05:27 services	| 17:05:27 [200] POST /api/render-markdown 1ms
+17:05:27 services	| 17:05:27 [200] POST /api/render-markdown 1ms
+17:05:27 services	| 17:05:27 [200] POST /api/render-markdown 1ms
+17:05:31 services	| 17:05:31 [200] POST /api/render-markdown 1ms
+17:05:32 services	| 17:05:32 [200] POST /api/render-markdown 1ms
+17:05:32 services	| 17:05:32 [200] POST /api/render-markdown 1ms
+17:05:33 services	| 17:05:33 [200] POST /api/render-markdown 1ms
+17:05:33 services	| 17:05:33 [200] POST /api/render-markdown 1ms
+17:05:35 services	| 17:05:35 [200] POST /api/render-markdown 1ms
+17:05:35 services	| 17:05:35 [200] POST /api/render-markdown 1ms
+17:05:35 services	| 17:05:35 [200] POST /api/render-markdown 1ms
+17:05:35 services	| 17:05:35 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:36 services	| 17:05:36 [200] POST /api/render-markdown 1ms
+17:05:37 services	| 17:05:37 [200] POST /api/render-markdown 1ms
+17:05:37 services	| 17:05:37 [200] POST /api/render-markdown 1ms
+17:05:37 services	| 17:05:37 [200] POST /api/render-markdown 2ms
+17:05:43 services	| 17:05:43 [200] POST /api/render-markdown 1ms
+17:05:43 services	| 17:05:43 [200] POST /api/render-markdown 2ms
+17:05:43 services	| 17:05:43 [200] POST /api/render-markdown 1ms
+17:05:44 services	| 17:05:44 [200] POST /api/render-markdown 1ms
+17:05:44 services	| 17:05:44 [200] POST /api/render-markdown 2ms
+17:05:45 services	| 17:05:45 [200] POST /api/render-markdown 1ms
+17:05:45 services	| 17:05:45 [200] POST /api/render-markdown 1ms
+17:05:45 services	| 17:05:45 [200] POST /api/render-markdown 1ms
+17:05:45 services	| 17:05:45 [200] POST /api/render-markdown 1ms
+17:05:45 services	| 17:05:45 [200] POST /api/render-markdown 1ms
+17:05:47 services	| 17:05:47 [200] POST /api/render-markdown 1ms
+17:05:48 services	| 17:05:48 [200] POST /api/render-markdown 1ms
+17:05:48 services	| 17:05:48 [200] POST /api/render-markdown 1ms
+17:05:48 services	| 17:05:48 [200] POST /api/render-markdown 1ms
+17:05:49 services	| 17:05:49 [200] POST /api/render-markdown 1ms
+17:05:49 services	| 17:05:49 [200] POST /api/render-markdown 1ms
+17:05:49 services	| 17:05:49 [200] POST /api/render-markdown 1ms
+17:05:49 services	| 17:05:49 [200] POST /api/render-markdown 1ms
+17:05:49 services	| 17:05:49 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 1ms
+17:05:50 services	| 17:05:50 [200] POST /api/render-markdown 2ms
+17:05:52 services	| 17:05:52 [200] POST /api/render-markdown 2ms
+17:05:55 services	| 17:05:55 [200] POST /api/render-markdown 1ms
+17:05:55 services	| 17:05:55 [200] POST /api/render-markdown 1ms
+17:05:56 services	| 17:05:56 [200] POST /api/render-markdown 1ms
+17:05:56 services	| 17:05:56 [200] POST /api/render-markdown 1ms
+17:05:56 services	| 17:05:56 [200] POST /api/render-markdown 1ms
+17:05:56 services	| 17:05:56 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:57 services	| 17:05:57 [200] POST /api/render-markdown 1ms
+17:05:59 services	| 17:05:59 [200] POST /api/render-markdown 1ms
+17:06:00 services	| 17:06:00 [200] POST /api/render-markdown 1ms
+17:06:00 services	| 17:06:00 [200] POST /api/render-markdown 1ms
+17:06:00 services	| 17:06:00 [200] POST /api/render-markdown 1ms
+17:06:04 services	| 17:06:04 [200] POST /api/render-markdown 1ms
+17:06:05 services	| 17:06:05 [200] POST /api/render-markdown 1ms
+17:06:05 services	| 17:06:05 [200] POST /api/render-markdown 1ms
+17:06:05 services	| 17:06:05 [200] POST /api/render-markdown 1ms
+17:06:05 services	| 17:06:05 [200] POST /api/render-markdown 1ms
+17:06:06 services	| 17:06:06 [200] POST /api/render-markdown 1ms
+17:06:06 services	| 17:06:06 [200] POST /api/render-markdown 1ms
+17:06:06 services	| 17:06:06 [200] POST /api/render-markdown 1ms
+17:06:06 services	| 17:06:06 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 2ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 2ms
+17:06:07 services	| 17:06:07 [200] POST /api/render-markdown 1ms
+17:07:19 services	| 17:07:19 [200] / 45ms
+17:07:21 services	| 17:07:21 [200] /tags 6ms
+17:08:08 services	| 17:08:08 [watch] src/components/Header.astro
+17:08:08 services	| 17:08:08 [200] /editor 14ms
+17:08:08 services	| 17:08:08 [200] /tags 16ms
+17:08:09 services	| 17:08:09 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+17:08:09 services	| 17:08:09 [200] /api/get-tags 6ms
+17:08:29 services	| 17:08:29 [200] / 35ms
+17:08:32 services	| 17:08:32 [200] /tags 8ms
+17:08:50 services	| 17:08:50 [200] /editor 9ms
+17:08:50 services	| 17:08:50 [200] /api/get-tags 1ms
+17:08:59 services	| 17:08:59 [200] POST /api/render-markdown 2ms
+17:08:59 services	| 17:08:59 [200] POST /api/render-markdown 1ms
+17:08:59 services	| 17:08:59 [200] POST /api/render-markdown 2ms
+17:08:59 services	| 17:08:59 [200] POST /api/render-markdown 2ms
+17:08:59 services	| 17:08:59 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 2ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:00 services	| 17:09:00 [200] POST /api/render-markdown 1ms
+17:09:02 services	| 17:09:02 [200] POST /api/render-markdown 1ms
+17:09:05 services	| 17:09:05 [200] POST /api/render-markdown 1ms
+17:09:05 services	| 17:09:05 [200] POST /api/render-markdown 1ms
+17:09:07 services	| 17:09:07 [200] POST /api/render-markdown 1ms
+17:09:09 services	| 17:09:09 [200] POST /api/render-markdown 1ms
+17:09:10 services	| 17:09:10 [200] POST /api/render-markdown 3ms
+17:09:10 services	| 17:09:10 [200] POST /api/render-markdown 2ms
+17:09:11 services	| 17:09:11 [200] POST /api/render-markdown 1ms
+17:09:11 services	| 17:09:11 [200] POST /api/render-markdown 1ms
+17:09:14 services	| 17:09:14 [200] POST /api/render-markdown 2ms
+17:09:16 services	| 17:09:16 [200] POST /api/render-markdown 1ms
+17:09:16 services	| 17:09:16 [200] POST /api/render-markdown 1ms
+17:09:16 services	| 17:09:16 [200] POST /api/render-markdown 1ms
+17:09:17 services	| 17:09:17 [200] POST /api/render-markdown 1ms
+17:09:23 services	| 17:09:23 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 2ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 1ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 2ms
+17:09:25 services	| 17:09:25 [200] POST /api/render-markdown 2ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 1ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 1ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 1ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 1ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 2ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 2ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 1ms
+17:09:27 services	| 17:09:27 [200] POST /api/render-markdown 1ms
+17:09:28 services	| 17:09:28 [200] POST /api/render-markdown 1ms
+17:09:28 services	| 17:09:28 [200] POST /api/render-markdown 2ms
+17:09:28 services	| 17:09:28 [200] POST /api/render-markdown 2ms
+17:09:28 services	| 17:09:28 [200] POST /api/render-markdown 1ms
+17:09:29 services	| 17:09:29 [200] POST /api/render-markdown 1ms
+17:09:29 services	| 17:09:29 [200] POST /api/render-markdown 1ms
+17:09:29 services	| 17:09:29 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:34 services	| 17:09:34 [200] POST /api/render-markdown 1ms
+17:09:35 services	| 17:09:35 [200] POST /api/render-markdown 1ms
+17:09:36 services	| 17:09:36 [200] POST /api/render-markdown 1ms
+17:09:36 services	| 17:09:36 [200] POST /api/render-markdown 1ms
+17:09:37 services	| 17:09:37 [200] POST /api/render-markdown 2ms
+17:09:37 services	| 17:09:37 [200] POST /api/render-markdown 2ms
+17:09:37 services	| 17:09:37 [200] POST /api/render-markdown 2ms
+17:09:37 services	| 17:09:37 [200] POST /api/render-markdown 2ms
+17:09:38 services	| 17:09:38 [200] POST /api/render-markdown 2ms
+17:09:38 services	| 17:09:38 [200] POST /api/render-markdown 1ms
+17:09:39 services	| 17:09:39 [200] POST /api/render-markdown 1ms
+17:09:42 services	| 17:09:42 [200] POST /api/render-markdown 1ms
+17:09:42 services	| 17:09:42 [200] POST /api/render-markdown 2ms
+17:09:45 services	| 17:09:45 [200] POST /api/render-markdown 1ms
+17:09:45 services	| 17:09:45 [200] POST /api/render-markdown 1ms
+17:09:45 services	| 17:09:45 [200] POST /api/render-markdown 1ms
+17:09:45 services	| 17:09:45 [200] POST /api/render-markdown 1ms
+17:09:46 services	| 17:09:46 [200] POST /api/render-markdown 2ms
+17:09:46 services	| 17:09:46 [200] POST /api/render-markdown 1ms
+17:09:46 services	| 17:09:46 [200] POST /api/render-markdown 2ms
+17:09:46 services	| 17:09:46 [200] POST /api/render-markdown 1ms
+17:09:47 services	| 17:09:47 [200] POST /api/render-markdown 1ms
+17:09:48 services	| 17:09:48 [200] POST /api/render-markdown 1ms
+17:09:50 services	| 17:09:50 [200] POST /api/render-markdown 1ms
+17:09:52 services	| 17:09:52 [200] POST /api/render-markdown 1ms
+17:09:57 services	| Failed to highlight code for language j: ShikiError: Language `j` not found, you may need to load it first
+17:09:57 services	|     at Object.getLanguage (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/@shikijs+core@1.29.2/node_modules/@shikijs/core/dist/index.mjs:1698:13)
+17:09:57 services	|     at codeToTokensBase (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/@shikijs+core@1.29.2/node_modules/@shikijs/core/dist/index.mjs:777:29)
+17:09:57 services	|     at codeToTokens (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/@shikijs+core@1.29.2/node_modules/@shikijs/core/dist/index.mjs:1097:14)
+17:09:57 services	|     at codeToHast (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/@shikijs+core@1.29.2/node_modules/@shikijs/core/dist/index.mjs:1160:7)
+17:09:57 services	|     at codeToHtml (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/@shikijs+core@1.29.2/node_modules/@shikijs/core/dist/index.mjs:1387:23)
+17:09:57 services	|     at Object.codeToHtml (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/@shikijs+core@1.29.2/node_modules/@shikijs/core/dist/index.mjs:1808:37)
+17:09:57 services	|     at eval (/home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js:55:45)
+17:09:57 services	|     at overload (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unist-util-visit/lib/index.js:311:12)
+17:09:57 services	|     at node ([33melement<pre>[39m) (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unist-util-visit-parents/lib/index.js:346:27)
+17:09:57 services	|     at node ([33mroot[39m) (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unist-util-visit-parents/lib/index.js:363:61)
+17:09:57 services	|     at visitParents (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unist-util-visit-parents/lib/index.js:304:31)
+17:09:57 services	|     at Module.visit (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unist-util-visit/lib/index.js:302:3)
+17:09:57 services	|     at eval (/home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js:41:27)
+17:09:57 services	|     at wrapped (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:160:27)
+17:09:57 services	|     at next (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:86:23)
+17:09:57 services	|     at done (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:194:7)
+17:09:57 services	|     at then (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:204:5)
+17:09:57 services	|     at wrapped (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:181:9)
+17:09:57 services	|     at next (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:86:23)
+17:09:57 services	|     at done (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:194:7)
+17:09:57 services	|     at then (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:204:5)
+17:09:57 services	|     at wrapped (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:181:9)
+17:09:57 services	|     at next (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:86:23)
+17:09:57 services	|     at Object.run (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/trough/lib/index.js:57:5)
+17:09:57 services	|     at executor (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unified/lib/index.js:901:20)
+17:09:57 services	|     at Function.run (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unified/lib/index.js:884:19)
+17:09:57 services	|     at executor (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unified/lib/index.js:737:12)
+17:09:57 services	|     at new Promise (<anonymous>)
+17:09:57 services	|     at Function.process (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/unified/lib/index.js:720:47)
+17:09:57 services	|     at Module.POST (/home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/api/render-markdown.js:134:36)
+17:09:57 services	|     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+17:09:57 services	|     at async renderEndpoint (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/runtime/server/endpoint.js:34:18)
+17:09:57 services	|     at async lastNext (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/core/render-context.js:139:23)
+17:09:57 services	|     at async callMiddleware (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/core/middleware/callMiddleware.js:11:10)
+17:09:57 services	|     at async RenderContext.render (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/core/render-context.js:178:22)
+17:09:57 services	|     at async handleRoute (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/vite-plugin-astro-server/route.js:135:16)
+17:09:57 services	|     at async run (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/vite-plugin-astro-server/request.js:40:14)
+17:09:57 services	|     at async runWithErrorHandling (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/vite-plugin-astro-server/controller.js:64:5)
+17:09:57 services	|     at async handleRequest (file:///home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/node_modules/.pnpm/astro@4.16.18_rollup@4.45.1_typescript@5.4.2/node_modules/astro/dist/vite-plugin-astro-server/request.js:34:3)
+17:09:57 services	| 17:09:57 [200] POST /api/render-markdown 4ms
+17:09:57 services	| 17:09:57 [200] POST /api/render-markdown 30ms
+17:09:58 services	| 17:09:58 [200] POST /api/render-markdown 3ms
+17:15:32 services	| 17:15:32 [200] /tags 7ms
+17:15:32 services	| 17:15:32 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:04 services	| 17:17:04 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460224191 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:04 services	| 17:17:04 [watch] src/pages/editor/index.astro
+17:17:04 services	| 17:17:04 [200] /tags 5ms
+17:17:04 services	| 17:17:04 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:04 services	| 17:17:04 [200] /editor 5ms
+17:17:05 services	| 17:17:05 [200] /api/get-tags 1ms
+17:17:11 services	| 17:17:11 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460231444 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:11 services	| 17:17:11 [watch] src/pages/editor/index.astro
+17:17:11 services	| 17:17:11 [200] /tags 6ms
+17:17:11 services	| 17:17:11 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:12 services	| 17:17:12 [200] /editor 11ms
+17:17:12 services	| 17:17:12 [200] /api/get-tags 2ms
+17:17:19 services	| 17:17:19 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460239230 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:19 services	| 17:17:19 [watch] src/pages/editor/index.astro
+17:17:19 services	| 17:17:19 [200] /tags 6ms
+17:17:19 services	| 17:17:19 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:19 services	| 17:17:19 [200] /editor 5ms
+17:17:20 services	| 17:17:20 [200] /api/get-tags 2ms
+17:17:26 services	| 17:17:26 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460246377 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:26 services	| 17:17:26 [watch] src/pages/editor/index.astro
+17:17:26 services	| 17:17:26 [200] /tags 6ms
+17:17:26 services	| 17:17:26 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:27 services	| 17:17:27 [200] /editor 5ms
+17:17:27 services	| 17:17:27 [200] /api/get-tags 2ms
+17:17:33 services	| 17:17:33 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460253192 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:33 services	| 17:17:33 [watch] src/pages/editor/index.astro
+17:17:33 services	| 17:17:33 [200] /tags 4ms
+17:17:33 services	| 17:17:33 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:33 services	| 17:17:33 [200] /editor 6ms
+17:17:34 services	| 17:17:34 [200] /api/get-tags 1ms
+17:17:47 services	| 17:17:47 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460267756 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:47 services	| 17:17:47 [watch] src/pages/editor/index.astro
+17:17:48 services	| 17:17:48 [200] /tags 11ms
+17:17:48 services	| 17:17:48 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+17:17:48 services	| 17:17:48 [200] /editor 11ms
+17:17:48 services	| 17:17:48 [200] /api/get-tags 1ms
+17:17:51 services	| 17:17:51 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460271657 found. Prefix filename with an underscore (`_`) to ignore.
+17:17:51 services	| 17:17:51 [watch] src/pages/editor/index.astro
+17:17:51 services	| 17:17:51 [200] /tags 5ms
+17:17:52 services	| 17:17:52 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:17:52 services	| 17:17:52 [200] /editor 12ms
+17:17:52 services	| 17:17:52 [200] /api/get-tags 1ms
+17:26:38 services	| 17:26:38 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:29:40 services	| 17:29:40 [WARN] Unsupported file type /home/kyran/Sync/workspace/projects/2025/LLMs/claude_code/astro_blog/astro-sphere/src/pages/editor/index.astro.tmp.378362.1753460980072 found. Prefix filename with an underscore (`_`) to ignore.
+17:29:40 services	| 17:29:40 [watch] src/pages/editor/index.astro
+17:29:40 services	| 17:29:40 [200] /editor 5ms
+17:29:40 services	| 17:29:40 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+17:29:40 services	| 17:29:40 [200] /tags 6ms
+17:29:40 services	| 17:29:40 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+17:29:40 services	| 17:29:40 [200] /api/get-tags 22ms
+17:30:01 services	| 17:30:01 [200] /editor 3ms
+17:30:02 services	| 17:30:02 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:30:02 services	| 17:30:02 [200] /api/get-tags 11ms
+17:34:35 services	| 17:34:35 [watch] src/pages/editor/index.astro
+17:34:36 services	| 17:34:36 [200] /tags 7ms
+17:34:36 services	| 17:34:36 [200] /editor 6ms
+17:34:36 services	| 17:34:36 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:34:36 services	| 17:34:36 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:34:36 services	| 17:34:36 [200] /api/get-tags 13ms
+17:34:57 services	| 17:34:57 [200] / 44ms
+17:34:57 services	| 17:34:57 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:56:37 services	| 17:56:37 [200] / 59ms
+17:56:37 services	| 17:56:37 [200] /tags 12ms
+17:56:37 services	| 17:56:37 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+17:56:37 services	| 17:56:37 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+19:56:47 services	| 19:56:47 [200] / 76ms
+19:56:47 services	| 19:56:47 [200] /tags 11ms
+19:56:47 services	| 19:56:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+19:56:47 services	| 19:56:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+00:24:09 services	| 24:24:09 [200] /tags 10ms
+00:24:09 services	| 24:24:09 [200] / 57ms
+00:24:09 services	| 24:24:09 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+00:24:09 services	| 24:24:09 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:23:23 services	| 13:23:23 [200] / 50ms
+13:23:23 services	| 13:23:23 [200] /tags 7ms
+13:55:58 services	| 13:55:58 [200] /tags 8ms
+13:55:58 services	| 13:55:58 [200] / 56ms

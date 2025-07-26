@@ -111,10 +111,24 @@ test.describe('Blog Editor Integration Tests', () => {
 
     // Step 2: Navigate back to homepage and verify post appears
     await test.step('Verify post appears on homepage', async () => {
-      await page.goto('http://localhost:4321');
+      // More robust navigation with retries
+      let retries = 3;
+      while (retries > 0) {
+        try {
+          await page.goto('http://localhost:4321', { 
+            waitUntil: 'load',
+            timeout: 10000 
+          });
+          break;
+        } catch (error) {
+          retries--;
+          if (retries === 0) throw error;
+          await page.waitForTimeout(2000); // Wait 2s before retry
+        }
+      }
       
       // Wait for the post to appear
-      await page.waitForSelector(`text="${TEST_POST_TITLE}"`, { timeout: 10000 });
+      await page.waitForSelector(`text="${TEST_POST_TITLE}"`, { timeout: 15000 });
       
       // Verify the summary is visible
       const summaryVisible = await page.isVisible(`text="${TEST_POST_SUMMARY}"`);
@@ -123,13 +137,30 @@ test.describe('Blog Editor Integration Tests', () => {
 
     // Step 3: Edit the blog post
     await test.step('Edit existing blog post', async () => {
+      // Wait a bit for the server to fully process the new file
+      await page.waitForTimeout(3000);
+      
+      // Reload the page to ensure we have the latest content
+      await page.reload({ waitUntil: 'networkidle' });
+      
+      // Wait for the post to appear
+      await page.waitForSelector(`text="${TEST_POST_TITLE}"`, { timeout: 10000 });
+      
       // Find and click the edit button for our test post
       const article = await page.locator('article').filter({ hasText: TEST_POST_TITLE }).first();
       await article.locator('a:has-text("Edit")').click();
       
-      await page.waitForURL(`**/editor?edit=${expectedSlug}`);
+      // Wait for navigation to editor
+      await page.waitForLoadState('networkidle');
+      
+      // Check if we got redirected or if we're on the edit page
+      const currentUrl = page.url();
+      if (!currentUrl.includes(`edit=${expectedSlug}`)) {
+        throw new Error(`Expected to be on edit page for ${expectedSlug}, but was redirected to ${currentUrl}`);
+      }
 
       // Verify the content loaded correctly
+      await page.waitForSelector('#post-title', { state: 'visible' });
       const titleValue = await page.inputValue('#post-title');
       expect(titleValue).toBe(TEST_POST_TITLE);
 
@@ -142,8 +173,18 @@ test.describe('Blog Editor Integration Tests', () => {
       
       // Wait for success message
       await page.waitForSelector('#status-message:not(.hidden)');
+      
+      // Wait for the status to change from "Saving post..." to success message
+      await page.waitForFunction(
+        () => {
+          const statusEl = document.querySelector('#status-message');
+          return statusEl?.textContent?.includes('updated successfully') || false;
+        },
+        { timeout: 15000 }
+      );
+      
       const updateStatusText = await page.textContent('#status-message');
-      expect(updateStatusText).toContain('Post updated successfully');
+      expect(updateStatusText).toContain('updated successfully');
 
       // Verify file was updated
       const updatedFileContent = await readFile(expectedFilePath, 'utf8');
@@ -152,19 +193,67 @@ test.describe('Blog Editor Integration Tests', () => {
       expect(updatedFileContent).not.toContain(TEST_POST_CONTENT);
     });
 
-    // Step 4: Delete the blog post from the editor
-    await test.step('Delete blog post from editor', async () => {
-      // We're already on the editor page, click delete
-      await page.click('#delete-post');
+    // Step 4: Delete the blog post from the homepage
+    await test.step('Delete blog post from homepage', async () => {
+      // Navigate to homepage with retry logic to handle server reloads
+      let retries = 3;
+      while (retries > 0) {
+        try {
+          await page.goto('http://localhost:4321', { 
+            waitUntil: 'domcontentloaded',
+            timeout: 10000 
+          });
+          break;
+        } catch (error) {
+          retries--;
+          if (retries === 0) throw error;
+          console.log(`Navigation retry ${3 - retries} failed, waiting before retry...`);
+          await page.waitForTimeout(2000); // Wait 2s before retry
+        }
+      }
       
-      // Handle the confirmation dialog
+      // Wait for the updated post to appear
+      await page.waitForSelector(`text="${UPDATED_POST_TITLE}"`, { timeout: 15000 });
+      
+      // Find the article with the updated title
+      const article = await page.locator('article').filter({ hasText: UPDATED_POST_TITLE }).first();
+      
+      // Set up dialog handler before clicking delete
       page.on('dialog', dialog => dialog.accept());
       
-      // Wait for deletion and redirect
-      await page.waitForURL('http://localhost:4321/', { timeout: 5000 });
+      // Click the delete button and wait for the server to process the deletion
+      const deleteButton = article.locator('button:has-text("Delete")');
+      await deleteButton.click();
+      
+      // After deletion, the server will reload due to file changes
+      // Wait a bit for the deletion to process before trying to navigate
+      await page.waitForTimeout(1000);
+      
+      // Navigate back to homepage after deletion with retry logic
+      retries = 3;
+      while (retries > 0) {
+        try {
+          await page.goto('http://localhost:4321', { 
+            waitUntil: 'networkidle',
+            timeout: 10000 
+          });
+          break;
+        } catch (error) {
+          retries--;
+          if (retries === 0) {
+            // If we still can't navigate, try one more time with just waiting for the response
+            await page.goto('http://localhost:4321', { waitUntil: 'commit' });
+          } else {
+            console.log(`Post-deletion navigation retry ${3 - retries} failed, waiting before retry...`);
+            await page.waitForTimeout(2000); // Wait 2s before retry
+          }
+        }
+      }
 
-      // Verify the post no longer appears on homepage
-      await page.waitForTimeout(2000); // Wait for page to fully load
+      // Wait for the page to stabilize
+      await page.waitForTimeout(2000);
+
+      // Verify the post no longer appears
       const postExists = await page.isVisible(`text="${UPDATED_POST_TITLE}"`);
       expect(postExists).toBe(false);
 
@@ -204,19 +293,50 @@ test.describe('Blog Editor Integration Tests', () => {
       { timeout: 15000 }
     );
 
-    // Go back to homepage
-    await page.goto('http://localhost:4321/', { waitUntil: 'networkidle' });
-    await page.waitForSelector(`text="${deleteTestTitle}"`, { timeout: 10000 });
+    // Enable edit mode via localStorage before navigating
+    await page.evaluate(() => {
+      localStorage.setItem('editMode', 'true');
+    });
+    
+    // Go back to homepage with retries
+    let retries = 3;
+    while (retries > 0) {
+      try {
+        await page.goto('http://localhost:4321', { 
+          waitUntil: 'domcontentloaded', // Faster than 'load'
+          timeout: 15000 
+        });
+        break;
+      } catch (error) {
+        retries--;
+        if (retries === 0) throw error;
+        console.log(`Navigation retry ${3 - retries} failed, waiting before retry...`);
+        await page.waitForTimeout(2000); // Wait 2s before retry
+      }
+    }
+    
+    await page.waitForSelector(`text="${deleteTestTitle}"`, { timeout: 15000 });
 
     // Find and click delete button
     const article = await page.locator('article').filter({ hasText: deleteTestTitle }).first();
     
+    // Check if delete button is visible
+    const deleteButtonExists = await article.locator('button:has-text("Delete")').isVisible();
+    if (!deleteButtonExists) {
+      throw new Error('Delete button not visible - edit mode may not be enabled');
+    }
+    
     // Set up dialog handler before clicking delete
     page.on('dialog', dialog => dialog.accept());
     
+    // Wait for navigation after delete (page reload)
+    const navigationPromise = page.waitForLoadState('networkidle');
     await article.locator('button:has-text("Delete")').click();
-
-    // Wait for page reload
+    
+    // Wait for page to reload after deletion
+    await navigationPromise;
+    
+    // Give additional time for DOM to update
     await page.waitForTimeout(2000);
 
     // Verify post is gone
@@ -255,8 +375,21 @@ test.describe('Blog Editor Integration Tests', () => {
   });
 
   test('Settings persistence for compact mode', async ({ page }) => {
-    // Go to settings
-    await page.goto('http://localhost:4321/settings');
+    // Go to settings with retries
+    let retries = 3;
+    while (retries > 0) {
+      try {
+        await page.goto('http://localhost:4321/settings', { 
+          waitUntil: 'load',
+          timeout: 10000 
+        });
+        break;
+      } catch (error) {
+        retries--;
+        if (retries === 0) throw error;
+        await page.waitForTimeout(2000);
+      }
+    }
 
     // Change to compact mode
     await page.selectOption('#view-mode', 'compact');
@@ -265,8 +398,21 @@ test.describe('Blog Editor Integration Tests', () => {
     await page.click('#save-settings');
     await page.waitForTimeout(1500); // Wait for save and potential reload
 
-    // Go to homepage
-    await page.goto('http://localhost:4321');
+    // Go to homepage with retries
+    retries = 3;
+    while (retries > 0) {
+      try {
+        await page.goto('http://localhost:4321', { 
+          waitUntil: 'load',
+          timeout: 10000 
+        });
+        break;
+      } catch (error) {
+        retries--;
+        if (retries === 0) throw error;
+        await page.waitForTimeout(2000);
+      }
+    }
 
     // Verify compact mode is applied
     // In compact mode, only first paragraph should be visible

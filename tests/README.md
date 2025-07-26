@@ -86,13 +86,6 @@ The `blog-editor.spec.ts` file tests the complete blog post lifecycle:
 
 ## Troubleshooting
 
-### Port Already in Use
-If you get a port conflict error, make sure no other Astro dev server is running:
-```bash
-# Kill any process using port 4321
-lsof -ti:4321 | xargs kill -9
-```
-
 ### File Permission Errors
 Ensure you have write permissions to the `src/content/blog/` directory.
 

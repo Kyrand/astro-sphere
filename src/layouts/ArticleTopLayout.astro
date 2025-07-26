@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { formatDate, readingTime } from "@lib/utils";
 import { Icon } from "astro-icon/components";
+import { editModeScript } from "@lib/editMode";
 
 type Props = {
   entry: CollectionEntry<"projects"> | CollectionEntry<"blog">;
@@ -14,10 +15,7 @@ const { title, summary, date } = data;
 const demoUrl = collection === "projects" ? data.demoUrl : null;
 const repoUrl = collection === "projects" ? data.repoUrl : null;
 
-// Show edit button for blog posts in development mode
-const isDevMode = import.meta.env.DEV;
-const showEditButton = collection === "blog" && isDevMode;
-const editUrl = showEditButton ? `/editor?edit=${entry.slug}` : null;
+const editUrl = collection === "blog" ? `/editor?edit=${entry.slug}` : null;
 ---
 
 <div>
@@ -67,10 +65,11 @@ const editUrl = showEditButton ? `/editor?edit=${entry.slug}` : null;
       {title}
     </h1>
     {
-      showEditButton && (
+      collection === "blog" && (
         <a
+          id="edit-button"
           href={editUrl}
-          class="group flex items-center gap-1.5 px-2 py-1 text-sm rounded-md border border-blue-300 dark:border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 hover:dark:bg-blue-900/20 transition-colors duration-200"
+          class="group flex items-center gap-1.5 px-2 py-1 text-sm rounded-md border border-blue-300 dark:border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 hover:dark:bg-blue-900/20 transition-colors duration-200 hidden"
           title={`Edit "${title}"`}
         >
           <svg
@@ -124,3 +123,28 @@ const editUrl = showEditButton ? `/editor?edit=${entry.slug}` : null;
     )
   }
 </div>
+
+<script is:inline set:html={editModeScript} />
+<script is:inline>
+  function updateEditButtonVisibility() {
+    const editButton = document.getElementById('edit-button');
+    if (editButton && window.getEditMode && window.getEditMode()) {
+      editButton.classList.remove('hidden');
+    } else if (editButton) {
+      editButton.classList.add('hidden');
+    }
+  }
+
+  // Update on page load
+  document.addEventListener('DOMContentLoaded', updateEditButtonVisibility);
+  
+  // Also run immediately in case DOM is already loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateEditButtonVisibility);
+  } else {
+    updateEditButtonVisibility();
+  }
+
+  // Listen for edit mode changes
+  window.addEventListener('editModeChanged', updateEditButtonVisibility);
+</script>

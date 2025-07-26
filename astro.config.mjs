@@ -16,4 +16,22 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false }),
     icon()
   ],
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true,
+      transformers: [],
+      langs: [
+        'javascript',
+        'typescript',
+        'html',
+        'css',
+        'json',
+        'bash',
+        'shell',
+        'text',
+        'astro'
+      ]
+    }
+  }
 })

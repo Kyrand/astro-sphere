@@ -27,3 +27,4 @@ debug/
 tests/test-results/
 tests/playwright-report/
 *.log
+dev.log

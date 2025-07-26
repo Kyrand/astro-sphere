@@ -9,7 +9,7 @@ import { BLOG, SITE } from "@consts";
 import { editModeScript } from "@lib/editMode";
 import { settingsScript } from "@lib/settings";
 import { marked } from "marked";
-import { createHighlighter } from "shiki";
+import { getShikiHighlighter } from "@lib/shikiHighlighter";
 
 const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -27,40 +27,23 @@ posts.forEach((post) => {
   });
 });
 
-// Initialize Shiki highlighter
-const highlighter = await createHighlighter({
-  themes: ["github-dark", "github-light"],
-  langs: [
-    "javascript",
-    "typescript",
-    "html",
-    "css",
-    "json",
-    "yaml",
-    "markdown",
-    "bash",
-    "shell",
-    "jsx",
-    "tsx",
-    "astro",
-    "python",
-    "go",
-    "rust",
-    "java",
-    "php",
-    "sql",
-  ],
-});
+// Get singleton Shiki highlighter instance
+const highlighter = await getShikiHighlighter();
 
 // Configure marked with Shiki syntax highlighting
 marked.use({
   renderer: {
-    code: function (token) {
-      const code = token.text || token.code || String(token);
-      const lang = token.lang || token.language;
+    code: function (token: any) {
+      const code = token.text || String(token);
+      const lang = token.lang;
 
       if (!lang) {
         return `<pre><code>${code}</code></pre>`;
+      }
+
+      // Skip markdown language to prevent WebAssembly memory errors
+      if (lang === 'markdown' || lang === 'md') {
+        return `<pre><code class="language-text">${code}</code></pre>`;
       }
 
       try {
@@ -83,7 +66,7 @@ const postContents: Record<string, string> = {};
 for (const post of posts) {
   try {
     // Convert markdown to HTML for preview with syntax highlighting
-    const htmlContent = marked(post.body);
+    const htmlContent = await marked(post.body);
     postContents[post.slug] = htmlContent;
   } catch (e) {
     console.error(`Error processing content for ${post.slug}:`, e);
@@ -162,13 +145,4 @@ const estimated_initial_size =
       window.addEventListener("settingsChanged", updateLayoutBasedOnSettings);
     </script>
   </BottomLayout>
-
-  <!-- Floating Add Post Button -->
-  <a
-    href="/editor"
-    title="Add a new post"
-    class="fixed bottom-6 right-6 z-50 size-14 bg-blue-600 opacity-60 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
-  >
-    <span class="text-2xl font-light leading-none">+</span>
-  </a>
 </PageLayout>

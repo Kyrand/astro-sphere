@@ -24,6 +24,7 @@ import Container from "@components/Container.astro";
       <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
         <a
           href="/search"
+          title="Search blog posts and projects"
           aria-label={`Search blog posts and projects on ${SITE.TITLE}`}
           class={cn(
             "hidden md:flex",
@@ -41,8 +42,28 @@ import Container from "@components/Container.astro";
         </a>
 
         <a
+          href="/tags"
+          title="Browse all tags"
+          aria-label={`Browse all tags on ${SITE.TITLE}`}
+          class={cn(
+            "hidden md:flex",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "text-current hover:text-black hover:dark:text-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out",
+            pathname === "/tags" || "/" + subpath?.[0] === "/tags"
+              ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black"
+              : ""
+          )}
+        >
+          <Icon name="lucide:tags" class="size-full" />
+        </a>
+
+        <a
           href="/rss.xml"
           target="_blank"
+          title="Subscribe to RSS feed"
           aria-label={`Rss feed for ${SITE.TITLE}`}
           class={cn(
             "hidden md:flex",
@@ -58,6 +79,7 @@ import Container from "@components/Container.astro";
 
         <button
           id="header-edit-button"
+          title="Toggle edit mode"
           aria-label={`Toggle edit mode`}
           class={cn(
             "hidden md:flex",
@@ -73,6 +95,7 @@ import Container from "@components/Container.astro";
 
         <a
           href="/settings"
+          title="Open settings"
           aria-label={`Settings`}
           class={cn(
             "hidden md:flex",
@@ -91,6 +114,7 @@ import Container from "@components/Container.astro";
 
         <button
           id="header-theme-button"
+          title="Toggle light/dark theme"
           aria-label={`Toggle light and dark theme`}
           class={cn(
             "hidden md:flex",
@@ -107,6 +131,7 @@ import Container from "@components/Container.astro";
 
         <button
           id="header-drawer-button"
+          title="Open menu"
           aria-label={`Toggle drawer open and closed`}
           class={cn(
             "flex md:hidden",

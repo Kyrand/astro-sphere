@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
+import TableOfContents from "@components/TableOfContents"
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">
@@ -8,7 +9,7 @@ type Props = {
 // Get the requested entry
 const { entry } = Astro.props
 const { collection } = entry
-const { Content } = await entry.render()
+const { Content, headings } = await entry.render()
 
 // Get the next and prev entries (modulo to wrap index)
 const items = (await getCollection(collection))
@@ -17,11 +18,62 @@ const items = (await getCollection(collection))
 const index = items.findIndex(x => x.slug === entry.slug)
 const prev = items[(index - 1 + items.length) % items.length]
 const next = items[(index + 1) % items.length]
+
+// Format headings for TOC
+const tocHeadings = headings.map(heading => ({
+  depth: heading.depth,
+  text: heading.text,
+  slug: heading.slug
+}));
 ---
 
-<article>
-  <Content/>
-</article>
+<div class="relative">
+  <div id="article-layout" class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 transition-all duration-300 ease-in-out">
+    <article>
+      <Content/>
+    </article>
+    {tocHeadings.length > 0 && (
+      <aside id="toc-sidebar" class="hidden lg:block transition-all duration-300 ease-in-out">
+        <TableOfContents headings={tocHeadings} client:load />
+      </aside>
+    )}
+  </div>
+</div>
+
+<script>
+  // Listen for TOC toggle events and adjust layout accordingly
+  function handleTocToggle(event) {
+    const { expanded } = event.detail;
+    const layout = document.getElementById('article-layout');
+    const sidebar = document.getElementById('toc-sidebar');
+    
+    if (layout && sidebar) {
+      if (expanded) {
+        // Expanded: normal two-column layout
+        layout.style.gridTemplateColumns = '1fr 280px';
+        sidebar.style.width = '280px';
+      } else {
+        // Collapsed: content takes most space, small sidebar
+        layout.style.gridTemplateColumns = '1fr 48px';
+        sidebar.style.width = '48px';
+      }
+    }
+  }
+
+  // Set up event listener when page loads
+  document.addEventListener('astro:page-load', () => {
+    window.addEventListener('tocToggle', handleTocToggle);
+  });
+
+  // Also set up for initial page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener('tocToggle', handleTocToggle);
+    });
+  } else {
+    window.addEventListener('tocToggle', handleTocToggle);
+  }
+</script>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
   <a href={`/${prev.collection}/${prev.slug}`} class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 blend">
     <div class="order-2 w-full h-full group-hover:text-black group-hover:dark:text-white blend">

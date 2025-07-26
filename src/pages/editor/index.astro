@@ -52,9 +52,17 @@ if (editSlug) {
       "Final editPost:",
       editPost ? `"${editPost.data.title}"` : "null"
     );
+
+    // If post still not found, we'll handle it client-side
+    // This allows for dev server delays in detecting new files
+    if (!editPost) {
+      console.log("Post not found in collection, will check client-side");
+    }
   } catch (error) {
     console.error('ERROR in getCollection("blog"):', error);
     console.error("Error details:", error.message, error.stack);
+    // Redirect on error as well
+    return Astro.redirect("/editor");
   }
 
   console.log("===================");
@@ -177,7 +185,7 @@ if (editSlug) {
               <!-- Autocomplete dropdown -->
               <div
                 id="tags-autocomplete"
-                class="absolute z-10 w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg max-h-48 overflow-y-auto hidden"
+                class="relative z-50 w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg max-h-48 overflow-y-auto hidden"
                 style="top: 100%"
               >
                 <!-- Autocomplete suggestions will be populated here -->
@@ -224,8 +232,167 @@ if (editSlug) {
               id="markdown-editor"
               rows="20"
               placeholder="Write your markdown here... (Drop images directly into this editor)"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-t-md bg-white dark:bg-gray-800 text-black dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm"
             ></textarea>
+
+            <!-- Markdown Toolbar -->
+            <div
+              class="border border-t-0 border-gray-300 dark:border-gray-600 rounded-b-md bg-gray-50 dark:bg-gray-800 p-2"
+            >
+              <div class="flex flex-wrap gap-1">
+                <!-- Text Formatting -->
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="**bold**"
+                  data-selection="bold"
+                  title="Bold text"
+                >
+                  <strong>B</strong>
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="*italic*"
+                  data-selection="italic"
+                  title="Italic text"
+                >
+                  <em>I</em>
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="`code`"
+                  data-selection="code"
+                  title="Inline code"
+                >
+                  <code>&lt;/&gt;</code>
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="~~strikethrough~~"
+                  data-selection="strikethrough"
+                  title="Strikethrough text"
+                >
+                  <s>S</s>
+                </button>
+
+                <!-- Separator -->
+                <div class="border-l border-gray-300 dark:border-gray-600 mx-1">
+                </div>
+
+                <!-- Headers -->
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="# "
+                  data-prefix="true"
+                  title="Heading 1"
+                >
+                  H1
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="## "
+                  data-prefix="true"
+                  title="Heading 2"
+                >
+                  H2
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="### "
+                  data-prefix="true"
+                  title="Heading 3"
+                >
+                  H3
+                </button>
+
+                <!-- Separator -->
+                <div class="border-l border-gray-300 dark:border-gray-600 mx-1">
+                </div>
+
+                <!-- Lists -->
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="- "
+                  data-prefix="true"
+                  title="Bullet list"
+                >
+                  • List
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="1. "
+                  data-prefix="true"
+                  title="Numbered list"
+                >
+                  1. List
+                </button>
+
+                <!-- Separator -->
+                <div class="border-l border-gray-300 dark:border-gray-600 mx-1">
+                </div>
+
+                <!-- Links and Images -->
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="[link text](url)"
+                  data-selection="link text"
+                  title="Insert link"
+                >
+                  🔗 Link
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="![alt text](image.jpg)"
+                  data-selection="alt text"
+                  title="Insert image"
+                >
+                  🖼️ Image
+                </button>
+
+                <!-- Separator -->
+                <div class="border-l border-gray-300 dark:border-gray-600 mx-1">
+                </div>
+
+                <!-- Other Elements -->
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="> "
+                  data-prefix="true"
+                  title="Blockquote"
+                >
+                  " Quote
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="```\ncode block\n```"
+                  data-selection="code block"
+                  title="Code block"
+                >
+                  📄 Code
+                </button>
+                <button
+                  type="button"
+                  class="markdown-btn px-2 py-1 text-xs bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                  data-markdown="---"
+                  data-prefix="true"
+                  title="Horizontal rule"
+                >
+                  ⎯⎯⎯ HR
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -276,34 +443,34 @@ if (editSlug) {
 />
 <script is:inline>
   // Load Prism.js dynamically with sequential loading
-  window.loadPrism = function() {
+  window.loadPrism = function () {
     if (window.Prism) return Promise.resolve();
-    
+
     return new Promise((resolve) => {
       const scripts = [
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js'
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js",
       ];
-      
+
       function loadScript(src) {
         return new Promise((scriptResolve) => {
-          const script = document.createElement('script');
+          const script = document.createElement("script");
           script.src = src;
           script.onload = scriptResolve;
           script.onerror = () => {
-            console.warn('Failed to load script:', src);
+            console.warn("Failed to load script:", src);
             scriptResolve(); // Continue even if one script fails
           };
           document.head.appendChild(script);
         });
       }
-      
+
       // Load scripts sequentially, not in parallel
       async function loadSequentially() {
         for (const script of scripts) {
@@ -311,9 +478,9 @@ if (editSlug) {
         }
         resolve();
       }
-      
+
       loadSequentially().catch((error) => {
-        console.warn('Failed to load Prism.js:', error);
+        console.warn("Failed to load Prism.js:", error);
         resolve(); // Continue without Prism
       });
     });
@@ -358,6 +525,13 @@ if (editSlug) {
       this.fileUploadArea = document.getElementById("file-upload-area");
       this.markdownFileInput = document.getElementById("markdown-file-input");
       this.availableTags = [];
+
+      // Undo/Redo system
+      this.undoStack = [];
+      this.redoStack = [];
+      this.maxUndoSteps = 50;
+      this.lastSavedContent = "";
+      this.undoTimeoutId = null;
     }
 
     setupEventListeners() {
@@ -391,8 +565,16 @@ if (editSlug) {
         this.deleteButton.addEventListener("click", () => this.deletePost());
       }
 
-      // Auto-update preview
-      this.markdownEditor.addEventListener("input", () => this.updatePreview());
+      // Auto-update preview and track changes for undo
+      this.markdownEditor.addEventListener("input", () => {
+        this.updatePreview();
+        this.trackContentChange();
+      });
+
+      // Keyboard shortcuts for undo/redo
+      this.markdownEditor.addEventListener("keydown", (e) =>
+        this.handleKeyboardShortcuts(e)
+      );
 
       // Tags autocomplete
       console.log("Setting up tags autocomplete event listeners...");
@@ -427,44 +609,68 @@ if (editSlug) {
 
       // Load available tags
       this.loadAvailableTags();
+
+      // Setup markdown toolbar
+      this.setupMarkdownToolbar();
+
+      // Initialize undo state
+      this.initializeUndoState();
     }
 
     async loadEditData() {
       // Also check URL for edit parameter as backup
       const urlParams = new URLSearchParams(window.location.search);
       const editSlug = urlParams.get("edit");
-      
+
       // Store the edit slug for potential deletion
       this.currentEditSlug = editSlug;
-      
-      // Show delete button if we're editing
-      if (editSlug && this.deleteButton) {
-        this.deleteButton.classList.remove('hidden');
-      }
 
       if (window.editPostData) {
         const post = window.editPostData;
         console.log("Loading edit data:", post); // Debug log
         this.populateEditor(post);
+
+        // Show delete button only if we actually have a post to edit
+        if (this.deleteButton) {
+          this.deleteButton.classList.remove("hidden");
+        }
       } else if (editSlug) {
-        this.showStatus(
-          "Post data not found in window, attempting to fetch...",
-          "info"
-        );
-        console.error(
-          "editPostData not found in window, but edit slug is:",
+        // Try to fetch the post data as the server might not have detected it yet
+        console.log(
+          "editPostData not found in window, attempting to fetch:",
           editSlug
         );
 
-        // Try to fetch the post data as fallback
-        try {
-          await this.fetchPostData(editSlug);
-        } catch (error) {
-          this.showStatus(
-            "Failed to load post data: " + error.message,
-            "error"
-          );
-        }
+        // Try to fetch with retry logic
+        let retries = 3;
+        const tryFetch = async () => {
+          try {
+            await this.fetchPostData(editSlug);
+            // If successful, show delete button
+            if (this.deleteButton) {
+              this.deleteButton.classList.remove("hidden");
+            }
+          } catch (error) {
+            retries--;
+            if (retries > 0) {
+              console.log(
+                `Fetch failed, retrying... (${retries} attempts left)`
+              );
+              setTimeout(tryFetch, 2000); // Wait 2 seconds before retry
+            } else {
+              // All retries failed, redirect
+              this.showStatus(
+                "Post not found. Redirecting to editor...",
+                "error"
+              );
+              setTimeout(() => {
+                window.location.href = "/editor";
+              }, 1500);
+            }
+          }
+        };
+
+        tryFetch();
       }
     }
 
@@ -498,6 +704,9 @@ if (editSlug) {
       }
 
       this.showStatus("Loaded post for editing: " + post.data.title, "info");
+
+      // Reinitialize undo state with loaded content
+      this.initializeUndoState();
     }
 
     async fetchPostData(slug) {
@@ -648,20 +857,23 @@ if (editSlug) {
               this.previewHtml.innerHTML = result.html;
 
               // Highlight code blocks with Prism
-              if (typeof window !== 'undefined' && window.loadPrism) {
-                window.loadPrism().then(() => {
-                  if (window.Prism) {
-                    try {
-                      setTimeout(() => {
-                        window.Prism.highlightAll();
-                      }, 10);
-                    } catch (error) {
-                      console.log('Prism highlighting failed:', error);
+              if (typeof window !== "undefined" && window.loadPrism) {
+                window
+                  .loadPrism()
+                  .then(() => {
+                    if (window.Prism) {
+                      try {
+                        setTimeout(() => {
+                          window.Prism.highlightAll();
+                        }, 10);
+                      } catch (error) {
+                        console.log("Prism highlighting failed:", error);
+                      }
                     }
-                  }
-                }).catch(error => {
-                  console.log('Failed to load Prism:', error);
-                });
+                  })
+                  .catch((error) => {
+                    console.log("Failed to load Prism:", error);
+                  });
               }
             } else {
               throw new Error(result.error || "Failed to render markdown");
@@ -970,14 +1182,14 @@ if (editSlug) {
             tags: tags.split(" ").filter((tag) => tag.trim()),
             draft,
             content: "\n" + content, // Add newline after frontmatter
-            editSlug: this.currentEditSlug // Pass the edit slug if we're editing
+            editSlug: this.currentEditSlug, // Pass the edit slug if we're editing
           }),
         });
 
         const result = await response.json();
 
         if (response.ok && result.success) {
-          const action = this.currentEditSlug ? 'updated' : 'saved';
+          const action = this.currentEditSlug ? "updated" : "saved";
           this.showStatus(
             `Post ${action} successfully as: ${result.filename}`,
             "success"
@@ -1056,36 +1268,50 @@ ${tags
         this.markdownEditor.value = "";
         this.updatePreview();
         this.showStatus("Editor cleared.", "info");
+
+        // Reinitialize undo state after clearing
+        this.initializeUndoState();
       }
     }
 
     async deletePost() {
       if (!this.currentEditSlug) {
-        this.showStatus("No post to delete. This only works when editing an existing post.", "error");
+        this.showStatus(
+          "No post to delete. This only works when editing an existing post.",
+          "error"
+        );
         return;
       }
 
-      const title = document.getElementById("post-title").value || this.currentEditSlug;
-      
-      if (confirm(`Are you sure you want to delete "${title}"? This cannot be undone.`)) {
+      const title =
+        document.getElementById("post-title").value || this.currentEditSlug;
+
+      if (
+        confirm(
+          `Are you sure you want to delete "${title}"? This cannot be undone.`
+        )
+      ) {
         try {
           this.showStatus("Deleting post...", "info");
-          
+
           const response = await fetch("/api/delete-post", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              slug: this.currentEditSlug
-            })
+              slug: this.currentEditSlug,
+            }),
           });
 
           const result = await response.json();
 
           if (response.ok && result.success) {
-            this.showStatus("Post deleted successfully. Redirecting...", "success");
-            
+            this.showStatus(
+              "Post deleted successfully. Redirecting...",
+              "success"
+            );
+
             // Redirect to homepage after a short delay
             setTimeout(() => {
               window.location.href = "/";
@@ -1104,10 +1330,23 @@ ${tags
       try {
         console.log("Loading available tags...");
         const response = await fetch("/api/get-tags");
+        console.log("Response status:", response.status);
+
         if (response.ok) {
           const data = await response.json();
+          console.log("Raw API response:", data);
           this.availableTags = data.tags || [];
-          console.log("Loaded tags:", this.availableTags);
+          console.log("Loaded tags array:", this.availableTags);
+          console.log("Number of tags:", this.availableTags.length);
+        } else {
+          console.error(
+            "API response not ok:",
+            response.status,
+            response.statusText
+          );
+          const errorText = await response.text();
+          console.error("Error response body:", errorText);
+          this.availableTags = [];
         }
       } catch (error) {
         console.error("Failed to load available tags:", error);
@@ -1125,7 +1364,10 @@ ${tags
       const words = beforeCursor.split(" ");
       const currentWord = words[words.length - 1];
 
-      if (currentWord.length > 0) {
+      // Debug logging removed for cleaner console
+
+      // Show autocomplete for any non-empty word
+      if (currentWord.length > 0 && currentWord.trim().length > 0) {
         this.showAutocomplete(currentWord, words.length - 1);
       } else {
         this.hideAutocomplete();
@@ -1182,11 +1424,22 @@ ${tags
     }
 
     showAutocomplete(currentWord, wordIndex) {
-      const matches = this.availableTags.filter(
-        (tag) =>
-          tag.toLowerCase().startsWith(currentWord.toLowerCase()) &&
-          tag.toLowerCase() !== currentWord.toLowerCase()
+      console.log(
+        "Tag autocomplete for:",
+        currentWord,
+        "| Available tags:",
+        this.availableTags.length
       );
+
+      const currentWordLower = currentWord.toLowerCase().trim();
+      const matches = this.availableTags.filter((tag) => {
+        const tagLower = tag.toLowerCase();
+        return (
+          tagLower.startsWith(currentWordLower) && tagLower !== currentWordLower
+        );
+      });
+
+      console.log("Matches found:", matches);
 
       if (matches.length === 0) {
         this.hideAutocomplete();
@@ -1239,6 +1492,209 @@ ${tags
       setTimeout(() => {
         this.tagsAutocomplete.classList.add("hidden");
       }, 150); // Small delay to allow click events
+    }
+
+    handleKeyboardShortcuts(event) {
+      const isCtrl = event.ctrlKey || event.metaKey; // Support both Ctrl and Cmd on Mac
+
+      if (isCtrl && event.key === "z" && !event.shiftKey) {
+        event.preventDefault();
+        this.undo();
+      } else if (
+        isCtrl &&
+        (event.key === "y" || (event.key === "z" && event.shiftKey))
+      ) {
+        event.preventDefault();
+        this.redo();
+      }
+    }
+
+    trackContentChange() {
+      // Debounce content changes to avoid too many undo steps
+      if (this.undoTimeoutId) {
+        clearTimeout(this.undoTimeoutId);
+      }
+
+      this.undoTimeoutId = setTimeout(() => {
+        this.saveUndoState();
+      }, 500); // Save undo state after 500ms of no typing
+    }
+
+    saveUndoState() {
+      const currentContent = this.markdownEditor.value;
+      const currentSelection = {
+        start: this.markdownEditor.selectionStart,
+        end: this.markdownEditor.selectionEnd,
+      };
+
+      // Don't save if content hasn't changed
+      if (currentContent === this.lastSavedContent) {
+        return;
+      }
+
+      // Save current state to undo stack
+      this.undoStack.push({
+        content: this.lastSavedContent,
+        selection: this.lastSelection || { start: 0, end: 0 },
+      });
+
+      // Limit undo stack size
+      if (this.undoStack.length > this.maxUndoSteps) {
+        this.undoStack.shift();
+      }
+
+      // Clear redo stack when new changes are made
+      this.redoStack = [];
+
+      // Update last saved state
+      this.lastSavedContent = currentContent;
+      this.lastSelection = currentSelection;
+    }
+
+    undo() {
+      if (this.undoStack.length === 0) {
+        return;
+      }
+
+      // Save current state to redo stack
+      this.redoStack.push({
+        content: this.markdownEditor.value,
+        selection: {
+          start: this.markdownEditor.selectionStart,
+          end: this.markdownEditor.selectionEnd,
+        },
+      });
+
+      // Restore previous state
+      const undoState = this.undoStack.pop();
+      this.markdownEditor.value = undoState.content;
+      this.markdownEditor.setSelectionRange(
+        undoState.selection.start,
+        undoState.selection.end
+      );
+
+      // Update tracking variables
+      this.lastSavedContent = undoState.content;
+      this.lastSelection = undoState.selection;
+
+      // Update preview
+      this.updatePreview();
+    }
+
+    redo() {
+      if (this.redoStack.length === 0) {
+        return;
+      }
+
+      // Save current state to undo stack
+      this.undoStack.push({
+        content: this.markdownEditor.value,
+        selection: {
+          start: this.markdownEditor.selectionStart,
+          end: this.markdownEditor.selectionEnd,
+        },
+      });
+
+      // Restore next state
+      const redoState = this.redoStack.pop();
+      this.markdownEditor.value = redoState.content;
+      this.markdownEditor.setSelectionRange(
+        redoState.selection.start,
+        redoState.selection.end
+      );
+
+      // Update tracking variables
+      this.lastSavedContent = redoState.content;
+      this.lastSelection = redoState.selection;
+
+      // Update preview
+      this.updatePreview();
+    }
+
+    initializeUndoState() {
+      // Initialize undo state with current content
+      this.lastSavedContent = this.markdownEditor.value;
+      this.lastSelection = {
+        start: this.markdownEditor.selectionStart,
+        end: this.markdownEditor.selectionEnd,
+      };
+    }
+
+    setupMarkdownToolbar() {
+      const markdownButtons = document.querySelectorAll(".markdown-btn");
+      markdownButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const markdown = button.dataset.markdown;
+          const isPrefix = button.dataset.prefix === "true";
+          const selectionText = button.dataset.selection;
+
+          // Save undo state before making changes
+          this.saveUndoState();
+          this.insertMarkdown(markdown, isPrefix, selectionText);
+        });
+      });
+    }
+
+    insertMarkdown(markdownText, isPrefix = false, selectionText = null) {
+      const textarea = this.markdownEditor;
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const selectedText = textarea.value.substring(start, end);
+      const beforeText = textarea.value.substring(0, start);
+      const afterText = textarea.value.substring(end);
+
+      let insertText = markdownText;
+      let newCursorPos = start;
+
+      if (isPrefix) {
+        // For prefixes like "# " or "- ", add to beginning of line
+        const lineStart = beforeText.lastIndexOf("\n") + 1;
+        const beforeLine = beforeText.substring(0, lineStart);
+        const currentLine = beforeText.substring(lineStart);
+
+        // Insert prefix at beginning of current line
+        const newContent =
+          beforeLine + markdownText + currentLine + selectedText + afterText;
+        textarea.value = newContent;
+        newCursorPos =
+          lineStart +
+          markdownText.length +
+          currentLine.length +
+          selectedText.length;
+      } else if (selectionText && selectedText) {
+        // Replace selected text with markdown wrapper
+        if (markdownText.includes(selectionText)) {
+          insertText = markdownText.replace(selectionText, selectedText);
+        } else {
+          insertText = markdownText;
+        }
+        const newContent = beforeText + insertText + afterText;
+        textarea.value = newContent;
+        newCursorPos = start + insertText.length;
+      } else if (selectionText) {
+        // Insert markdown with placeholder text selected
+        const newContent = beforeText + markdownText + afterText;
+        textarea.value = newContent;
+
+        // Select the placeholder text
+        const placeholderStart = start + markdownText.indexOf(selectionText);
+        const placeholderEnd = placeholderStart + selectionText.length;
+        textarea.focus();
+        textarea.setSelectionRange(placeholderStart, placeholderEnd);
+        this.updatePreview();
+        return;
+      } else {
+        // Simple insertion
+        const newContent = beforeText + markdownText + afterText;
+        textarea.value = newContent;
+        newCursorPos = start + markdownText.length;
+      }
+
+      // Set cursor position and update preview
+      textarea.focus();
+      textarea.setSelectionRange(newCursorPos, newCursorPos);
+      this.updatePreview();
     }
 
     showStatus(message, type) {

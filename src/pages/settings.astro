@@ -92,6 +92,24 @@ import Container from "@components/Container.astro";
               </div>
             </label>
           </div>
+          
+          <!-- Table of Contents Setting -->
+          <div class="mb-6">
+            <label class="flex items-center gap-3">
+              <input 
+                type="checkbox" 
+                id="show-toc" 
+                checked
+                class="w-5 h-5 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-neutral-700 text-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-0"
+              />
+              <div>
+                <span class="text-sm font-medium">Show Table of Contents</span>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Display a table of contents on the right side of blog posts (desktop only)
+                </p>
+              </div>
+            </label>
+          </div>
         </div>
         
         <!-- Save Button -->
@@ -115,6 +133,7 @@ import Container from "@components/Container.astro";
   const textLimitSlider = document.getElementById('text-limit-slider') as HTMLInputElement;
   const textLimitInput = document.getElementById('text-limit-input') as HTMLInputElement;
   const showHighlightsColumnCheckbox = document.getElementById('show-highlights-column') as HTMLInputElement;
+  const showTocCheckbox = document.getElementById('show-toc') as HTMLInputElement;
   const saveButton = document.getElementById('save-settings');
   
   // Load settings from localStorage
@@ -137,6 +156,12 @@ import Container from "@components/Container.astro";
       showHighlightsColumnCheckbox.checked = settings.showHighlightsColumn;
     }
     
+    // Set TOC visibility (from localStorage directly for backward compatibility)
+    const showToc = localStorage.getItem('showToc');
+    if (showToc !== null) {
+      showTocCheckbox.checked = showToc !== 'false';
+    }
+    
     // Show/hide text limit based on view mode
     updateTextLimitVisibility();
   }
@@ -150,6 +175,9 @@ import Container from "@components/Container.astro";
     };
     
     localStorage.setItem('siteSettings', JSON.stringify(settings));
+    
+    // Save TOC setting separately for backward compatibility
+    localStorage.setItem('showToc', showTocCheckbox.checked.toString());
     
     // Dispatch event to notify other components
     window.dispatchEvent(new CustomEvent('settingsChanged', { detail: settings }));
